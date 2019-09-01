@@ -13,7 +13,7 @@ namespace CustomPrettyEditor {
 	internal static class GUIDrawer 
 	{
 		
-		private static GameObject go;
+		private static GameObject editorUtilityGameObject;
 		private static Rect lastRect;
 		
 		static GUIDrawer() 
@@ -64,18 +64,18 @@ namespace CustomPrettyEditor {
 		{
 			try {
 				
-				go = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
+				editorUtilityGameObject = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
 				
-				if(!go)
+				if(!editorUtilityGameObject)
 					return;
 				
-                if (go.tag == "Scene")
+                if (editorUtilityGameObject.tag == "Scene")
 					ColorBg(rect, ColorForHex("#00991A28"));
-				else if (go.tag == "Managers")
+				else if (editorUtilityGameObject.tag == "Manager")
 					ColorBg(rect, ColorForHex("#8D991728"));
-				else if (go.tag == "Canvas")
+				else if (editorUtilityGameObject.tag == "Canvas")
 					ColorBg(rect, ColorForHex("#99006228"));
-				else if (go.tag == "Visual Break")
+				else if (editorUtilityGameObject.tag == "Visual Break")
 				{
 					if((rect.y / rect.height) % 2 < 1f)
 						ColorBg(rect, ColorForHex("#323232ff"));
@@ -83,9 +83,9 @@ namespace CustomPrettyEditor {
 						ColorBg(rect, ColorForHex("#383838FF"));
 				}
 			
-				else if (go.tag == "EditorOnly")
+				else if (editorUtilityGameObject.tag == "EditorOnly")
 					ColorBg(rect, ColorForHex("#38383898"));
-				else if (go.name == "UniversePageGOView" || go.name == "UniversePageView" )
+				else if (editorUtilityGameObject.name == "UniversePageGOView" || editorUtilityGameObject.name == "UniversePageView" )
 					ColorBg(rect, ColorForHex("#D4701633"));							
 			}
 			catch {
