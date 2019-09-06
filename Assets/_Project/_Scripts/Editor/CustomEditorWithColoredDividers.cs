@@ -42,7 +42,7 @@ namespace CustomPrettyEditor {
 			{
  #if UNITY_PRO_LICENSE
 				if((selectionRect.y / selectionRect.height) % 2 < 1f)
-					EditorGUI.DrawRect(selectionRect, LBUtility.ColorForHex("#323232ff"));
+					EditorGUI.DrawRect(selectionRect, LBUtility.ColorForHex("#323232FF"));
 				else
 					EditorGUI.DrawRect(selectionRect, LBUtility.ColorForHex("#383838FF"));
 				//line
