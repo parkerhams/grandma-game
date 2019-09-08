@@ -167,8 +167,8 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
   - Type: 0
-    Key: Oculus Desktop
-    IconType: 160
+    Key: Oculus
+    IconType: 2040
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
