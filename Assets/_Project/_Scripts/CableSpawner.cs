@@ -31,6 +31,11 @@ public class CableSpawner : MonoBehaviour
 
     #endregion
 
+    private void Start()
+    {
+        spawnCableParts = true;
+    }
+
     // Update is called once per frame
     private void Update()
     {
