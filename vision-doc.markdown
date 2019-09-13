@@ -34,3 +34,16 @@ This project will be developed over the course of 7 weeks.
         * Week Five: Beta Build - game is playable from start-to-finish with minor bugs and core features fleshed out
         * Week Six: Polishing of gameplay features, visuals, and systems
         * Week Seven: Golden Master - game poilish is fully implemented and bug tested
+
+Week 1 Physical Prototyping & Puzzle Design Results: (Cole & Dan)
+	* Found that tactility was a large part of the system's appeal
+	* Established "Cable discovery" as a mechanical alternative to cable complexity
+		- Saves programming work, making more broken/weird/non-functioning cables is easier than programming more complex systems
+		- Is still fun, picking cables up, evaluating them, then selecting the right ones
+		- prone to emergent gameplay such as plugging in the unecessary cables/or arranging them
+	* Found effective ways to stylize and simplify the physical interaction between people and the CRT / VCR
+		- Fewer buttons. We only need Power, Play, and Stop on the VCR and only Power, Channel +/- on the TV
+		- Maintains a level of emulation from the real devices, but simplifies the action for big clumsy VR hands
+	* Simplified the device count down from the CRT/Stereo/VCR model down to just the CRT/VCR
+		- Again, less programming load, and a shift away from cable placement as a primary mechanic
+	
