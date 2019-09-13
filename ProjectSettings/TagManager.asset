@@ -8,6 +8,7 @@ TagManager:
   - Scene
   - Canvas
   - Manager
+  - Cable
   layers:
   - Default
   - TransparentFX

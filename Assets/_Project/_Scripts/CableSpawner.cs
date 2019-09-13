@@ -14,6 +14,9 @@ public class CableSpawner : MonoBehaviour
     private int cableLength = 1;
 
     [SerializeField]
+    private float rotationLimit = 120f;
+
+    [SerializeField]
     [Tooltip("distance between cable parts, which are capsules")]
     private float distanceBetweenCablePartPrefabs = .21f;
 
@@ -60,7 +63,8 @@ public class CableSpawner : MonoBehaviour
                 transform.position.y + distanceBetweenCablePartPrefabs * (i+1), transform.position.z), 
                 Quaternion.identity, parentObject.transform);
 
-            spawnedGameObject.transform.eulerAngles = new Vector3(180, 0, 0);
+            //180 is total allowed rotation around the x axis
+            spawnedGameObject.transform.eulerAngles = new Vector3(rotationLimit, 0, 0);
 
             //name the spawned Cable Prefab after whatever child number it is 
             //under the parent, i.e. 1, 2, 3, etc.
