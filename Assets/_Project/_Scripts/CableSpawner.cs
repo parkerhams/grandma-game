@@ -13,6 +13,8 @@ public class CableSpawner : MonoBehaviour
     [Tooltip("Total length of cable with all of the cable parts")]
     private int cableLength = 1;
 
+
+
     [SerializeField]
     private float rotationLimit = 120f;
 
@@ -31,6 +33,8 @@ public class CableSpawner : MonoBehaviour
 
     #endregion
 
+    //timestep for VR: 1/90 fixed timestep
+    //timestep for physics: .005 fixed timestep, .02 max allowed timestep
     private void Start()
     {
         spawnCableParts = true;
