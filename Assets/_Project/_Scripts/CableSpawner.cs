@@ -37,7 +37,7 @@ public class CableSpawner : MonoBehaviour
     //timestep for physics: .005 fixed timestep, .02 max allowed timestep
     private void Start()
     {
-        spawnCableParts = true;
+        spawnCableParts = false;
     }
 
     // Update is called once per frame

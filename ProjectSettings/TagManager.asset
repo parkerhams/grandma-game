@@ -9,6 +9,8 @@ TagManager:
   - Canvas
   - Manager
   - Cable
+  - Socket
+  - Plug
   layers:
   - Default
   - TransparentFX
