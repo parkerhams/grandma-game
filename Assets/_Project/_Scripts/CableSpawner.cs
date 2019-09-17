@@ -13,10 +13,8 @@ public class CableSpawner : MonoBehaviour
     [Tooltip("Total length of cable with all of the cable parts")]
     private int cableLength = 1;
 
-
-
     [SerializeField]
-    private float rotationLimit = 120f;
+    private float rotationLimit = 180f;
 
     [SerializeField]
     [Tooltip("distance between cable parts, which are capsules")]
