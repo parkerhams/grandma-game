@@ -940,10 +940,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: {x: 0.5, y: 0.5, z: 0.5}
+  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 196025096}
   maleEndCapsule: {fileID: 465834810}
   femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &236804962
 GameObject:
   m_ObjectHideFlags: 0
