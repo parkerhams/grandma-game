@@ -6,13 +6,13 @@ public class CableTension : MonoBehaviour
 {
     /*
      * We want this script to know: 
-     * -Whether or not the cable is plugged into anything
+     * -Whether or not the cable is plugged into anything                                           [YEET]
      * -whether the cable is being grabbed or not
-     * -which number cable this is (GameObject.name)
+     * -which number cable this is (GameObject.name)                                                [YEET]
      * -Total number of capsules on this cable                                                      [YEET]
      * 
      * So, when we detect too much distance between the gameobject.name capsule
-     * and either of its nearby capsule (name.ToInt32(+1, -1))
+     * and either of its nearby capsule
      * If it's plugged in then we unplug it,
      * and when we're unplugging it then we unplug to the closer side to this gripped capsule
      * 
@@ -21,7 +21,7 @@ public class CableTension : MonoBehaviour
      */
 
     [SerializeField]
-    private Vector3 maxDistance;
+    private float maxLengthBetweenCapsules;
 
     [SerializeField]
     public GameObject parentCable;
@@ -29,28 +29,68 @@ public class CableTension : MonoBehaviour
     [SerializeField]
     private GameObject maleEndCapsule, femaleEndCapsule;
 
-    private PlugBehavior plugBehaviorObject;
+    [SerializeField]
+    private Vector3 cableTetherPoint;
+    //find neighbor capsule and check the distance betweenthose neighbors in fixed update
+
+    private GameObject frontNeighborCapsule, backNeighborCapsule;
+
+    private PlugBehavior plugBehavior;
 
     private List<GameObject> capsuleChildren;
 
     private void Start()
     {
-        plugBehaviorObject = this.gameObject.GetComponentInParent<PlugBehavior>();
+        maxLengthBetweenCapsules = .2f;
 
-        maxDistance = new Vector3(.5f, .5f, .5f);
         capsuleChildren = new List<GameObject>();
 
         int children = parentCable.transform.childCount;
-        for (int i = 0; i < children; ++i)
+        for (int index = 0; index < children; ++index)
         {
-            capsuleChildren.Add(parentCable.transform.GetChild(i).gameObject);
-            print("For loop: " + transform.GetChild(i));
+            capsuleChildren.Add(parentCable.transform.GetChild(index).gameObject);
 
+
+            //print("For loop: " + capsuleChildren[index].name);
         }
+
+        for (int index = 0; index < capsuleChildren.Count - 1; ++index)
+        {
+            //we can set the front neighbor unless our index == 0
+            //we can set the back neighbor if our index less than count-1
+
+            if (index > 0)
+            {
+                frontNeighborCapsule = capsuleChildren[index - 1];
+                print("frontNeighbor capsule added for " + (index+1) + ", front neighbor is " + frontNeighborCapsule);
+            }
+
+            if (index <= capsuleChildren.Count-1)
+            {
+                backNeighborCapsule = capsuleChildren[index + 1];
+                print("backNeighbor capsule added for " + (index+1) + ", back neighbor is " + backNeighborCapsule);
+            }
+        }
+
+        plugBehavior = capsuleChildren[0].transform.Find("Plug").gameObject.GetComponent<PlugBehavior>();
+
+        //reference capsuleCHildren[index].name for name
+        //plugBehavior.isPluggedIn       
 
         maleEndCapsule = capsuleChildren[0];
         femaleEndCapsule = capsuleChildren[capsuleChildren.Count - 1];
     }
 
+    private void Update()
+    {
+        if (plugBehavior.isPluggedIn)
+        {
+            //check distance between capsuleChild[i] and capsuleChild[i+1]
+        }
+    }
 
+    private void CheckDistanceBetweenCapsules(GameObject neighborCapsule)
+    {
+
+    }
 }
