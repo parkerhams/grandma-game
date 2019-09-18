@@ -4,7 +4,7 @@ created in Unity 2019.1.10
 
 This document will outline the core gameplay, features, and purpose of the project "Weekend at Grandma's".
 
-![Grandma Banner](file:///C:/workspace/Grandma_Game_Pitch.png)
+![Grandma Banner](https://github.com/parkerhams/grandma-game/blob/master/Assets/_Project/Art/Sprites/Grandma_Game_Pitch.png)
 
 <h2>Synopsis:</h2>
 
