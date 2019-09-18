@@ -4,6 +4,8 @@ created in Unity 2019.1.10
 
 This document will outline the core gameplay, features, and purpose of the project "Weekend at Grandma's".
 
+![Grandma Banner](file:///C:/workspace/Grandma_Game_Pitch.png)
+
 <h2>Synopsis:</h2>
 
 "Weekend at Grandma's" is a Virtual Reality game taking place inside the player's grandmother's sitting room. Grandma isn't very tech savvy, and needs 
