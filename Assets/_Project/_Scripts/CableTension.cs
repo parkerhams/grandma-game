@@ -8,8 +8,8 @@ public class CableTension : MonoBehaviour
      * We want this script to know: 
      * -Whether or not the cable is plugged into anything                                           [YEET]
      * -whether the cable is being grabbed or not
-     * -which number cable this is (GameObject.name)                                                [YEET]
-     * -Total number of capsules on this cable                                                      [YEET]
+     * -which number capsule this is (GameObject.name)                                                [YEET]
+     * -Total number of capsules on this capsule's cable                                                      [YEET]
      * 
      * So, when we detect too much distance between the gameobject.name capsule
      * and either of its nearby capsule
@@ -33,7 +33,8 @@ public class CableTension : MonoBehaviour
     private Vector3 cableTetherPoint;
     //find neighbor capsule and check the distance betweenthose neighbors in fixed update
 
-    private GameObject frontNeighborCapsule, backNeighborCapsule;
+    private GameObject frontNeighborCapsule, backNeighborCapsule;//front neighbor is closer to male end of the cable (male end is capsule 1)
+    private float frontDistance, backDistance;
 
     private PlugBehavior plugBehavior;
 
@@ -62,13 +63,13 @@ public class CableTension : MonoBehaviour
             if (index > 0)
             {
                 frontNeighborCapsule = capsuleChildren[index - 1];
-                print("frontNeighbor capsule added for " + (index+1) + ", front neighbor is " + frontNeighborCapsule);
+                //print("frontNeighbor capsule added for " + (index+1) + ", front neighbor is " + frontNeighborCapsule);
             }
 
             if (index <= capsuleChildren.Count-1)
             {
                 backNeighborCapsule = capsuleChildren[index + 1];
-                print("backNeighbor capsule added for " + (index+1) + ", back neighbor is " + backNeighborCapsule);
+                //print("backNeighbor capsule added for " + (index+1) + ", back neighbor is " + backNeighborCapsule);
             }
         }
 
@@ -83,14 +84,42 @@ public class CableTension : MonoBehaviour
 
     private void Update()
     {
-        if (plugBehavior.isPluggedIn)
+
+    }
+
+    private void FixedUpdate()//not sure if this would work better as Update or FixedUpdate. either way it might be really expensive and we might need to only do this distance check somewhere else (when moved?)
+    {
+        if(backNeighborCapsule)
         {
-            //check distance between capsuleChild[i] and capsuleChild[i+1]
+            CheckDistanceBetweenCapsules(backNeighborCapsule);
+        }
+    }
+
+    private void UngrabCable()
+    {
+        foreach (GameObject capsule in capsuleChildren)//look through all the capsules on this cable and ungrab them if they're being held
+        {
+            OVRGrabbable grabScript = capsule.GetComponent<OVRGrabbable>();
+            if (grabScript.isGrabbed)
+            {
+                grabScript.grabbedBy.GetComponent<OVRGrabber>().ForceRelease(grabScript);
+            }
         }
     }
 
     private void CheckDistanceBetweenCapsules(GameObject neighborCapsule)
     {
-
+        if (backNeighborCapsule)
+        {
+            backDistance = Vector3.Distance(transform.position, frontNeighborCapsule.transform.position);
+            if (backDistance > maxLengthBetweenCapsules)
+            {
+                //if it's plugged in: search for nearest plug side and disconnect
+                
+                //if it's not plugged in: ungrab
+                UngrabCable();
+            }
+        }
+        //back neighbor currently not being checked; might be redundant
     }
 }
