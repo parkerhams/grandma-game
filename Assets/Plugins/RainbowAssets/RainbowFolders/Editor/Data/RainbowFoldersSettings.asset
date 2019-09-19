@@ -175,3 +175,12 @@ MonoBehaviour:
     BackgroundType: 90
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
+  - Type: 1
+    Key: Assets/_Project/Art/Objects
+    IconType: 2070
+    SmallIcon: {fileID: 0}
+    LargeIcon: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
