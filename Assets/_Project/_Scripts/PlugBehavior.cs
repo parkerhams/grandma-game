@@ -11,6 +11,11 @@ public class PlugBehavior : MonoBehaviour
     public enum WhatCableCarries { Audio, Video, Power}//the type of info the cable will send along its wire
     public WhatCableCarries whatThisCableCarries;
 
+    SocketBehavior socketBehaviorLastKnown;//once a plug plugs into a socket, that socket is saved here
+
+    public GameObject neighorCapsule;
+    public float maxDistance = 1f;
+
     bool allowedToAttemptPlugIn = true;//if this is false, plug is completely disabled from trying to plug into anything
     bool isWorkingPlug = true;//if set to false, this plug can plug into things but won't transmit any information
 
@@ -26,7 +31,14 @@ public class PlugBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(isPluggedIn && socketBehaviorLastKnown)
+        {
+            DistanceBasedUnplugCheck();//check to see if it's tensioned hard enough to automatically unplug itself
+        }
+        else
+        {
+            Debug.Log("can't run yet");
+        }
     }
 
     public void PlugIntoSocket(SocketBehavior socketBehaviorScript)
@@ -35,17 +47,50 @@ public class PlugBehavior : MonoBehaviour
         //plug jumps into proper location. using parent because the plug's parent is the capsule that acts as the end of the cable
         transform.parent.position = socketBehaviorScript.DesiredPlugLocation.transform.position;
         transform.parent.rotation = socketBehaviorScript.DesiredPlugLocation.transform.rotation;//need to figure out if we can easily establish a rotation for DesiredPlugLocation in the scene
+        socketBehaviorLastKnown = socketBehaviorScript;
+        //ungrab the plug's capsule
+        if(transform.parent.GetComponent<OVRGrabbable>().isGrabbed)
+        {
+            OVRGrabbable grabScript = transform.parent.GetComponent<OVRGrabbable>();
+            grabScript.grabbedBy.ForceRelease(grabScript);
+        }
         //lock the plug location and try to keep cable attached
         transform.parent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         //broadcast information about what plug is plugged into which socket (so that the game knows if audio should be enabled, for example)
         Debug.Log(whatThisCableCarries.ToString() + " plug plugged into " + socketBehaviorScript.whatThisSocketNeeds.ToString() + " socket.");
         socketBehaviorScript.ReceivePlug();
+        isPluggedIn = true;
     }
     private void UnplugFromSocket()
     {
-        //check if it's actually plugged into anything and if it's allowed to be unplugged
+        if(!isPluggedIn)
+        {
+            return;
+        }
         //broadcast the plug being disabled
-        //push plug a safe distance away from cable and disable it from being allowed to plug into anything for a brief moment
+        Debug.Log("Unplugged.");
+        //disable plug from being allowed to plug into anything for a brief moment, remove constraints, inform socket of unplugging
+        StartCoroutine(UnplugWaitCoroutine());
+        transform.parent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        isPluggedIn = false;
+        socketBehaviorLastKnown.RemovePlug();
+    }
+
+    private void DistanceBasedUnplugCheck()
+    {
+        Debug.Log("running");
+        //if the neighbor capsule is too far away from the plug's parent capsule, unplug
+        if(!neighorCapsule)
+        {
+            Debug.Log("No neighbor capsule specified for distance based unplug check.");
+            return;
+        }
+        float currentDistance = Vector3.Distance(transform.parent.position, neighorCapsule.transform.position);
+        Debug.Log("Distance: " + currentDistance);
+        if(currentDistance >= maxDistance)
+        {
+            UnplugFromSocket();
+        }
     }
 
     IEnumerator UnplugWaitCoroutine()//disables any plugging action for that plug until the set time has elapsed, then re-enables that behavior
