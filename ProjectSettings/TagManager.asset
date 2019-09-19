@@ -11,6 +11,7 @@ TagManager:
   - Cable
   - Socket
   - Plug
+  - GenericGrabbable
   layers:
   - Default
   - TransparentFX
