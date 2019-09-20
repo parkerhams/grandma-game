@@ -14,7 +14,7 @@ public class CableSpawner : MonoBehaviour
     private int cableLength = 1;
 
     [SerializeField]
-    private float rotationLimit = 120f;
+    private float rotationLimit = 180f;
 
     [SerializeField]
     [Tooltip("distance between cable parts, which are capsules")]
@@ -31,9 +31,11 @@ public class CableSpawner : MonoBehaviour
 
     #endregion
 
+    //timestep for VR: 1/90 fixed timestep
+    //timestep for physics: .005 fixed timestep, .02 max allowed timestep
     private void Start()
     {
-        spawnCableParts = true;
+        spawnCableParts = false;
     }
 
     // Update is called once per frame

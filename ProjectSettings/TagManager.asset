@@ -9,6 +9,9 @@ TagManager:
   - Canvas
   - Manager
   - Cable
+  - Socket
+  - Plug
+  - GenericGrabbable
   layers:
   - Default
   - TransparentFX
@@ -19,8 +22,8 @@ TagManager:
   - 
   - 
   - DistanceGrabbable
-  - 
-  - 
+  - PlayerCollision
+  - Cables
   - 
   - 
   - 
