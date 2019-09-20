@@ -6,7 +6,7 @@ public class CRTBehavior : MonoBehaviour
 {
     //TODO: Refactor Signal as an inheritable interface
     public enum Signal { Video, LeftAudio, RightAudio, Power, None}; //Denotes the type of signal a cable carries, including no signal
-    private Signal thisSignal = Signal.None;
+    public enum CableType { Power, RCA};
 
     //Serialized references to the Device's Buttons
     [SerializeField]
