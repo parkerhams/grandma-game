@@ -38,8 +38,7 @@ Armed with this goal and an early model for the Television, we prototyped the de
 ![CRT Prototype 2](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/CRT%20Prototype%202.JPG)
 
 ### Drafting Dialogue for Grandma
-* Wrote draft of Grandma dialogue
-
+The dialogue document was split into three sections: Instructional Dialogue, Prompted Dialogue, and Unprompted Dialogue. The instructional dialogue is dialogue that tells the player to do something, like "Plug in the TV." The prompted dialogue is dialogue that is prompted by something the player does, like "Oh, you turned on the TV." The unprompted dialogue is dialogue that happens regardless of what the player is doing, like "Do you wanna make cookies later?" I wrote a bunch of dialogue barks in all of these sections, to be edited, deleted, or added to as we progress.
 
 # **Week 3 - 9-20-19**
 
