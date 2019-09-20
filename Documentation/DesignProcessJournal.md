@@ -18,6 +18,8 @@ This week, we all met and established our plans for the game. We designated offi
 # **Week 2 - 9-13-19**
 
 ## **Art:**
+### Grandma Model
+
 
 ## **Design:**
 ### CRT & VCR Prototyping
