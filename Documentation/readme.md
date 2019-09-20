@@ -1,7 +1,6 @@
 ## The Game
 
-**Weekend At Grandma's** 
-*A Familial Tech Support VR Experience*
+**Weekend At Grandma's**: *A Familial Tech Support VR Experience*
 
 ## Information
 
