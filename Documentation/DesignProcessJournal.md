@@ -19,7 +19,10 @@ This week, we all met and established our plans for the game. We designated offi
 
 ## **Art:**
 ### Grandma Model
-
+  The grandma base mesh was completed and UV unwrapped. Basic textures will be apllied and a Rig should be put on the model. By next week, a fully textured grandma posed in her rocking chair will be completed a ready to be put in game.
+![Grandma Base Mesh](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/GrandmaBaseMesh.jpg)
+![Grandma Base Mesh Frontal View](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/GrandmaBaseMeshFront.jpg)
+![Grandma UV Map](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/GrandmaUV.png)
 
 ## **Design:**
 ### CRT & VCR Prototyping
