@@ -12,10 +12,13 @@ public class PlugBehavior : MonoBehaviour
 
     public bool isPluggedIn = false;
 
-    SocketBehavior socketBehaviorLastKnown; //once a plug plugs into a socket, that socket is saved here
+    public CableBehavior cableBehaviorScript;
+
+    [HideInInspector]
+    public SocketBehavior currentSocketBehaviorScript; //once a plug plugs into a socket, that socket is saved here
 
     public GameObject neighborCapsule;
-    public float maxDistance = 1f;
+    public float maxDistance = 1f;//when a cable's plug's neighbor capsule gets pulled this far away, unplug the cable from that plug's socket
 
     bool allowedToAttemptPlugIn = true; //if this is false, plug is completely disabled from trying to plug into anything
     bool isWorkingPlug = true; //if set to false, this plug can plug into things but won't transmit any information
@@ -32,23 +35,26 @@ public class PlugBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isPluggedIn && socketBehaviorLastKnown)
+        if(isPluggedIn && currentSocketBehaviorScript)
         {
+            if(cableType == CableType.Power && currentSocketBehaviorScript.isInputSocket)
+            {
+                return;//power cable can't be removed from its input socket on the CRT
+            }
             DistanceBasedUnplugCheck();//check to see if it's tensioned hard enough to automatically unplug itself
-        }
-        else
-        {
-            Debug.Log("can't run yet");
         }
     }
 
     public void PlugIntoSocket(SocketBehavior socketBehaviorScript)
     {
-        //remove player's control/grabbing of object
         //plug jumps into proper location. using parent because the plug's parent is the capsule that acts as the end of the cable
         transform.parent.position = socketBehaviorScript.DesiredPlugLocation.transform.position;
         transform.parent.rotation = socketBehaviorScript.DesiredPlugLocation.transform.rotation; //need to figure out if we can easily establish a rotation for DesiredPlugLocation in the scene
-        socketBehaviorLastKnown = socketBehaviorScript;
+        if(transform.parent.name == "1")//if this is the front end cable, rotate it 180 degrees when plugging in so it faces the right way
+        {
+            transform.parent.RotateAround(socketBehaviorScript.DesiredPlugLocation.transform.position, socketBehaviorScript.DesiredPlugLocation.transform.up, 180f);
+        }
+        currentSocketBehaviorScript = socketBehaviorScript;
         //ungrab the plug's capsule
         if(transform.parent.GetComponent<OVRGrabbable>().isGrabbed)
         {
@@ -63,6 +69,7 @@ public class PlugBehavior : MonoBehaviour
         Debug.Log(signal.ToString() + " plug plugged into " + socketBehaviorScript.signal.ToString() + " socket.");
         socketBehaviorScript.ReceivePlug();
         isPluggedIn = true;
+        cableBehaviorScript.UpdatePlugStatus(gameObject);
     }
     private void UnplugFromSocket()
     {
@@ -77,7 +84,9 @@ public class PlugBehavior : MonoBehaviour
         StartCoroutine(UnplugWaitCoroutine());
         transform.parent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         isPluggedIn = false;
-        socketBehaviorLastKnown.RemovePlug();
+        currentSocketBehaviorScript.RemovePlug();
+        currentSocketBehaviorScript = null;
+        cableBehaviorScript.TerminateSignalStatus();
     }
 
     private void DistanceBasedUnplugCheck()

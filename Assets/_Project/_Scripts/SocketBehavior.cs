@@ -11,6 +11,7 @@ public class SocketBehavior : MonoBehaviour
     public Signal signal = Signal.None; //the signal carried by this cable's signal
 
     public bool isOccupied = false;//becomes occupied when a plug slots into the socket
+    public bool isInputSocket = false;
 
     public GameObject DesiredPlugLocation;//the exact spot the plug jumps to when plugging into the socket. the plug will set its location to this game object's location
 
@@ -26,7 +27,6 @@ public class SocketBehavior : MonoBehaviour
                 return;
             }
 
-            //SocketBehavior socketBehaviorScript = collision.gameObject.GetComponent<SocketBehavior>();
             PlugBehavior plugBehaviorScript = collision.gameObject.GetComponent<PlugBehavior>();
 
             //check if socket is already occupied or plug is already plugged into something
