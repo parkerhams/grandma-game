@@ -12,6 +12,7 @@ TagManager:
   - Socket
   - Plug
   - GenericGrabbable
+  - Player Hand
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - DistanceGrabbable
   - PlayerCollision
   - Cables
-  - 
+  - Button
   - 
   - 
   - 

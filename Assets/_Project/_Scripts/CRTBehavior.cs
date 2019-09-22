@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CRTBehavior : MonoBehaviour
 {
@@ -30,7 +31,16 @@ public class CRTBehavior : MonoBehaviour
     private bool isOn = false;
     private bool hasPower = false;
     private enum Channel { Input, Channel1, Channel2};
+    [SerializeField]
     private Channel currentChannel = Channel.Channel2;
+
+    //for printing debug log messages about status to CRT canvas. removed when testing is done
+    public Text debugTextPower;
+    public Text debugTextLeftAudio;
+    public Text debugTextVideo;
+    public Text debugTextRightAudio;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +54,10 @@ public class CRTBehavior : MonoBehaviour
         checkPower();
         checkButtons();
         updateScreenState();
+        debugTextPower.text = "Power: " + powerSocket.signal.ToString();
+        debugTextLeftAudio.text = "Left audio: " + leftAudioSocket.signal.ToString();
+        debugTextVideo.text = "Video: " + videoSocket.signal.ToString();
+        debugTextRightAudio.text = "Right audio: " + rightAudioSocket.signal.ToString();
     }
     
     void updateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
@@ -122,7 +136,7 @@ public class CRTBehavior : MonoBehaviour
         }
     }
 
-    void checkButtons() //checks each of the buttons to see if they've been presse
+    void checkButtons() //checks each of the buttons to see if they've been pressed
     {
         if (hasPower) //if the TV has power plugged in
         {
