@@ -12,6 +12,8 @@ public class PlugBehavior : MonoBehaviour
 
     public bool isPluggedIn = false;
 
+    public bool isBackPlug = false;
+
     public CableBehavior cableBehaviorScript;
 
     [HideInInspector]
@@ -50,7 +52,7 @@ public class PlugBehavior : MonoBehaviour
         //plug jumps into proper location. using parent because the plug's parent is the capsule that acts as the end of the cable
         transform.parent.position = socketBehaviorScript.DesiredPlugLocation.transform.position;
         transform.parent.rotation = socketBehaviorScript.DesiredPlugLocation.transform.rotation; //need to figure out if we can easily establish a rotation for DesiredPlugLocation in the scene
-        if(transform.parent.name == "1")//if this is the front end cable, rotate it 180 degrees when plugging in so it faces the right way
+        if(isBackPlug)//if this is the back plug, rotate it 180 degrees when plugging in so it faces the right way
         {
             transform.parent.RotateAround(socketBehaviorScript.DesiredPlugLocation.transform.position, socketBehaviorScript.DesiredPlugLocation.transform.up, 180f);
         }
