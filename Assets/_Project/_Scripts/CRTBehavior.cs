@@ -26,6 +26,8 @@ public class CRTBehavior : MonoBehaviour
     private SocketBehavior leftAudioSocket;
     [SerializeField]
     private SocketBehavior rightAudioSocket;
+    [SerializeField]
+    private SocketBehavior powerVCRSocket;
 
     //Variables for keeping track of the CRT's current state
     private bool isOn = false;
@@ -36,6 +38,7 @@ public class CRTBehavior : MonoBehaviour
 
     //for printing debug log messages about status to CRT canvas. removed when testing is done
     public Text debugTextPower;
+    public Text debugVCRPower;
     public Text debugTextLeftAudio;
     public Text debugTextVideo;
     public Text debugTextRightAudio;
@@ -54,10 +57,11 @@ public class CRTBehavior : MonoBehaviour
         checkPower();
         checkButtons();
         updateScreenState();
-        debugTextPower.text = "Power: " + powerSocket.signal.ToString();
+        debugTextPower.text = "CRT Power: " + powerSocket.signal.ToString();
         debugTextLeftAudio.text = "Left audio: " + leftAudioSocket.signal.ToString();
         debugTextVideo.text = "Video: " + videoSocket.signal.ToString();
         debugTextRightAudio.text = "Right audio: " + rightAudioSocket.signal.ToString();
+        debugVCRPower.text = "VCR Power: " + powerVCRSocket.signal.ToString();
     }
     
     void updateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)

@@ -13,6 +13,7 @@ public class PlugBehavior : MonoBehaviour
     public bool isPluggedIn = false;
 
     public bool isBackPlug = false;
+    public bool canBeUnplugged = true;
 
     public CableBehavior cableBehaviorScript;
 
@@ -39,7 +40,7 @@ public class PlugBehavior : MonoBehaviour
     {
         if(isPluggedIn && currentSocketBehaviorScript)
         {
-            if(cableType == CableType.Power && currentSocketBehaviorScript.isInputSocket)
+            if(!canBeUnplugged && currentSocketBehaviorScript.isInputSocket)
             {
                 return;//power cable can't be removed from its input socket on the CRT
             }
