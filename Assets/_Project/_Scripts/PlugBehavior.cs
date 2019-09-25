@@ -40,7 +40,7 @@ public class PlugBehavior : MonoBehaviour
     {
         if(isPluggedIn && currentSocketBehaviorScript)
         {
-            if(!canBeUnplugged && currentSocketBehaviorScript.isInputSocket)
+            if(!canBeUnplugged)
             {
                 return;//power cable can't be removed from its input socket on the CRT
             }
@@ -55,7 +55,7 @@ public class PlugBehavior : MonoBehaviour
         transform.parent.rotation = socketBehaviorScript.DesiredPlugLocation.transform.rotation; //need to figure out if we can easily establish a rotation for DesiredPlugLocation in the scene
         if(isBackPlug)//if this is the back plug, rotate it 180 degrees when plugging in so it faces the right way
         {
-            transform.parent.RotateAround(socketBehaviorScript.DesiredPlugLocation.transform.position, socketBehaviorScript.DesiredPlugLocation.transform.up, 180f);
+            transform.parent.RotateAround(socketBehaviorScript.DesiredPlugLocation.transform.position, socketBehaviorScript.DesiredPlugLocation.transform.right, 180f);
         }
         currentSocketBehaviorScript = socketBehaviorScript;
         //ungrab the plug's capsule

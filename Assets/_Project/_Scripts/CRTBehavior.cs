@@ -42,6 +42,7 @@ public class CRTBehavior : MonoBehaviour
     public Text debugTextLeftAudio;
     public Text debugTextVideo;
     public Text debugTextRightAudio;
+    public Text debugButtonInfo;
 
 
 
@@ -62,6 +63,11 @@ public class CRTBehavior : MonoBehaviour
         debugTextVideo.text = "Video: " + videoSocket.signal.ToString();
         debugTextRightAudio.text = "Right audio: " + rightAudioSocket.signal.ToString();
         debugVCRPower.text = "VCR Power: " + powerVCRSocket.signal.ToString();
+    }
+
+    public void debugButtonInfoUpdate(string newText)
+    {
+        debugButtonInfo.text = newText;
     }
     
     void updateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
@@ -140,7 +146,7 @@ public class CRTBehavior : MonoBehaviour
         }
     }
 
-    void checkButtons() //checks each of the buttons to see if they've been pressed
+    public void checkButtons() //checks each of the buttons to see if they've been pressed
     {
         if (hasPower) //if the TV has power plugged in
         {

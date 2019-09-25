@@ -161,5 +161,6 @@ public class CableBehavior : MonoBehaviour
             socket2Behavior = null;
         }
         DetermineSocketTypes();
+        CommunicateSignalStatus(false);
     }
 }
