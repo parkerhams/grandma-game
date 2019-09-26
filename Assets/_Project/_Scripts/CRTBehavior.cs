@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class CRTBehavior : MonoBehaviour
 {
@@ -44,12 +45,13 @@ public class CRTBehavior : MonoBehaviour
     public Text debugTextRightAudio;
     public Text debugButtonInfo;
 
-
+    //reference to the object's video player component
+    private VideoPlayer videoPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        videoPlayer = this.GetComponent<VideoPlayer>();
     }
 
     // Update is called once per frame
@@ -96,6 +98,7 @@ public class CRTBehavior : MonoBehaviour
         if (videoSocket.signal == SocketBehavior.Signal.Video)
         {
             //Play the Video
+            videoPlayer.Play();
             Debug.Log("The Television is showing the video");
         }
         else if (videoSocket.signal == SocketBehavior.Signal.None)
