@@ -14,7 +14,7 @@ public class ButtonBehavior : MonoBehaviour
 
     bool canBePressed = true;
 
-    public float waitTime = 1f;//time to wait, in seconds, until button can be interacted with again
+    public float waitTime = .5f;//time to wait, in seconds, until button can be interacted with again
 
     //isPressed is set back to false when its corresponding function is called in the device's script to ensure that the device "hears" when it is pressed
 
@@ -57,10 +57,39 @@ public class ButtonBehavior : MonoBehaviour
                 //push button into its closer position and lock it there
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
                 isPressedInwards = true;
+                isPressed = true;
                 CRTBehaviorScript.checkButtons();
                 StartCoroutine(AfterPressWaitCoroutine());
             }
         }
+        else
+        {
+            if(canBePressed)
+            {
+                CRTBehaviorScript.debugButtonInfoUpdate("D");
+                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
+                StartCoroutine(AfterPressWaitCoroutine());
+                StartCoroutine(MoveButton());
+                isPressed = true;
+            }
+        }
+    }
+
+    IEnumerator MoveButton()
+    {
+        float timeWaited = 0;
+        float waitIncrement = .01f;
+        while(timeWaited <= waitTime)
+        {
+            timeWaited += waitIncrement;
+            //move the button a fraction of the distance back towards its normal position.
+            var posIncrement = pressedInDistance / (waitTime / waitIncrement);//with a waitTime of .5f and waitIncrement of .01, posIncrement is .04
+            var newZPos = pressedInDistance - (posIncrement * timeWaited);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - (pressedInDistance / (waitTime / waitIncrement)));
+            yield return new WaitForSeconds(.01f);
+
+        }
+        
     }
 
     IEnumerator AfterPressWaitCoroutine()
