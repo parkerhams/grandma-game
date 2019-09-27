@@ -49,8 +49,33 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        
+        _dialogue = dialogue;
         Debug.Log("Grandma started her dialogue!");
+        grandmaSentences.Clear();
+
+        foreach(string sentence in dialogue.grandmaSentences)
+        {
+            grandmaSentences.Enqueue(sentence);
+        }
+
+        DisplayNextSentence()
+    }
+
+    public void DisplayNextSentence()
+    {
+        if(grandmaSentences.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+
+        string sentence = grandmaSentences.Dequeue();
+        Debug.Log(sentence);
+    }
+
+    public void EndDialogue()
+    {
+        Debug.Log("End of conversation");
     }
 
 }
