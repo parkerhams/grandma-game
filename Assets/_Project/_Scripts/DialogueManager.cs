@@ -36,14 +36,19 @@ public class DialogueManager : MonoBehaviour
         set{}
     }
 
+    public static Dialogue _dialogue;
+
     [SerializeField]
     public TextMeshProUGUI grandmaSpeechBubble;
 
     [SerializeField]
     private Queue<string> grandmaSentences; //first in first out system, then loads new sentence from end of queue
+    [SerializeField]
+    private List<string> alreadySpokenSentences;
     private void Start()
     {
         grandmaSentences = new Queue<string>();
+        alreadySpokenSentences = new List<string>();
         _dialogueManager = this;
     }
 
@@ -55,7 +60,12 @@ public class DialogueManager : MonoBehaviour
 
         foreach(string sentence in dialogue.grandmaSentences)
         {
-            grandmaSentences.Enqueue(sentence);
+            //compare string sentence to anything that's already been spoken
+            //if it's been spoken, don't display it 
+            if(sentence == alreadySpokenSentences[alreadySpokenSentences.Count-1])
+            {
+                grandmaSentences.Enqueue(sentence);
+            }
         }
 
         DisplayNextSentence()
@@ -70,6 +80,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = grandmaSentences.Dequeue();
+        alreadySpokenSentences.Add(sentence);
         Debug.Log(sentence);
     }
 
