@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private Queue<string> grandmaSentences; //first in first out system, then loads new sentence from end of queue
+    private void Start()
     {
-        
+        grandmaSentences = new Queue<string>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartDialogue(Dialogue dialogue)
     {
-        
+        Debug.Log("Grandma started her dialogue!");
     }
+
 }

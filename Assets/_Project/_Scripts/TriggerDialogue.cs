@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class TriggerDialogue : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Dialogue grandmaDialogue;
 
-    // Update is called once per frame
-    void Update()
+    public void TriggerGrandmaDialogue()
     {
-        
+        FindObjectOfType<DialogueManager>().StartDialogue(grandmaDialogue);
     }
 }
