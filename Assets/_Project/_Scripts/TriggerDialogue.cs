@@ -10,4 +10,7 @@ public class TriggerDialogue : MonoBehaviour
     {
         FindObjectOfType<DialogueManager>().StartDialogue(grandmaDialogue);
     }
+
+    //trigger a dialogue with Grandma to begin
+            //DialogueManager.Instance.StartDialogue(GetComponent<TriggerDialogue>().grandmaDialogue);
 }

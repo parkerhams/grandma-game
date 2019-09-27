@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        DisplayNextSentence()
+        DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
