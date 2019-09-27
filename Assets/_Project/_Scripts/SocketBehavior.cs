@@ -56,6 +56,9 @@ public class SocketBehavior : MonoBehaviour
             }
             //plug it in. this currently doesn't check for the connection type; we need to decide what's allowed to be incorrectly plugged where
             plugBehaviorScript.PlugIntoSocket(this);
+
+            //trigger a dialogue with Grandma to begin
+            //DialogueManager.Instance.StartDialogue(DialogueManager.Instance._dialogue = );
         }
     }
 
