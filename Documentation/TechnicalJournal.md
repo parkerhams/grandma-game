@@ -4,6 +4,13 @@
 * Began prototyping cable system by creating a CableSpawner that loads character joint cables at runtime
 * Drafted mockups of State Machine for TV and VCR systems in correlation with physical mockups
 
+### Cable Prototyping
+Parker, 9-13-19:
+Alongside Cole and Justin, our team's lead Designer and Programmer, respectively, we began prototyping Cable Behaviors. We thought that having cable physics integrated into our project, especially in terms of gripping in VR, would be a pain and cause glitching. 
+A potential soluton that Cole suggested was that we use Coliision Layers in Unity, so that the cables don't push the player around the scene or "launch them into oblivion," as we saw when trying out character joints that anchored cables together that push the player back with great force if they're separated or stretched.
+This was the first foray into the game's mechanics to be spearheaded by Justin, whose approach to functionality and THEN form allowed to prototype quickly together on the Oculus Quest.
+Here, we created a simple CableSpawner script (later reworked and changed) to spawn cables in real time. This allowed to see the cables fall onto the ground and, while a minor feature, was really useful in allowing to see how character joints were going to behave. Seeing their physics made it easier for Justin and I to make tweaks tpo their behavior going forward. 
+
 # Week 2
 ### Cable Behavior
 I anticipated cable behavior being the most difficult part of the process, and looked through various possible solutions. Among them are:
@@ -18,3 +25,5 @@ These issues aren't severe enough to impact gameplay meaningfully, and the rest 
 Another issue that is yet to be tackled is the visual of the cable. As it stands, it's a clear enough representation of a cable, but the individual capsules are readily apparent and are less than ideal. Potential solutions included a line or tube renderer stretching across each capsule and mimicking their positions in real time.
 
 # Week 3
+### Game Features: Cables, State Machine, Implementation
+
