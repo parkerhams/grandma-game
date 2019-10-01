@@ -14,7 +14,7 @@ public class VCRBehavior : MonoBehaviour
 
     public Text debugText;
 
-    float waitTime = 2f;//when a VHS is accepted or ejected, don't accept or remove any VHS for this duration
+    float waitTime = 1.5f;//when a VHS is accepted or ejected, don't accept or remove any VHS for this duration
     bool isWaiting = false;//set to true while the VHS has recently accepted or ejected a VHS
 
     private void Start()
@@ -58,7 +58,7 @@ public class VCRBehavior : MonoBehaviour
         }
         if (!currentVHS)
         {
-            debugText.text = "no current VHS";
+            //debugText.text = "no current VHS";
             return;//can't eject a VHS if there isn't one in it
         }
         debugText.text = "eject running";
@@ -100,7 +100,7 @@ public class VCRBehavior : MonoBehaviour
     IEnumerator VHSMovementCoroutine(bool goingIn)
     {
         float timeWaited = 0;
-        float duration = 1;
+        float duration = .7f;
         float step = .6f * Time.deltaTime;
         currentVHS.layer = 0;
         MoveFlap(true);

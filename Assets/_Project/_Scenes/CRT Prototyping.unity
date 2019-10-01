@@ -1231,6 +1231,7 @@ GameObject:
   - component: {fileID: 56020394}
   - component: {fileID: 56020393}
   - component: {fileID: 56020392}
+  - component: {fileID: 56020396}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1311,6 +1312,19 @@ Transform:
   m_Father: {fileID: 839705160}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &56020396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56020391}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 2, z: 10}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1 &57677422
 GameObject:
   m_ObjectHideFlags: 0
@@ -5377,7 +5391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354663512}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03, y: 0.18, z: -0.68}
+  m_LocalPosition: {x: -0.03, y: 0.3, z: -0.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1137545178}
@@ -7358,7 +7372,7 @@ MonoBehaviour:
   cableType: 0
   signal: 4
   isPluggedIn: 0
-  isBackPlug: 0
+  isBackPlug: 1
   canBeUnplugged: 1
   cableBehaviorScript: {fileID: 779020980}
   currentSocketBehaviorScript: {fileID: 0}
@@ -13244,6 +13258,25 @@ Transform:
   m_Father: {fileID: 716327284}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &916609949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -9064309303332522412, guid: f21a07c0719b3e941ac2e1f447bceeef,
+    type: 3}
+  m_PrefabInstance: {fileID: 303806920}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &916609953
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916609949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42485535, y: 0.08135584, z: 0.25}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &928258291
 GameObject:
   m_ObjectHideFlags: 0
@@ -16356,7 +16389,7 @@ BoxCollider:
   m_GameObject: {fileID: 1137545177}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -22625,6 +22658,31 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 5016674086430574546, guid: f4e1cdc0395596f4d98315aa419671fb,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25090,6 +25148,31 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016674086501349353, guid: f4e1cdc0395596f4d98315aa419671fb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 5016674086430574546, guid: f4e1cdc0395596f4d98315aa419671fb,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -26118,7 +26201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112591054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.553, y: 0, z: 0}
+  m_LocalPosition: {x: 0.41, y: -0.143, z: 0.235}
   m_LocalScale: {x: 0.24, y: 0.045, z: 0.12}
   m_Children: []
   m_Father: {fileID: 1239310375}
@@ -30122,7 +30205,7 @@ MonoBehaviour:
   cableType: 0
   signal: 4
   isPluggedIn: 0
-  isBackPlug: 0
+  isBackPlug: 1
   canBeUnplugged: 1
   cableBehaviorScript: {fileID: 705143194843084150}
   currentSocketBehaviorScript: {fileID: 0}
