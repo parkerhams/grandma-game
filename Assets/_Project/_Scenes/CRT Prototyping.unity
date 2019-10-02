@@ -9258,6 +9258,8 @@ MonoBehaviour:
   rightAudioSocket: {fileID: 268595519}
   powerVCRSocket: {fileID: 303806928}
   videoPlayer: {fileID: 0}
+  blankScreenClip: {fileID: 0}
+  highschoolConcertClip: {fileID: 0}
   isOn: 0
   hasPower: 0
   currentChannel: 0
@@ -10710,6 +10712,9 @@ MonoBehaviour:
   rightAudioSocket: {fileID: 268595519}
   powerVCRSocket: {fileID: 303806928}
   videoPlayer: {fileID: 2105313544}
+  blankScreenClip: {fileID: 32900000, guid: 4eb42bd22b9818145bdb6451232e696b, type: 3}
+  highschoolConcertClip: {fileID: 32900000, guid: 57aca441cbc77fe4489f87c2a10c0819,
+    type: 3}
   isOn: 0
   hasPower: 0
   currentChannel: 1
@@ -26904,9 +26909,9 @@ VideoPlayer:
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
+  m_SkipOnDrop: 0
   m_Looping: 1
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
 --- !u!82 &2105313545
 AudioSource:
