@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class CRTBehavior : MonoBehaviour
 {
     //TODO: Refactor Signal as an inheritable interface
-    public enum Signal { Video, LeftAudio, RightAudio, Power, None}; //Denotes the type of signal a cable carries, including no signal
-    public enum CableType { Power, RCA};
+    public enum Signal { Video, LeftAudio, RightAudio, Power, None }; //Denotes the type of signal a cable carries, including no signal
+    public enum CableType { Power, RCA };
 
     //The VHS currently in the VCR. This is handled and updated by the VCR
     [HideInInspector]
@@ -48,12 +46,10 @@ public class CRTBehavior : MonoBehaviour
 
     [Header("CRT State")]
     //Variables for keeping track of the CRT's current state
-    [SerializeField] //temporarily serialized for testing TODO: Remove serialization
     private bool isOn = false;
-    [SerializeField] //temporarily serialized for testing TODO: Remove serialization
     private bool hasPower = false;
 
-    private enum Channel { Input, Channel1, Channel2};
+    private enum Channel { Input, Channel1, Channel2 };
     [SerializeField]
     private Channel currentChannel = Channel.Channel2;
     [SerializeField]
@@ -68,7 +64,9 @@ public class CRTBehavior : MonoBehaviour
     public Text debugTextRightAudio;
     public Text debugButtonInfo;
 
-
+    [Header("Acceptable VHS Objects")]
+    [SerializeField]
+    private GameObject BandVHSTape;
 
     // Start is called before the first frame update
     void Start()
@@ -79,9 +77,19 @@ public class CRTBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //checkPower(); TODO: Re-enable cable check for power. Disabled temporarily for debug
+        checkPower();
         checkButtons();
         updateScreenState();
+        updateDebugText();
+    }
+
+    public void debugButtonInfoUpdate(string newText)
+    {
+        debugButtonInfo.text = newText;
+    }
+
+    void updateDebugText() //updates text on the debug canvas
+    {
         debugTextPower.text = "CRT Power: " + powerSocket.signal.ToString();
         debugTextLeftAudio.text = "Left audio: " + leftAudioSocket.signal.ToString();
         debugTextVideo.text = "Video: " + videoSocket.signal.ToString();
@@ -89,12 +97,7 @@ public class CRTBehavior : MonoBehaviour
         debugVCRPower.text = "VCR Power: " + powerVCRSocket.signal.ToString();
     }
 
-    public void debugButtonInfoUpdate(string newText)
-    {
-        debugButtonInfo.text = newText;
-    }
-    
-    void updateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
+    void updateScreenState() //updates what the screen is doing based on power, channel, and input
     {
         if (hasPower && isOn)
         {
@@ -133,13 +136,13 @@ public class CRTBehavior : MonoBehaviour
             ChannelText.text = null;
         }
     }
-    void updateInputChannel()
+    void updateInputChannel() //updates what video clip is showing on the Input Channel
     {
         //Video Socket Logic
         if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
             //Play the Video
-            if(currentVHS.name == "Band_VHS")//we can add info inside VHSBehavior and reference that instead of using the name if we want
+            if (currentVHS == BandVHSTape) //we can add info inside VHSBehavior and reference that instead of using the name if we want
             {
                 //play video 1
                 if (videoPlayer.clip != highschoolConcertClip) //sees if the correct clips is already loaded, if not, plays the clip
@@ -202,7 +205,7 @@ public class CRTBehavior : MonoBehaviour
         }
     }
 
-    void checkPower()
+    void checkPower() //checks whether the CRT power cable is plugged in
     {
         if (powerSocket.signal == SocketBehavior.Signal.Power) //if the power cable is plugged 
         {
