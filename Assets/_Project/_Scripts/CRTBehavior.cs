@@ -79,9 +79,9 @@ public class CRTBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkPower(); 
-        checkButtons();
-        updateScreenState();
+        CheckPower(); 
+        CheckButtons();
+        UpdateScreenState();
         debugTextPower.text = "CRT Power: " + powerSocket.signal.ToString();
         debugTextLeftAudio.text = "Left audio: " + leftAudioSocket.signal.ToString();
         debugTextVideo.text = "Video: " + videoSocket.signal.ToString();
@@ -89,12 +89,12 @@ public class CRTBehavior : MonoBehaviour
         debugVCRPower.text = "VCR Power: " + powerVCRSocket.signal.ToString();
     }
 
-    public void debugButtonInfoUpdate(string newText)
+    public void DebugButtonInfoUpdate(string newText)
     {
         debugButtonInfo.text = newText;
     }
     
-    void updateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
+    void UpdateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
     {
         if (hasPower && isOn)
         {
@@ -102,7 +102,7 @@ public class CRTBehavior : MonoBehaviour
             {
                 case Channel.Input:
                     ChannelText.text = "INPUT";
-                    updateInputChannel();
+                    UpdateInputChannel();
                     break;
                 case Channel.Channel1:
                     ChannelText.text = "CHANNEL-1";
@@ -134,7 +134,7 @@ public class CRTBehavior : MonoBehaviour
             videoPlayer.Stop(); //stops the video if there is no power
         }
     }
-    void updateInputChannel()
+    void UpdateInputChannel()
     {
         //Video Socket Logic
         if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
@@ -203,7 +203,7 @@ public class CRTBehavior : MonoBehaviour
         }
     }
 
-    void checkPower()
+    void CheckPower()
     {
         if (powerSocket.signal == SocketBehavior.Signal.Power) //if the power cable is plugged 
         {
@@ -215,7 +215,7 @@ public class CRTBehavior : MonoBehaviour
         }
     }
 
-    public void checkButtons() //checks each of the buttons to see if they've been pressed
+    public void CheckButtons() //checks each of the buttons to see if they've been pressed
     {
         if (hasPower) //if the TV has power plugged in
         {
