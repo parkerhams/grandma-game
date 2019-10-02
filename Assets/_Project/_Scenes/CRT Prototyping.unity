@@ -3637,7 +3637,7 @@ GameObject:
   - component: {fileID: 222036847}
   - component: {fileID: 222036846}
   m_Layer: 8
-  m_Name: VHS2
+  m_Name: BandVHS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10207,8 +10207,6 @@ MonoBehaviour:
   highschoolConcertClip: {fileID: 32900000, guid: 57aca441cbc77fe4489f87c2a10c0819,
     type: 3}
   BandVHSTape: {fileID: 222036840}
-  isOn: 0
-  hasPower: 0
   currentChannel: 1
   ChannelText: {fileID: 366654351}
   debugTextPower: {fileID: 679574485}

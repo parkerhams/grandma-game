@@ -147,18 +147,18 @@ public class CRTBehavior : MonoBehaviour
         //Video Socket Logic
         if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
+            ChannelText.text = "PLAY";
             //Play the Video
-            if(currentVHS == BandVHSTape)//we can add info inside VHSBehavior and reference that instead of using the name if we want
+            if (currentVHS == BandVHSTape)//we can add info inside VHSBehavior and reference that instead of using the name if we want
             {
                 //play video 1
-                if (videoPlayer.clip != highschoolConcertClip) //sees if the correct clips is already loaded, if not, plays the clip
+                if (videoPlayer.clip != highschoolConcertClip) //sees if the correct clip is already loaded, if not, plays the clip
                 {
                     videoPlayer.Stop();
                     videoPlayer.clip = highschoolConcertClip;
                     videoPlayer.Play();
                 }
             }
-            Debug.Log("The Television is showing the video");
         }
         else if (videoSocket.signal == SocketBehavior.Signal.Video && !currentVHS)
         {
