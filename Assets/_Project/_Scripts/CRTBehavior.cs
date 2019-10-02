@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class CRTBehavior : MonoBehaviour
 {
@@ -33,12 +34,20 @@ public class CRTBehavior : MonoBehaviour
     [SerializeField]
     private SocketBehavior powerVCRSocket;
 
+    //Public Reference to the CRT Screen's Video Player (could be accessed with VHS behaviors to change video being played)
+    public VideoPlayer videoPlayer;
+
     //Variables for keeping track of the CRT's current state
+    [SerializeField] //temporarily serialized for testing TODO: Remove serialization
     private bool isOn = false;
+    [SerializeField] //temporarily serialized for testing TODO: Remove serialization
     private bool hasPower = false;
+
     private enum Channel { Input, Channel1, Channel2};
     [SerializeField]
     private Channel currentChannel = Channel.Channel2;
+    [SerializeField]
+    private Text ChannelText; //text element for printing the channel over the screen
 
     //for printing debug log messages about status to CRT canvas. removed when testing is done
     public Text debugTextPower;
@@ -59,7 +68,7 @@ public class CRTBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkPower();
+        //checkPower(); TODO: Re-enable cable check for power. Disabled temporarily for debug
         checkButtons();
         updateScreenState();
         debugTextPower.text = "CRT Power: " + powerSocket.signal.ToString();
@@ -81,17 +90,24 @@ public class CRTBehavior : MonoBehaviour
             switch (currentChannel)
             {
                 case Channel.Input:
+                    ChannelText.text = "INPUT";
                     updateInputChannel();
                     break;
                 case Channel.Channel1:
+                    ChannelText.text = "CHANNEL-1";
                     //Display Static with channel number
                     break;
                 case Channel.Channel2:
+                    ChannelText.text = "CHANNEL-2";
                     //Display Static with channel number
                     break;
                 default:
                     break;
             }
+        }
+        else
+        {
+            ChannelText.text = null;
         }
     }
     void updateInputChannel()
