@@ -4871,31 +4871,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VCR
       objectReference: {fileID: 0}
-    - target: {fileID: -6236743471014415788, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayButton
-      objectReference: {fileID: 0}
-    - target: {fileID: -7455685359145607950, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Name
-      value: VCRPowerSocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 1135244083771908629, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Name
-      value: PowerButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 5984388485589536855, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Name
-      value: VideoSocket
-      objectReference: {fileID: 0}
-    - target: {fileID: -7114577863419070732, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Name
-      value: RightAudioSocket
-      objectReference: {fileID: 0}
     - target: {fileID: -9064309303332522412, guid: f21a07c0719b3e941ac2e1f447bceeef,
         type: 3}
       propertyPath: m_Name
@@ -4906,6 +4881,31 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -9050095477880005426, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: -7996341430962460841, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
+    - target: {fileID: -7455685359145607950, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Name
+      value: VCRPowerSocket
+      objectReference: {fileID: 0}
+    - target: {fileID: -7114577863419070732, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Name
+      value: RightAudioSocket
+      objectReference: {fileID: 0}
+    - target: {fileID: -6236743471014415788, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayButton
+      objectReference: {fileID: 0}
     - target: {fileID: -4690061960754922341, guid: f21a07c0719b3e941ac2e1f447bceeef,
         type: 3}
       propertyPath: m_Name
@@ -4915,11 +4915,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460770153449642512, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Name
-      value: Pause Button
       objectReference: {fileID: 0}
     - target: {fileID: -4326761520034251805, guid: f21a07c0719b3e941ac2e1f447bceeef,
         type: 3}
@@ -4996,66 +4991,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1401006494575068746, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: -9050095477880005426, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 2618675992267900371, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 8662461212079705727, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 28dbb47c31d27b14a99d93ca670e787f, type: 2}
-    - target: {fileID: 6306971017694268109, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
-    - target: {fileID: -135972579220929086, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
-    - target: {fileID: 5218053877760515484, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
     - target: {fileID: -2942645444021431959, guid: f21a07c0719b3e941ac2e1f447bceeef,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 28dbb47c31d27b14a99d93ca670e787f, type: 2}
-    - target: {fileID: -7996341430962460841, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
-    - target: {fileID: 2406916848136235212, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
-    - target: {fileID: 1318460613128657674, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
-    - target: {fileID: -1043123955778730730, guid: f21a07c0719b3e941ac2e1f447bceeef,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
     - target: {fileID: -1270548668203460173, guid: f21a07c0719b3e941ac2e1f447bceeef,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -5081,6 +5021,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1043123955778730730, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
+    - target: {fileID: -135972579220929086, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
+    - target: {fileID: 1135244083771908629, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Name
+      value: PowerButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318460613128657674, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
+    - target: {fileID: 1401006494575068746, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2406916848136235212, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
+    - target: {fileID: 2618675992267900371, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460770153449642512, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Name
+      value: Pause Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218053877760515484, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
+    - target: {fileID: 5984388485589536855, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Name
+      value: VideoSocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306971017694268109, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9661cfa1df4b305408bd699ce90007c1, type: 2}
+    - target: {fileID: 8662461212079705727, guid: f21a07c0719b3e941ac2e1f447bceeef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 28dbb47c31d27b14a99d93ca670e787f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f21a07c0719b3e941ac2e1f447bceeef, type: 3}
 --- !u!1 &303806921 stripped
@@ -10703,9 +10703,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentVHS: {fileID: 0}
-  powerButton: {fileID: 19053281}
-  channelUpButton: {fileID: 2076397420}
-  channelDownButton: {fileID: 659252845}
+  powerButton: {fileID: 724318343}
+  channelUpButton: {fileID: 724318341}
+  channelDownButton: {fileID: 724318340}
   powerSocket: {fileID: 1137545180}
   videoSocket: {fileID: 1966434670}
   leftAudioSocket: {fileID: 984155588}
