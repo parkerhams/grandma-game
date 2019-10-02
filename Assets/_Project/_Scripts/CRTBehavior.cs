@@ -9,6 +9,10 @@ public class CRTBehavior : MonoBehaviour
     public enum Signal { Video, LeftAudio, RightAudio, Power, None}; //Denotes the type of signal a cable carries, including no signal
     public enum CableType { Power, RCA};
 
+    //The VHS currently in the VCR. This is handled and updated by the VCR
+    [HideInInspector]
+    public GameObject currentVHS;
+
     //Serialized references to the Device's Buttons
     [SerializeField]
     private ButtonBehavior powerButton;
@@ -93,10 +97,18 @@ public class CRTBehavior : MonoBehaviour
     void updateInputChannel()
     {
         //Video Socket Logic
-        if (videoSocket.signal == SocketBehavior.Signal.Video)
+        if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
             //Play the Video
+            if(currentVHS.name == "VHS1")//we can add info inside VHSBehavior and reference that instead of using the name if we want
+            {
+                //play video 1
+            }
             Debug.Log("The Television is showing the video");
+        }
+        else if (videoSocket.signal == SocketBehavior.Signal.Video && !currentVHS)
+        {
+            //Display Blank Input Screen (Bluescreen w/ VCR "INPUT" Title
         }
         else if (videoSocket.signal == SocketBehavior.Signal.None)
         {

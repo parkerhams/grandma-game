@@ -23,7 +23,9 @@ using UnityEngine;
 public class OVRGrabbable : MonoBehaviour
 {
     [SerializeField]
-    protected bool m_allowOffhandGrab = true;
+    public bool m_allowOffhandGrab = true;
+    [SerializeField]
+    public bool m_allowGrab = true;
     [SerializeField]
     protected bool m_snapPosition = false;
     [SerializeField]
@@ -44,10 +46,14 @@ public class OVRGrabbable : MonoBehaviour
     {
         get { return m_allowOffhandGrab; }
     }
+    public bool allowGrab
+    {
+        get { return m_allowGrab; }
+    }
 
-	/// <summary>
-	/// If true, the object is currently grabbed.
-	/// </summary>
+    /// <summary>
+    /// If true, the object is currently grabbed.
+    /// </summary>
     public bool isGrabbed
     {
         get { return m_grabbedBy != null; }

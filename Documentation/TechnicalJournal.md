@@ -27,3 +27,48 @@ Another issue that is yet to be tackled is the visual of the cable. As it stands
 # Week 3
 ### Game Features: Cables, State Machine, Implementation
 
+The focus this week was getting the logic behind what the CRT should emit (video and audio) based on which cables are properly connected. For example, if the power is plugged in and an RCA cable is connected to the VCR's video socket and the CRT's video socket, then the CRT would display the video but no audio. Since there were so many permutations for how the logic should play out, I wrote out a plan for how the code should operate:
+```
+Both plugs on each end of cable have PlugBehavior script 
+Sockets have SocketBehavior script 
+Cables have CableBehavior script 
+CRT has CRTBehavior script 
+
+When a plug enters a socket, it pulls info from the SocketBehavior to figure out what it is (input on CRT or signal on VCR).
+It sends that info to its cable's CableBehavior.
+If CableBehavior learns it has an input from one plug and signal from the other plug, it tells the SocketBehavior on the input socket
+what kind of signal is being provided. 
+CRTBehavior listens to these input sockets to decide if any actions need to occur based on what signal they're getting and what socket
+they are. 
+
+ 
+
+This means that each plug only talks to its parent cable and the socket it's in, the parent cable only receives info from its plugs and
+tells the input socket about the signal provided, and the CRT only knows the status of the input sockets (and the CRT's buttons). Each
+time an input socket's signal status changes (gained or lost a signal), it tells the CRT to run through its possible outcomes and pick
+the correct one. 
+
+Other notes: 
+The power plug is special, and is already plugged into the Power Input and can't be unplugged from it. Its only interaction is plugging the other side into Power Signal (wall socket). 
+Power button is either on or off. 
+Channel button cycles the CRT through 3 modes: Input, Channel 1, Channel 2. 
+
+Example: 
+CRT is told that the power button is pressed in. 
+CRT is told that the channel button is on Input Mode. 
+CRT is told that Power Input is receiving Power Signal. 
+CRT is told that Left Audio Input is receiving Left Audio Signal. 
+CRT is told that Right Audio Input is receiving Video Signal. 
+CRT is told that Video Input is receiving nothing. 
+With this information, CRT runs through its possible outcomes and decides to play cryptic audio. This is because although left audio is plugged in correctly, video signal is plugged into right audio socket, which provides the "cryptic audio" outcome and is a higher priority outcome. 
+
+Possible "error" cases where things are plugged in incorrectly, but the CRT provides a result: 
+- If you plug a Video signal into an Audio Input, the television plays cryptic audio 
+- if you plug an Audio signal into a Video Input, the video plays static  
+- if you switch the left and right audio signals, the audio plays BACKWARDS  
+- if video is connected but not audio, the video is muted
+- if the audio is connected but no video, the sound plays without visuals 
+
+```
+
+This plan helped me actually design the logic in more ways than one; in addition to being able to reference it and keep a consistent design (and share that design with team members), I also ended up rewriting pieces of the plan several times before I ever began implementing it. This is because being able to see the process mapped out in the plan helped me recognize flaws in the logic and rectify them before I ever had to spend time creating them. As a result, once I actually designed the system in code, it ran exactly as intended on the first attempt!
