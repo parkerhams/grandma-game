@@ -10591,6 +10591,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CRT
       objectReference: {fileID: 0}
+    - target: {fileID: -8933801212004612612, guid: ed5df38e21a2bcb47ac32b20548784b3,
+        type: 3}
+      propertyPath: m_Name
+      value: TV_ChannelUpBtn
+      objectReference: {fileID: 0}
     - target: {fileID: -7248157349677390288, guid: ed5df38e21a2bcb47ac32b20548784b3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10601,6 +10606,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 11e4d2f629c664a4891bfc24873780a0, type: 2}
+    - target: {fileID: -5148385724905502361, guid: ed5df38e21a2bcb47ac32b20548784b3,
+        type: 3}
+      propertyPath: m_Name
+      value: TV_ChannelDownBtn
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ed5df38e21a2bcb47ac32b20548784b3,
         type: 3}
       propertyPath: m_LocalPosition.x
