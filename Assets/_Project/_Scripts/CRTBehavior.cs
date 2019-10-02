@@ -139,7 +139,7 @@ public class CRTBehavior : MonoBehaviour
         if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
             //Play the Video
-            if(currentVHS.name == "VHS1")//we can add info inside VHSBehavior and reference that instead of using the name if we want
+            if(currentVHS.name == "Band_VHS")//we can add info inside VHSBehavior and reference that instead of using the name if we want
             {
                 //play video 1
                 if (videoPlayer.clip != highschoolConcertClip) //sees if the correct clips is already loaded, if not, plays the clip
