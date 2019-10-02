@@ -7,6 +7,8 @@ public class VCRBehavior : MonoBehaviour
 {
     GameObject currentVHS;//the VHS that's currently inside the VCR
 
+    public CRTBehavior CRTBehaviorScript;
+
     public GameObject flapUp;//having two separate game objects for the flap in its different positions was easier than rotating/moving it
     public GameObject flapDown;
     public GameObject entryPosition;//where the VHS will jump to when it's getting ready to move inside the VCR
@@ -20,6 +22,7 @@ public class VCRBehavior : MonoBehaviour
     private void Start()
     {
         flapUp.SetActive(false);//if this flap isn't disabled in scene view, disable it now
+        debugText.text = "No VHS";
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,10 +53,8 @@ public class VCRBehavior : MonoBehaviour
 
     void EjectVHS()
     {
-        debugText.text = "eject attempted";
         if (isWaiting)
         {
-            debugText.text = "still waiting";
             return;
         }
         if (!currentVHS)
@@ -61,16 +62,13 @@ public class VCRBehavior : MonoBehaviour
             //debugText.text = "no current VHS";
             return;//can't eject a VHS if there isn't one in it
         }
-        debugText.text = "eject running";
         StartCoroutine(VHSWaitCoroutine());
         StartCoroutine(VHSMovementCoroutine(false));
-        debugText.text = "eject ran";
 
     }
 
     void AcceptVHS(GameObject VHS)
     {
-        debugText.text = "accept attempted";
         if (currentVHS)
         {
             return;//can't take a VHS if there's already one in it
@@ -79,7 +77,6 @@ public class VCRBehavior : MonoBehaviour
         {
             return;
         }
-        debugText.text = "accept running";
         //ungrab VHS
         if (VHS.GetComponent<OVRGrabbable>().isGrabbed)
         {
@@ -93,7 +90,6 @@ public class VCRBehavior : MonoBehaviour
         StartCoroutine(VHSWaitCoroutine());
         currentVHS = VHS;
         StartCoroutine(VHSMovementCoroutine(true));
-        debugText.text = "accept ran";
 
     }
 
@@ -102,12 +98,11 @@ public class VCRBehavior : MonoBehaviour
         float timeWaited = 0;
         float duration = .7f;
         float step = .6f * Time.deltaTime;
-        currentVHS.layer = 0;
+        currentVHS.GetComponent<OVRGrabbable>().m_allowGrab = false;
         MoveFlap(true);
         while(timeWaited < duration)
         {
             timeWaited += Time.deltaTime;
-            debugText.text = timeWaited.ToString();
             if(goingIn)
             {
                 currentVHS.transform.position = Vector3.MoveTowards(currentVHS.transform.position, insidePosition.transform.position, step);
@@ -122,16 +117,19 @@ public class VCRBehavior : MonoBehaviour
         if(goingIn)
         {
             currentVHS.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            CRTBehaviorScript.currentVHS = currentVHS;
+            debugText.text = currentVHS.name;
         }
         else
         {
             currentVHS.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             //re-enable grabbing of VHS
-            currentVHS.layer = 8;
+            currentVHS.GetComponent<OVRGrabbable>().m_allowGrab = false;
             Rigidbody rb = currentVHS.GetComponent<Rigidbody>();
             rb.isKinematic = false;
-            debugText.text = currentVHS + " should be grabbable";
             currentVHS = null;
+            CRTBehaviorScript.currentVHS = null;
+            debugText.text = "VHS removed";
         }
     }
 

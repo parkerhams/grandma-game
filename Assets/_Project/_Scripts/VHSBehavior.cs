@@ -18,7 +18,6 @@ public class VHSBehavior : MonoBehaviour
 
     void debugGrabbability()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.isKinematic = true;
+
     }
 }
