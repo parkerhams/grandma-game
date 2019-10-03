@@ -110,6 +110,14 @@ public class CRTBehavior : MonoBehaviour
         debugTextRightAudio.text = "Right audio: " + rightAudioSocket.signal.ToString();
         debugVCRPower.text = "VCR Power: " + powerVCRSocket.signal.ToString();
     }
+
+    void PlayIfNotPlaying()
+    {
+        if (!videoPlayer.isPlaying)
+        {
+            videoPlayer.Play();
+        }
+    }
     
     void UpdateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
     {
@@ -130,10 +138,7 @@ public class CRTBehavior : MonoBehaviour
                         videoPlayer.clip = blankScreenClip;
                         videoPlayer.Play();
                     }
-                    if (!videoPlayer.isPlaying)
-                    {
-                        videoPlayer.Play();
-                    }
+                    PlayIfNotPlaying();
                     break;
                 case Channel.Channel2:
                     ChannelText.text = "CHANNEL-2";
@@ -144,10 +149,7 @@ public class CRTBehavior : MonoBehaviour
                         videoPlayer.clip = blankScreenClip;
                         videoPlayer.Play();
                     }
-                    if (!videoPlayer.isPlaying)
-                    {
-                        videoPlayer.Play();
-                    }
+                    PlayIfNotPlaying();
                     break;
                 default:
                     break;
@@ -171,10 +173,7 @@ public class CRTBehavior : MonoBehaviour
                 videoPlayer.clip = blankScreenClip;
                 videoPlayer.Play();
             }
-            if (!videoPlayer.isPlaying)
-            {
-                videoPlayer.Play();
-            }
+            PlayIfNotPlaying();
         }
         //Video Socket Logic
         else if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
@@ -190,10 +189,7 @@ public class CRTBehavior : MonoBehaviour
                     videoPlayer.clip = highschoolConcertClip;
                     videoPlayer.Play();
                 }
-                if (!videoPlayer.isPlaying)
-                {
-                    videoPlayer.Play();
-                }
+                PlayIfNotPlaying();
             }
         }
         else if (videoSocket.signal == SocketBehavior.Signal.Video && !currentVHS)
@@ -205,10 +201,7 @@ public class CRTBehavior : MonoBehaviour
                 videoPlayer.clip = blankScreenClip;
                 videoPlayer.Play();
             }
-            if (!videoPlayer.isPlaying)
-            {
-                videoPlayer.Play();
-            }
+            PlayIfNotPlaying();
         }
         else if (videoSocket.signal == SocketBehavior.Signal.None)
         {
@@ -219,10 +212,7 @@ public class CRTBehavior : MonoBehaviour
                 videoPlayer.clip = blankScreenClip;
                 videoPlayer.Play();
             }
-            if (!videoPlayer.isPlaying)
-            {
-                videoPlayer.Play();
-            }
+            PlayIfNotPlaying();
         }
         else //Audio has been plugged into the video socket
         {
@@ -308,6 +298,7 @@ public class CRTBehavior : MonoBehaviour
                 if (isOn) //check to see if that TV is on
                 {
                     currentChannel++; //Turn the channel up
+                    videoPlayer.Stop();
                     if (currentChannel >= Channel.Channel2)
                     {
                         currentChannel = Channel.Channel2;
@@ -323,6 +314,7 @@ public class CRTBehavior : MonoBehaviour
                     if (currentChannel <= Channel.Input)
                     {
                         currentChannel = Channel.Input;
+                        videoPlayer.Stop();
                     }
                 }
             }

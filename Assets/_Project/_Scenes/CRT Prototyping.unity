@@ -10309,7 +10309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPressed: 0
-  sticksInWhenPressed: 0
+  sticksInWhenPressed: 1
   isPressedInwards: 0
   pressedInDistance: 0.02
   CRTBehaviorScript: {fileID: 724318335}
@@ -18920,7 +18920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPressed: 0
-  sticksInWhenPressed: 0
+  sticksInWhenPressed: 1
   isPressedInwards: 0
   pressedInDistance: 0.02
   CRTBehaviorScript: {fileID: 724318335}
