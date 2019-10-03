@@ -13,7 +13,6 @@ public class ButtonBehavior : MonoBehaviour
     public CRTBehavior CRTBehaviorScript;
 
     public TriggerDialogue buttonTriggerDialogue;
-
     bool canBePressed = true;
 
     public float waitTime = .5f;//time to wait, in seconds, until button can be interacted with again
@@ -49,7 +48,6 @@ public class ButtonBehavior : MonoBehaviour
         CRTBehaviorScript.DebugButtonInfoUpdate("A");
         if(sticksInWhenPressed)//if it's a power button, behavior should be slightly different: lock into place when pressed in, or unlock when pressed again
         {
-            buttonTriggerDialogue.TriggerGrandmaDialogue();
             CRTBehaviorScript.DebugButtonInfoUpdate("B");
             if (isPressedInwards)
             {

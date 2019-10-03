@@ -43,6 +43,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField]
     private Queue<string> grandmaSentences; //first in first out system, then loads new sentence from end of queue
+
     [SerializeField]
     private List<string> alreadySpokenSentences;
 
@@ -54,22 +55,24 @@ public class DialogueManager : MonoBehaviour
         grandmaSentences = new Queue<string>();
         alreadySpokenSentences = new List<string>();
         _dialogueManager = this;
+
+        _dialogue.grandmaSentences = new string[3]{"Hi there! This should be typing","*kiss*","Fuck this took so long"};
+        StartDialogue(_dialogue);
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         _dialogue = dialogue;
-        Debug.Log("Grandma started her dialogue!");
         grandmaSentences.Clear();
 
         foreach(string sentence in dialogue.grandmaSentences)
         {
             //compare string sentence to anything that's already been spoken
             //if it's been spoken, don't display it 
-            if(sentence == alreadySpokenSentences[alreadySpokenSentences.Count-1])
-            {
-                grandmaSentences.Enqueue(sentence);
-            }
+            //if(sentence == alreadySpokenSentences[alreadySpokenSentences.Count-1])
+            //{
+            grandmaSentences.Enqueue(sentence);
+            //}
         }
 
         DisplayNextSentence();
