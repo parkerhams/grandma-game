@@ -4579,7 +4579,6 @@ GameObject:
   - component: {fileID: 268595518}
   - component: {fileID: 268595517}
   - component: {fileID: 268595519}
-  - component: {fileID: 268595521}
   - component: {fileID: 268595520}
   m_Layer: 0
   m_Name: Right Audio Socket Trigger
@@ -4678,25 +4677,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &268595521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268595515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6812ab6ba4ea6d4f88f553a9392b8a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grandmaDialogue:
-    grandmaSentences:
-    - 
-    - 
-    - 
-    - 
-    name: Grandma
 --- !u!1001 &303806920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10630,6 +10610,40 @@ VideoPlayer:
   m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
+--- !u!114 &724318345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724318334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6812ab6ba4ea6d4f88f553a9392b8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grandmaDialogue:
+    grandmaSentences:
+    - Oh I love this one!
+    - You're so talented, you always have been!
+    - Your grandfather would have loved to see you.
+    name: Grandma
+--- !u!114 &724318346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724318339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6812ab6ba4ea6d4f88f553a9392b8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grandmaDialogue:
+    grandmaSentences:
+    - Hm, that's the one that makes it go on, right?
+    name: Grandma
 --- !u!65 &724318356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22829,7 +22843,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  grandmaSpeechBubble: {fileID: 0}
 --- !u!1001 &1794369280
 PrefabInstance:
   m_ObjectHideFlags: 0

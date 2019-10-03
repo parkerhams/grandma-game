@@ -72,11 +72,14 @@ public class CRTBehavior : MonoBehaviour
     public Text debugButtonInfo;
 
 
+    private TriggerDialogue crtDialogueTrigger;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        crtDialogueTrigger = this.GetComponent<TriggerDialogue>();
     }
 
     // Update is called once per frame
