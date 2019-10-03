@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class CRTBehavior : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class CRTBehavior : MonoBehaviour
     [HideInInspector]
     public GameObject currentVHS;
 
+    [Header("Buttons")]
     //Serialized references to the Device's Buttons
     [SerializeField]
     private ButtonBehavior powerButton;
@@ -21,6 +23,7 @@ public class CRTBehavior : MonoBehaviour
     [SerializeField]
     private ButtonBehavior channelDownButton;
 
+    [Header("Sockets")]
     //Serialized references to the Device's Sockets
     [SerializeField]
     private SocketBehavior powerSocket;
@@ -33,13 +36,33 @@ public class CRTBehavior : MonoBehaviour
     [SerializeField]
     private SocketBehavior powerVCRSocket;
 
+
+    [Header("Video Player")]
+    //Public Reference to the CRT Screen's Video Player (could be accessed with VHS behaviors to change video being played)
+    public VideoPlayer videoPlayer;
+    //serialized references to the video clips playable by the CRT
+    [SerializeField]
+    private VideoClip blankScreenClip;
+    [SerializeField]
+    private VideoClip highschoolConcertClip;
+
+    [Header("VHS Tape Objects")]
+    [SerializeField]
+    private GameObject BandVHSTape;
+
     //Variables for keeping track of the CRT's current state
     private bool isOn = false;
     private bool hasPower = false;
+
     private enum Channel { Input, Channel1, Channel2};
+
+    [Header("CRT State")]
     [SerializeField]
     private Channel currentChannel = Channel.Channel2;
+    [SerializeField]
+    private Text ChannelText; //text element for printing the channel over the screen
 
+    [Header("Debug Text")]
     //for printing debug log messages about status to CRT canvas. removed when testing is done
     public Text debugTextPower;
     public Text debugVCRPower;
@@ -59,61 +82,107 @@ public class CRTBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkPower();
-        checkButtons();
-        updateScreenState();
+        CheckPower(); 
+        CheckButtons();
+        UpdateScreenState();
+        UpdateDebugText();
+    }
+
+    public void DebugButtonInfoUpdate(string newText)
+    {
+        debugButtonInfo.text = newText;
+    }
+
+    private void UpdateDebugText()
+    {
         debugTextPower.text = "CRT Power: " + powerSocket.signal.ToString();
         debugTextLeftAudio.text = "Left audio: " + leftAudioSocket.signal.ToString();
         debugTextVideo.text = "Video: " + videoSocket.signal.ToString();
         debugTextRightAudio.text = "Right audio: " + rightAudioSocket.signal.ToString();
         debugVCRPower.text = "VCR Power: " + powerVCRSocket.signal.ToString();
     }
-
-    public void debugButtonInfoUpdate(string newText)
-    {
-        debugButtonInfo.text = newText;
-    }
     
-    void updateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
+    void UpdateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
     {
         if (hasPower && isOn)
         {
             switch (currentChannel)
             {
                 case Channel.Input:
-                    updateInputChannel();
+                    ChannelText.text = "INPUT";
+                    UpdateInputChannel();
                     break;
                 case Channel.Channel1:
-                    //Display Static with channel number
+                    ChannelText.text = "CHANNEL-1";
+                    //show blank screen
+                    if (videoPlayer.clip != blankScreenClip) //sees if the correct clip is already loaded, if not, changes and plays the clip
+                    {
+                        videoPlayer.Stop();
+                        videoPlayer.clip = blankScreenClip;
+                        videoPlayer.Play();
+                    }
                     break;
                 case Channel.Channel2:
-                    //Display Static with channel number
+                    ChannelText.text = "CHANNEL-2";
+                    //show blank screen
+                    if (videoPlayer.clip != blankScreenClip) //sees if the correct clip is already loaded, if not, changes and plays the clip
+                    {
+                        videoPlayer.Stop();
+                        videoPlayer.clip = blankScreenClip;
+                        videoPlayer.Play();
+                    }
                     break;
                 default:
                     break;
             }
         }
+        else
+        {
+            ChannelText.text = null;
+            videoPlayer.Stop(); //stops the video if there is no power
+        }
     }
-    void updateInputChannel()
+    void UpdateInputChannel()
     {
         //Video Socket Logic
         if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
+            ChannelText.text = "PLAY";
             //Play the Video
-            if(currentVHS.name == "VHS1")//we can add info inside VHSBehavior and reference that instead of using the name if we want
+            if (currentVHS == BandVHSTape)//we can add info inside VHSBehavior and reference that instead of using the name if we want
             {
                 //play video 1
+                if (videoPlayer.clip != highschoolConcertClip) //sees if the correct clip is already loaded, if not, plays the clip
+                {
+                    videoPlayer.Stop();
+                    videoPlayer.clip = highschoolConcertClip;
+                    videoPlayer.Play();
+                }
+                if (!videoPlayer.isPlaying)
+                {
+                    videoPlayer.Play();
+                }
             }
-            Debug.Log("The Television is showing the video");
         }
         else if (videoSocket.signal == SocketBehavior.Signal.Video && !currentVHS)
         {
-            //Display Blank Input Screen (Bluescreen w/ VCR "INPUT" Title
+            //play video 1
+            if (videoPlayer.clip != blankScreenClip) //sees if the correct clip is already loaded, if not, changes and plays the clip
+            {
+                videoPlayer.Stop();
+                videoPlayer.clip = blankScreenClip;
+                videoPlayer.Play();
+            }
         }
         else if (videoSocket.signal == SocketBehavior.Signal.None)
         {
-            //Display Blank Input Screen (Bluescreen w/ VCR "INPUT" Title
-            Debug.Log("The Television is showing Nothing");
+            //play video 1
+            if (videoPlayer.clip != blankScreenClip) //sees if the correct clip is already loaded, if not, changes and plays the clip
+            {
+                videoPlayer.Stop();
+                videoPlayer.clip = blankScreenClip;
+                videoPlayer.Play();
+            }
         }
         else //Audio has been plugged into the video socket
         {
@@ -146,7 +215,7 @@ public class CRTBehavior : MonoBehaviour
         }
     }
 
-    void checkPower()
+    void CheckPower()
     {
         if (powerSocket.signal == SocketBehavior.Signal.Power) //if the power cable is plugged 
         {
@@ -158,7 +227,7 @@ public class CRTBehavior : MonoBehaviour
         }
     }
 
-    public void checkButtons() //checks each of the buttons to see if they've been pressed
+    public void CheckButtons() //checks each of the buttons to see if they've been pressed
     {
         if (hasPower) //if the TV has power plugged in
         {
