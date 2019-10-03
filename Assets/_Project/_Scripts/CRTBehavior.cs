@@ -158,6 +158,10 @@ public class CRTBehavior : MonoBehaviour
                     videoPlayer.clip = highschoolConcertClip;
                     videoPlayer.Play();
                 }
+                if (!videoPlayer.isPlaying)
+                {
+                    videoPlayer.Play();
+                }
             }
         }
         else if (videoSocket.signal == SocketBehavior.Signal.Video && !currentVHS)
