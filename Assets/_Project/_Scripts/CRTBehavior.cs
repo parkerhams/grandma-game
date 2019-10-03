@@ -76,7 +76,7 @@ public class CRTBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -106,6 +106,8 @@ public class CRTBehavior : MonoBehaviour
     {
         if (hasPower && isOn)
         {
+            
+
             switch (currentChannel)
             {
                 case Channel.Input:

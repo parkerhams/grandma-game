@@ -45,6 +45,10 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> grandmaSentences; //first in first out system, then loads new sentence from end of queue
     [SerializeField]
     private List<string> alreadySpokenSentences;
+
+    public delegate void OnTVPowerCablePluggedIn();
+	public event OnTVPowerCablePluggedIn OnTVPowerOn;
+
     private void Start()
     {
         grandmaSentences = new Queue<string>();
@@ -82,11 +86,24 @@ public class DialogueManager : MonoBehaviour
         string sentence = grandmaSentences.Dequeue();
         alreadySpokenSentences.Add(sentence);
         Debug.Log(sentence);
+
+        StopAllCoroutines();
+		StartCoroutine(TypeSentence(sentence));
     }
 
     public void EndDialogue()
     {
         Debug.Log("End of conversation");
     }
+
+    private IEnumerator TypeSentence (string sentence)
+	{
+		grandmaSpeechBubble.text = "";
+		foreach (char letter in sentence.ToCharArray())
+		{
+			grandmaSpeechBubble.text += letter;
+			yield return null;
+		}
+	}
 
 }
