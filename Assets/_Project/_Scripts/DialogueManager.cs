@@ -46,8 +46,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private List<string> alreadySpokenSentences;
 
-    public delegate void OnTVPowerCablePluggedIn();
-	public event OnTVPowerCablePluggedIn OnTVPowerOn;
+    public delegate void OnTVPowerHasPower();
+	public event OnTVPowerHasPower OnTVPowerOn;
 
     private void Start()
     {
@@ -96,7 +96,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End of conversation");
     }
 
-    private IEnumerator TypeSentence (string sentence)
+    public IEnumerator TypeSentence (string sentence)
 	{
 		grandmaSpeechBubble.text = "";
 		foreach (char letter in sentence.ToCharArray())
