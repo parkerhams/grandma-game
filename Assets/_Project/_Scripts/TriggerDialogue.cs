@@ -12,5 +12,5 @@ public class TriggerDialogue : MonoBehaviour
     }
 
     //trigger a dialogue with Grandma to begin
-            //DialogueManager.Instance.StartDialogue(GetComponent<TriggerDialogue>().grandmaDialogue);
+    //DialogueManager.Instance.StartDialogue(GetComponent<TriggerDialogue>().grandmaDialogue);
 }
