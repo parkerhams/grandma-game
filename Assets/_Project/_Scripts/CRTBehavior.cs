@@ -23,6 +23,13 @@ public class CRTBehavior : MonoBehaviour
     [SerializeField]
     private ButtonBehavior channelDownButton;
 
+    [SerializeField]
+    private ButtonBehavior powerButtonVCR;
+    [SerializeField]
+    private ButtonBehavior playButtonVCR;
+    [SerializeField]
+    private ButtonBehavior pauseButtonVCR;
+
     [Header("Sockets")]
     //Serialized references to the Device's Sockets
     [SerializeField]
@@ -52,7 +59,9 @@ public class CRTBehavior : MonoBehaviour
 
     //Variables for keeping track of the CRT's current state
     private bool isOn = false;
+    private bool VCRIsOn = false;
     private bool hasPower = false;
+    private bool VCRHasPower = false;
 
     private enum Channel { Input, Channel1, Channel2};
 
@@ -142,10 +151,21 @@ public class CRTBehavior : MonoBehaviour
             videoPlayer.Stop(); //stops the video if there is no power
         }
     }
+
     void UpdateInputChannel()
     {
+        //check VCR first
+        if(!VCRIsOn || !VCRHasPower)//if the VCR doesn't have the proper conditions to play video
+        {
+            if (videoPlayer.clip != blankScreenClip) //sees if the correct clip is already loaded, if not, changes and plays the clip
+            {
+                videoPlayer.Stop();
+                videoPlayer.clip = blankScreenClip;
+                videoPlayer.Play();
+            }
+        }
         //Video Socket Logic
-        if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
+        else if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
             ChannelText.text = "PLAY";
             //Play the Video
@@ -221,6 +241,15 @@ public class CRTBehavior : MonoBehaviour
         {
             hasPower = false; //set it to false
         }
+
+        if (powerVCRSocket.signal == SocketBehavior.Signal.Power) //if the VCR power cable is plugged
+        {
+            VCRHasPower = true;
+        }
+        else
+        {
+            VCRHasPower = false;
+        }
     }
 
     public void CheckButtons() //checks each of the buttons to see if they've been pressed
@@ -230,18 +259,25 @@ public class CRTBehavior : MonoBehaviour
             //Button Press Behavior
             if (powerButton.isPressed) //if the power button is pressed
             {
-                powerButton.isPressed = false; //Reset the button's state
-
-                //On button Press, toggle power on & off
-                if (isOn == false)
-                {
-                    isOn = true;
-                }
-                else
-                {
-                    isOn = false;
-                }
+                //power button will simply know whether it's pressed in or not; no resetting the variable
+                //that way the button being pressed inwards will always mean it's in "on" mode, even if you press it while power isn't hooked up
+                isOn = true;
             }
+            else
+            {
+                isOn = false;
+            }
+            if (powerButtonVCR.isPressed) //if the power button is pressed
+            {
+                //power button will simply know whether it's pressed in or not; no resetting the variable
+                //that way the button being pressed inwards will always mean it's in "on" mode, even if you press it while power isn't hooked up
+                VCRIsOn = true;
+            }
+            else
+            {
+                VCRIsOn = false;
+            }
+
             if (channelUpButton.isPressed) //if the Channel Up Button is Pressed
             {
                 channelUpButton.isPressed = false; //Reset the button's state

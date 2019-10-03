@@ -2231,7 +2231,7 @@ MonoBehaviour:
   sticksInWhenPressed: 0
   isPressedInwards: 0
   pressedInDistance: 0.02
-  CRTBehaviorScript: {fileID: 0}
+  CRTBehaviorScript: {fileID: 724318335}
   waitTime: 0.5
 --- !u!65 &113019716
 BoxCollider:
@@ -2857,7 +2857,7 @@ MonoBehaviour:
   sticksInWhenPressed: 0
   isPressedInwards: 0
   pressedInDistance: 0.02
-  CRTBehaviorScript: {fileID: 0}
+  CRTBehaviorScript: {fileID: 724318335}
   waitTime: 0.5
 --- !u!65 &175385238
 BoxCollider:
@@ -18920,7 +18920,7 @@ MonoBehaviour:
   sticksInWhenPressed: 1
   isPressedInwards: 0
   pressedInDistance: 0.02
-  CRTBehaviorScript: {fileID: 0}
+  CRTBehaviorScript: {fileID: 724318335}
   waitTime: 0.5
 --- !u!65 &1418863664
 BoxCollider:
