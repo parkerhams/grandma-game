@@ -20,13 +20,13 @@ public class ButtonBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        CRTBehaviorScript.debugButtonInfoUpdate(other.gameObject.name + ", " + other.gameObject.tag);
+        CRTBehaviorScript.DebugButtonInfoUpdate(other.gameObject.name + ", " + other.gameObject.tag);
         if (other.tag == "DistanceGrabbable" || (other.gameObject.name == "DistanceGrabHandLeft Variant" || other.gameObject.name == "DistanceGrabHandRight Variant") ) //if a player hand enters the button trigger
         {
-            CRTBehaviorScript.debugButtonInfoUpdate("2");
+            CRTBehaviorScript.DebugButtonInfoUpdate("2");
             if (canBePressed)
             {
-                CRTBehaviorScript.debugButtonInfoUpdate("3");
+                CRTBehaviorScript.DebugButtonInfoUpdate("3");
                 PressButton();
             }
         }
@@ -39,26 +39,24 @@ public class ButtonBehavior : MonoBehaviour
 
     void PressButton()
     {
-        CRTBehaviorScript.debugButtonInfoUpdate("A");
+        CRTBehaviorScript.DebugButtonInfoUpdate("A");
         if(sticksInWhenPressed)//if it's a power button, behavior should be slightly different: lock into place when pressed in, or unlock when pressed again
         {
-            CRTBehaviorScript.debugButtonInfoUpdate("B");
+            CRTBehaviorScript.DebugButtonInfoUpdate("B");
             if (isPressedInwards)
             {
                 //pull button back out to normal position
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - pressedInDistance);
                 isPressedInwards = false;
-                CRTBehaviorScript.checkButtons();
                 StartCoroutine(AfterPressWaitCoroutine());
             }
             else
             {
-                CRTBehaviorScript.debugButtonInfoUpdate("C");
+                CRTBehaviorScript.DebugButtonInfoUpdate("C");
                 //push button into its closer position and lock it there
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
                 isPressedInwards = true;
                 isPressed = true;
-                CRTBehaviorScript.checkButtons();
                 StartCoroutine(AfterPressWaitCoroutine());
             }
         }
@@ -66,7 +64,7 @@ public class ButtonBehavior : MonoBehaviour
         {
             if(canBePressed)
             {
-                CRTBehaviorScript.debugButtonInfoUpdate("D");
+                CRTBehaviorScript.DebugButtonInfoUpdate("D");
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
                 StartCoroutine(AfterPressWaitCoroutine());
                 StartCoroutine(MoveButton());
