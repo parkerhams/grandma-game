@@ -10197,6 +10197,9 @@ MonoBehaviour:
   powerButton: {fileID: 724318343}
   channelUpButton: {fileID: 724318341}
   channelDownButton: {fileID: 724318340}
+  powerButtonVCR: {fileID: 1418863663}
+  playButtonVCR: {fileID: 175385237}
+  pauseButtonVCR: {fileID: 113019715}
   powerSocket: {fileID: 1137545180}
   videoSocket: {fileID: 1966434670}
   leftAudioSocket: {fileID: 984155588}

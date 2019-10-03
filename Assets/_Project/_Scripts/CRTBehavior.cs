@@ -130,6 +130,10 @@ public class CRTBehavior : MonoBehaviour
                         videoPlayer.clip = blankScreenClip;
                         videoPlayer.Play();
                     }
+                    if (!videoPlayer.isPlaying)
+                    {
+                        videoPlayer.Play();
+                    }
                     break;
                 case Channel.Channel2:
                     ChannelText.text = "CHANNEL-2";
@@ -138,6 +142,10 @@ public class CRTBehavior : MonoBehaviour
                     {
                         videoPlayer.Stop();
                         videoPlayer.clip = blankScreenClip;
+                        videoPlayer.Play();
+                    }
+                    if (!videoPlayer.isPlaying)
+                    {
                         videoPlayer.Play();
                     }
                     break;
@@ -161,6 +169,10 @@ public class CRTBehavior : MonoBehaviour
             {
                 videoPlayer.Stop();
                 videoPlayer.clip = blankScreenClip;
+                videoPlayer.Play();
+            }
+            if (!videoPlayer.isPlaying)
+            {
                 videoPlayer.Play();
             }
         }
@@ -189,6 +201,10 @@ public class CRTBehavior : MonoBehaviour
                 videoPlayer.clip = blankScreenClip;
                 videoPlayer.Play();
             }
+            if (!videoPlayer.isPlaying)
+            {
+                videoPlayer.Play();
+            }
         }
         else if (videoSocket.signal == SocketBehavior.Signal.None)
         {
@@ -197,6 +213,10 @@ public class CRTBehavior : MonoBehaviour
             {
                 videoPlayer.Stop();
                 videoPlayer.clip = blankScreenClip;
+                videoPlayer.Play();
+            }
+            if (!videoPlayer.isPlaying)
+            {
                 videoPlayer.Play();
             }
         }
@@ -284,6 +304,10 @@ public class CRTBehavior : MonoBehaviour
                 if (isOn) //check to see if that TV is on
                 {
                     currentChannel++; //Turn the channel up
+                    if (currentChannel >= Channel.Channel2)
+                    {
+                        currentChannel = Channel.Channel2;
+                    }
                 }
             }
             if (channelDownButton.isPressed) //if the Channel Up Button is Pressed
@@ -292,6 +316,10 @@ public class CRTBehavior : MonoBehaviour
                 if (isOn) //check to see if that TV is on
                 {
                     currentChannel--; //Turn the channel down
+                    if (currentChannel <= Channel.Input)
+                    {
+                        currentChannel = Channel.Input;
+                    }
                 }
             }
         }
