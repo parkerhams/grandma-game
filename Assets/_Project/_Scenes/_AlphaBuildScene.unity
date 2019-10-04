@@ -9508,7 +9508,7 @@ PrefabInstance:
     - target: {fileID: 7730549658907655733, guid: 4331a49d93b37a64c85f16588047d51b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.177
+      value: 0.958
       objectReference: {fileID: 0}
     - target: {fileID: 7730549658907655733, guid: 4331a49d93b37a64c85f16588047d51b,
         type: 3}
@@ -9558,7 +9558,12 @@ PrefabInstance:
     - target: {fileID: 7730549658902665171, guid: 4331a49d93b37a64c85f16588047d51b,
         type: 3}
       propertyPath: m_Height
-      value: 2
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730549658902665171, guid: 4331a49d93b37a64c85f16588047d51b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4331a49d93b37a64c85f16588047d51b, type: 3}
@@ -26434,7 +26439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &2057063634
 Light:
   m_ObjectHideFlags: 0
@@ -26445,7 +26450,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
