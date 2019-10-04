@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlugBehavior : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PlugBehavior : MonoBehaviour
     public bool canBeUnplugged = true;
 
     public CableBehavior cableBehaviorScript;
+
+    [SerializeField]
+    public TextMeshProUGUI grandmaText;
 
     [HideInInspector]
     public SocketBehavior currentSocketBehaviorScript; //once a plug plugs into a socket, that socket is saved here
@@ -50,6 +54,7 @@ public class PlugBehavior : MonoBehaviour
 
     public void PlugIntoSocket(SocketBehavior socketBehaviorScript)
     {
+        grandmaText.text = "There's so many colors, I always get them mixed up.";
         //plug jumps into proper location. using parent because the plug's parent is the capsule that acts as the end of the cable
         transform.parent.position = socketBehaviorScript.DesiredPlugLocation.transform.position;
         transform.parent.rotation = socketBehaviorScript.DesiredPlugLocation.transform.rotation; //need to figure out if we can easily establish a rotation for DesiredPlugLocation in the scene
