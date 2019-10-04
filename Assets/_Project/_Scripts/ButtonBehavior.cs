@@ -12,11 +12,17 @@ public class ButtonBehavior : MonoBehaviour
 
     public CRTBehavior CRTBehaviorScript;
 
+    public TriggerDialogue buttonTriggerDialogue;
     bool canBePressed = true;
 
     public float waitTime = .5f;//time to wait, in seconds, until button can be interacted with again
 
     //isPressed is set back to false when its corresponding function is called in the device's script to ensure that the device "hears" when it is pressed
+
+    void Start()
+    {
+        buttonTriggerDialogue = this.GetComponent<TriggerDialogue>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
