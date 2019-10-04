@@ -54,6 +54,7 @@ public class ButtonBehavior : MonoBehaviour
                 //pull button back out to normal position
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - pressedInDistance);
                 isPressedInwards = false;
+                isPressed = false;
                 StartCoroutine(AfterPressWaitCoroutine());
             }
             else

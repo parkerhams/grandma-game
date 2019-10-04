@@ -23,6 +23,13 @@ public class CRTBehavior : MonoBehaviour
     [SerializeField]
     private ButtonBehavior channelDownButton;
 
+    [SerializeField]
+    private ButtonBehavior powerButtonVCR;
+    [SerializeField]
+    private ButtonBehavior playButtonVCR;
+    [SerializeField]
+    private ButtonBehavior pauseButtonVCR;
+
     [Header("Sockets")]
     //Serialized references to the Device's Sockets
     [SerializeField]
@@ -52,7 +59,9 @@ public class CRTBehavior : MonoBehaviour
 
     //Variables for keeping track of the CRT's current state
     private bool isOn = false;
+    private bool VCRIsOn = false;
     private bool hasPower = false;
+    private bool VCRHasPower = false;
 
     private enum Channel { Input, Channel1, Channel2};
 
@@ -80,7 +89,16 @@ public class CRTBehavior : MonoBehaviour
     void Start()
     {
         crtDialogueTrigger = this.GetComponent<TriggerDialogue>();
+        videoPlayer.loopPointReached += EndReached;
     }
+
+    void EndReached(VideoPlayer vp)
+    {
+        //vp.playbackSpeed = 1;
+        vp.Stop();
+        vp.Play();
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -104,6 +122,15 @@ public class CRTBehavior : MonoBehaviour
         debugTextRightAudio.text = "Right audio: " + rightAudioSocket.signal.ToString();
         debugVCRPower.text = "VCR Power: " + powerVCRSocket.signal.ToString();
     }
+
+    void PlayIfNotPlaying()
+    {
+        if (!videoPlayer.isPlaying && !videoPlayer.isPaused)
+        {
+            videoPlayer.Play();
+            //videoPlayer.playbackSpeed = 1;
+        }
+    }
     
     void UpdateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
     {
@@ -124,8 +151,9 @@ public class CRTBehavior : MonoBehaviour
                     {
                         videoPlayer.Stop();
                         videoPlayer.clip = blankScreenClip;
-                        videoPlayer.Play();
+                        PlayIfNotPlaying();
                     }
+                    PlayIfNotPlaying();
                     break;
                 case Channel.Channel2:
                     ChannelText.text = "CHANNEL-2";
@@ -134,8 +162,9 @@ public class CRTBehavior : MonoBehaviour
                     {
                         videoPlayer.Stop();
                         videoPlayer.clip = blankScreenClip;
-                        videoPlayer.Play();
+                        PlayIfNotPlaying();
                     }
+                    PlayIfNotPlaying();
                     break;
                 default:
                     break;
@@ -147,10 +176,22 @@ public class CRTBehavior : MonoBehaviour
             videoPlayer.Stop(); //stops the video if there is no power
         }
     }
+
     void UpdateInputChannel()
     {
+        //check VCR first
+        if(!VCRIsOn || !VCRHasPower)//if the VCR doesn't have the proper conditions to play video
+        {
+            if (videoPlayer.clip != blankScreenClip) //sees if the correct clip is already loaded, if not, changes and plays the clip
+            {
+                videoPlayer.Stop();
+                videoPlayer.clip = blankScreenClip;
+                PlayIfNotPlaying();
+            }
+            PlayIfNotPlaying();
+        }
         //Video Socket Logic
-        if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
+        else if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
             ChannelText.text = "PLAY";
             //Play the Video
@@ -161,12 +202,9 @@ public class CRTBehavior : MonoBehaviour
                 {
                     videoPlayer.Stop();
                     videoPlayer.clip = highschoolConcertClip;
-                    videoPlayer.Play();
+                    PlayIfNotPlaying();
                 }
-                if (!videoPlayer.isPlaying)
-                {
-                    videoPlayer.Play();
-                }
+                PlayIfNotPlaying();
             }
         }
         else if (videoSocket.signal == SocketBehavior.Signal.Video && !currentVHS)
@@ -176,8 +214,9 @@ public class CRTBehavior : MonoBehaviour
             {
                 videoPlayer.Stop();
                 videoPlayer.clip = blankScreenClip;
-                videoPlayer.Play();
+                PlayIfNotPlaying();
             }
+            PlayIfNotPlaying();
         }
         else if (videoSocket.signal == SocketBehavior.Signal.None)
         {
@@ -186,8 +225,9 @@ public class CRTBehavior : MonoBehaviour
             {
                 videoPlayer.Stop();
                 videoPlayer.clip = blankScreenClip;
-                videoPlayer.Play();
+                PlayIfNotPlaying();
             }
+            PlayIfNotPlaying();
         }
         else //Audio has been plugged into the video socket
         {
@@ -230,6 +270,43 @@ public class CRTBehavior : MonoBehaviour
         {
             hasPower = false; //set it to false
         }
+
+        if (powerVCRSocket.signal == SocketBehavior.Signal.Power) //if the VCR power cable is plugged
+        {
+            VCRHasPower = true;
+        }
+        else
+        {
+            VCRHasPower = false;
+        }
+    }
+
+    public void VCRPause()
+    {
+        if(AllConditionsForVideo())
+        {
+            videoPlayer.Pause();
+        }
+    }
+
+    public void VCRPlay()
+    {
+        if(AllConditionsForVideo())
+        {
+            if(!videoPlayer.isPlaying && videoPlayer.isPaused)
+            {
+                videoPlayer.Play();
+            }
+        }
+    }
+
+    bool AllConditionsForVideo()
+    {
+        if (hasPower && VCRHasPower && isOn && VCRIsOn && videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
+        {
+            return true;
+        }
+        else return false;
     }
 
     public void CheckButtons() //checks each of the buttons to see if they've been pressed
@@ -239,24 +316,48 @@ public class CRTBehavior : MonoBehaviour
             //Button Press Behavior
             if (powerButton.isPressed) //if the power button is pressed
             {
-                powerButton.isPressed = false; //Reset the button's state
-
-                //On button Press, toggle power on & off
-                if (isOn == false)
-                {
-                    isOn = true;
-                }
-                else
-                {
-                    isOn = false;
-                }
+                //power button will simply know whether it's pressed in or not; no resetting the variable
+                //that way the button being pressed inwards will always mean it's in "on" mode, even if you press it while power isn't hooked up
+                isOn = true;
             }
+            else
+            {
+                isOn = false;
+            }
+            if (powerButtonVCR.isPressed) //if the power button is pressed
+            {
+                //power button will simply know whether it's pressed in or not; no resetting the variable
+                //that way the button being pressed inwards will always mean it's in "on" mode, even if you press it while power isn't hooked up
+                VCRIsOn = true;
+            }
+            else
+            {
+                VCRIsOn = false;
+            }
+
+            if(pauseButtonVCR.isPressed)
+            {
+                pauseButtonVCR.isPressed = false;
+                VCRPause();
+            }
+
+            if (playButtonVCR.isPressed)
+            {
+                playButtonVCR.isPressed = false;
+                VCRPlay();
+            }
+
             if (channelUpButton.isPressed) //if the Channel Up Button is Pressed
             {
                 channelUpButton.isPressed = false; //Reset the button's state
                 if (isOn) //check to see if that TV is on
                 {
                     currentChannel++; //Turn the channel up
+                    videoPlayer.Stop();
+                    if (currentChannel >= Channel.Channel2)
+                    {
+                        currentChannel = Channel.Channel2;
+                    }
                 }
             }
             if (channelDownButton.isPressed) //if the Channel Up Button is Pressed
@@ -265,6 +366,11 @@ public class CRTBehavior : MonoBehaviour
                 if (isOn) //check to see if that TV is on
                 {
                     currentChannel--; //Turn the channel down
+                    if (currentChannel <= Channel.Input)
+                    {
+                        currentChannel = Channel.Input;
+                        videoPlayer.Stop();
+                    }
                 }
             }
         }
