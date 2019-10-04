@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using TMPro;
 
 public class CRTBehavior : MonoBehaviour
 {
@@ -73,15 +72,14 @@ public class CRTBehavior : MonoBehaviour
     public Text debugButtonInfo;
 
 
-    [SerializeField]
-    public TextMeshProUGUI grandmaText;
+    private TriggerDialogue crtDialogueTrigger;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //crtDialogueTrigger = this.GetComponent<TriggerDialogue>();
+        crtDialogueTrigger = this.GetComponent<TriggerDialogue>();
     }
 
     // Update is called once per frame
@@ -111,7 +109,7 @@ public class CRTBehavior : MonoBehaviour
     {
         if (hasPower && isOn)
         {
-            grandmaText.text = "You got the TV working! Now I can watch my shows about whales.";
+            
 
             switch (currentChannel)
             {
@@ -121,7 +119,6 @@ public class CRTBehavior : MonoBehaviour
                     break;
                 case Channel.Channel1:
                     ChannelText.text = "CHANNEL-1";
-                    grandmaText.text = "Oh, no! What made the picture go away?";
                     //show blank screen
                     if (videoPlayer.clip != blankScreenClip) //sees if the correct clip is already loaded, if not, changes and plays the clip
                     {
@@ -160,7 +157,6 @@ public class CRTBehavior : MonoBehaviour
             if (currentVHS == BandVHSTape)//we can add info inside VHSBehavior and reference that instead of using the name if we want
             {
                 //play video 1
-                grandmaText.text = "Sweetie, look! It's you! You play so wonderfully! Thank you for showing this to me. I love you.";
                 if (videoPlayer.clip != highschoolConcertClip) //sees if the correct clip is already loaded, if not, plays the clip
                 {
                     videoPlayer.Stop();
