@@ -85,8 +85,16 @@ public class CRTBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        videoPlayer.loopPointReached += EndReached;
     }
+
+    void EndReached(VideoPlayer vp)
+    {
+        //vp.playbackSpeed = 1;
+        vp.Stop();
+        vp.Play();
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -113,9 +121,10 @@ public class CRTBehavior : MonoBehaviour
 
     void PlayIfNotPlaying()
     {
-        if (!videoPlayer.isPlaying)
+        if (!videoPlayer.isPlaying && !videoPlayer.isPaused)
         {
             videoPlayer.Play();
+            //videoPlayer.playbackSpeed = 1;
         }
     }
     
@@ -136,7 +145,7 @@ public class CRTBehavior : MonoBehaviour
                     {
                         videoPlayer.Stop();
                         videoPlayer.clip = blankScreenClip;
-                        videoPlayer.Play();
+                        PlayIfNotPlaying();
                     }
                     PlayIfNotPlaying();
                     break;
@@ -147,7 +156,7 @@ public class CRTBehavior : MonoBehaviour
                     {
                         videoPlayer.Stop();
                         videoPlayer.clip = blankScreenClip;
-                        videoPlayer.Play();
+                        PlayIfNotPlaying();
                     }
                     PlayIfNotPlaying();
                     break;
@@ -171,7 +180,7 @@ public class CRTBehavior : MonoBehaviour
             {
                 videoPlayer.Stop();
                 videoPlayer.clip = blankScreenClip;
-                videoPlayer.Play();
+                PlayIfNotPlaying();
             }
             PlayIfNotPlaying();
         }
@@ -187,7 +196,7 @@ public class CRTBehavior : MonoBehaviour
                 {
                     videoPlayer.Stop();
                     videoPlayer.clip = highschoolConcertClip;
-                    videoPlayer.Play();
+                    PlayIfNotPlaying();
                 }
                 PlayIfNotPlaying();
             }
@@ -199,7 +208,7 @@ public class CRTBehavior : MonoBehaviour
             {
                 videoPlayer.Stop();
                 videoPlayer.clip = blankScreenClip;
-                videoPlayer.Play();
+                PlayIfNotPlaying();
             }
             PlayIfNotPlaying();
         }
@@ -210,7 +219,7 @@ public class CRTBehavior : MonoBehaviour
             {
                 videoPlayer.Stop();
                 videoPlayer.clip = blankScreenClip;
-                videoPlayer.Play();
+                PlayIfNotPlaying();
             }
             PlayIfNotPlaying();
         }
@@ -266,6 +275,34 @@ public class CRTBehavior : MonoBehaviour
         }
     }
 
+    public void VCRPause()
+    {
+        if(AllConditionsForVideo())
+        {
+            videoPlayer.Pause();
+        }
+    }
+
+    public void VCRPlay()
+    {
+        if(AllConditionsForVideo())
+        {
+            if(!videoPlayer.isPlaying && videoPlayer.isPaused)
+            {
+                videoPlayer.Play();
+            }
+        }
+    }
+
+    bool AllConditionsForVideo()
+    {
+        if (hasPower && VCRHasPower && isOn && VCRIsOn && videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
+        {
+            return true;
+        }
+        else return false;
+    }
+
     public void CheckButtons() //checks each of the buttons to see if they've been pressed
     {
         if (hasPower) //if the TV has power plugged in
@@ -290,6 +327,18 @@ public class CRTBehavior : MonoBehaviour
             else
             {
                 VCRIsOn = false;
+            }
+
+            if(pauseButtonVCR.isPressed)
+            {
+                pauseButtonVCR.isPressed = false;
+                VCRPause();
+            }
+
+            if (playButtonVCR.isPressed)
+            {
+                playButtonVCR.isPressed = false;
+                VCRPlay();
             }
 
             if (channelUpButton.isPressed) //if the Channel Up Button is Pressed
