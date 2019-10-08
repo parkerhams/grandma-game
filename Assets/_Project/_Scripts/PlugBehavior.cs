@@ -94,7 +94,6 @@ public class PlugBehavior : MonoBehaviour
 
     private void DistanceBasedUnplugCheck()
     {
-        Debug.Log("running");
         //if the neighbor capsule is too far away from the plug's parent capsule, unplug
         if(!neighborCapsule)
         {
@@ -102,7 +101,6 @@ public class PlugBehavior : MonoBehaviour
             return;
         }
         float currentDistance = Vector3.Distance(transform.parent.position, neighborCapsule.transform.position);
-        Debug.Log("Distance: " + currentDistance);
         if(currentDistance >= maxDistance)
         {
             UnplugFromSocket();

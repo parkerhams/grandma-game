@@ -18,12 +18,12 @@ namespace OculusSampleFramework
     public class DistanceGrabbable : OVRGrabbable
     {
         public string m_materialColorField;
+        private Color noHighlight = new Vector4(0, 0, 0, 0);
 
         GrabbableCrosshair m_crosshair;
         GrabManager m_crosshairManager;
         Renderer m_renderer;
         MaterialPropertyBlock m_mpb;
-
 
         public bool InRange
         {
@@ -55,7 +55,7 @@ namespace OculusSampleFramework
             m_crosshairManager = FindObjectOfType<GrabManager>();
             m_mpb = new MaterialPropertyBlock();
             RefreshCrosshair();
-            m_mpb.SetColor(m_materialColorField, Color.white);
+            m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineNoHighlight);
             m_renderer.SetPropertyBlock(m_mpb);
         }
 
@@ -70,9 +70,9 @@ namespace OculusSampleFramework
             if (m_materialColorField != null)
             {
                 m_renderer.GetPropertyBlock(m_mpb);
-                if (isGrabbed || !InRange) m_mpb.SetColor(m_materialColorField, Color.white);
+                if (isGrabbed || !InRange) m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineNoHighlight);
                 else if (Targeted) m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineColorHighlighted);
-                else m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineColorInRange);
+                else m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineNoHighlight);
                 m_renderer.SetPropertyBlock(m_mpb);
             }
         }
@@ -85,7 +85,7 @@ namespace OculusSampleFramework
 
         public void ClearColor()
         {
-            m_mpb.SetColor(m_materialColorField, Color.white);
+            m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineNoHighlight);
             m_renderer.SetPropertyBlock(m_mpb);
         }
     }

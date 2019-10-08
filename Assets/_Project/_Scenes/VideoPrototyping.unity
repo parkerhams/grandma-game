@@ -191,7 +191,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &8250600
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &15452087
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &28229223
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -876,6 +876,11 @@ PrefabInstance:
       propertyPath: m_noSnapThreshhold
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 4801764162000452807, guid: 107077ef9d093e747b0c5eb2f86f1926,
+        type: 3}
+      propertyPath: m_obstructionLayer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4842742601118330975, guid: 107077ef9d093e747b0c5eb2f86f1926,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -953,7 +958,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &42175767
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1283,7 +1288,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!136 &57677425
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1428,7 +1433,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &59370798
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1602,7 +1607,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!136 &60399187
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1824,7 +1829,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &80004546
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2013,7 +2018,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &84558943
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2436,7 +2441,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &142550276
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2625,7 +2630,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &145664862
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3179,6 +3184,11 @@ PrefabInstance:
       propertyPath: m_noSnapThreshhold
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 401183372346019769, guid: 58143a5d663d8b84f8807dc546fa2da5,
+        type: 3}
+      propertyPath: m_obstructionLayer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 294644784546422159, guid: 58143a5d663d8b84f8807dc546fa2da5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3263,7 +3273,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &211507794
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3452,7 +3462,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &217926617
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3641,7 +3651,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &219321953
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3790,7 +3800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222036840}
   m_LocalRotation: {x: 0.013037843, y: 0.6632629, z: -0.014706072, w: 0.74812835}
-  m_LocalPosition: {x: 1.653, y: -0.5686, z: 0.061}
+  m_LocalPosition: {x: 1.653, y: -0.5686, z: 0.2}
   m_LocalScale: {x: 0.24, y: 0.045, z: 0.12}
   m_Children: []
   m_Father: {fileID: 703872842}
@@ -3957,7 +3967,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!136 &225053932
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4223,7 +4233,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!136 &262411969
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4412,7 +4422,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &263605603
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -4716,12 +4726,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f21a07c0719b3e941ac2e1f447bceeef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.897
+      value: 1.1341
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f21a07c0719b3e941ac2e1f447bceeef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.338
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f21a07c0719b3e941ac2e1f447bceeef,
         type: 3}
@@ -5204,7 +5214,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &351395586
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -5348,7 +5358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354663512}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03, y: 0.3, z: -0.68}
+  m_LocalPosition: {x: -0.03, y: 0.03, z: -0.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1137545178}
@@ -5522,7 +5532,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &370351554
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -5711,7 +5721,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &376910795
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -5900,7 +5910,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &380822261
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -6135,6 +6145,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381833383}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &390126294
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 647772859}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_Name
+      value: Issac_RCAMale2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5941615455810218394, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b433ee2f1e58b2140b08b13892018175, type: 2}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.18803833
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6816462
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6816462
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.18803827
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 51.393
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -97.76301
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd31cf25ab6b006418ec0aea0cc29a62, type: 3}
+--- !u!4 &390126295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+    type: 3}
+  m_PrefabInstance: {fileID: 390126294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &391369742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5006350008173338853, guid: ed5df38e21a2bcb47ac32b20548784b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 724318332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &391369746
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391369742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.2}
+  m_Center: {x: 0, y: 0.28042123, z: 0.06}
 --- !u!1001 &417011011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6330,7 +6454,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &425988732
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -6685,7 +6809,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &519044231
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -6981,7 +7105,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &523417065
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -7342,7 +7466,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &580867867
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -7641,7 +7765,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7962,7 +8086,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &631861846
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -8122,6 +8246,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.12, z: 0.1}
   m_Children:
   - {fileID: 631231831}
+  - {fileID: 390126295}
   m_Father: {fileID: 716327284}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8156,7 +8281,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &647772862
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -8381,7 +8506,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &677562943
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -8667,7 +8792,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &679625433
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -8856,7 +8981,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &682687348
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -9140,7 +9265,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &689392859
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -9478,6 +9603,26 @@ PrefabInstance:
       propertyPath: OutlineColorHighlighted.a
       value: 0.48235294
       objectReference: {fileID: 0}
+    - target: {fileID: 215550150, guid: 4331a49d93b37a64c85f16588047d51b, type: 3}
+      propertyPath: OutlineColorHighlighted.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215550150, guid: 4331a49d93b37a64c85f16588047d51b, type: 3}
+      propertyPath: OutlineColorInRange.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 215550150, guid: 4331a49d93b37a64c85f16588047d51b, type: 3}
+      propertyPath: OutlineColorInRange.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 215550150, guid: 4331a49d93b37a64c85f16588047d51b, type: 3}
+      propertyPath: OutlineColorInRange.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 215550150, guid: 4331a49d93b37a64c85f16588047d51b, type: 3}
+      propertyPath: OutlineColorInRange.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4331a49d93b37a64c85f16588047d51b, type: 3}
 --- !u!4 &696676182 stripped
@@ -9562,7 +9707,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &697238635
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -9931,7 +10076,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &718275335
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -10120,7 +10265,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &719988346
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -10308,7 +10453,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &723718701
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -10441,6 +10586,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CRT
       objectReference: {fileID: 0}
+    - target: {fileID: -5006350008173338853, guid: ed5df38e21a2bcb47ac32b20548784b3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4489269917142362692, guid: ed5df38e21a2bcb47ac32b20548784b3,
         type: 3}
       propertyPath: m_IsActive
@@ -10474,12 +10624,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: ed5df38e21a2bcb47ac32b20548784b3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.856
+      value: 1.0931
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ed5df38e21a2bcb47ac32b20548784b3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.425
+      value: 2.471
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ed5df38e21a2bcb47ac32b20548784b3,
         type: 3}
@@ -10863,7 +11013,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &733179201
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -11082,7 +11232,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &750563466
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -11264,7 +11414,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11327,6 +11477,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.12, z: 0.1}
   m_Children:
   - {fileID: 1129974222}
+  - {fileID: 2005956567}
   m_Father: {fileID: 1047911451}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11361,7 +11512,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &765167228
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -11736,7 +11887,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &812686900
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -11925,7 +12076,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &815921805
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -12114,7 +12265,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &827004978
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -12463,6 +12614,101 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854468652}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &868733261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1276268063}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_Name
+      value: Issac_RCAMale2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -5941615455810218394, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a08ff1f69d4906740949f616d06d26d6, type: 2}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd31cf25ab6b006418ec0aea0cc29a62, type: 3}
+--- !u!4 &868733262 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: cd31cf25ab6b006418ec0aea0cc29a62,
+    type: 3}
+  m_PrefabInstance: {fileID: 868733261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &873032537
 GameObject:
   m_ObjectHideFlags: 0
@@ -12533,7 +12779,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &873032541
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -12772,7 +13018,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &881920024
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -12961,7 +13207,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &888094458
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -13150,7 +13396,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &906347897
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -13358,7 +13604,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &928258295
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -13531,7 +13777,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &930411488
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -13736,7 +13982,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &940379618
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -14217,7 +14463,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &964563844
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -14361,7 +14607,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4b49bbe831960784caabd1b02d75e61a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49199998
+      value: 0.607
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4b49bbe831960784caabd1b02d75e61a,
         type: 3}
@@ -14411,17 +14657,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4b49bbe831960784caabd1b02d75e61a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4b49bbe831960784caabd1b02d75e61a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4b49bbe831960784caabd1b02d75e61a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b49bbe831960784caabd1b02d75e61a, type: 3}
@@ -14704,7 +14950,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &998875837
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -14894,7 +15140,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15152,7 +15398,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1053124570
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -15341,7 +15587,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1054372098
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -15530,7 +15776,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1056166166
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -15695,6 +15941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OutlineColorInRange: {r: 0, g: 0, b: 0, a: 0}
   OutlineColorHighlighted: {r: 0.48104307, g: 0.8867924, b: 0.8059825, a: 0.48235294}
+  OutlineNoHighlight: {r: 0, g: 0, b: 0, a: 0}
 --- !u!135 &1065982843
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15764,7 +16011,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!136 &1079722487
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16318,7 +16565,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16553,7 +16800,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1146111086
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -16742,7 +16989,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1146644379
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -16961,7 +17208,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1173353882
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -17150,7 +17397,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1179604747
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -17642,7 +17889,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1265545707
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -17831,7 +18078,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1266371584
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -18020,7 +18267,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1267915246
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -18209,7 +18456,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1268414961
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -18398,7 +18645,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1271505267
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -18621,6 +18868,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.12, z: 0.1}
   m_Children:
   - {fileID: 124405686}
+  - {fileID: 868733262}
   m_Father: {fileID: 1360000387}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18655,7 +18903,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1276268066
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -18846,7 +19094,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1297592674
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -19137,7 +19385,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1365810913
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -19860,7 +20108,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19974,7 +20222,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1516407693
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -20163,7 +20411,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1522294978
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -20434,7 +20682,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!136 &1532484619
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -20579,7 +20827,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1583339397
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -20768,7 +21016,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1601539600
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -20963,7 +21211,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1631458334
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -21152,7 +21400,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1652435430
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -21418,7 +21666,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1665801585
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -21698,7 +21946,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1693438130
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -21828,6 +22076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Issac.RCAMale
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e30f9e9d4c90374419a8414096f898f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e30f9e9d4c90374419a8414096f898f9,
         type: 3}
@@ -21977,7 +22230,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!136 &1705227262
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22175,7 +22428,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1724147104
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -22364,7 +22617,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1744529298
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -22553,7 +22806,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1746647193
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -22825,6 +23078,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Issac.RCAMale
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e30f9e9d4c90374419a8414096f898f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e30f9e9d4c90374419a8414096f898f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22988,7 +23246,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1860546319
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -23345,7 +23603,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!136 &1873849351
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -23534,7 +23792,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1885908316
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -23823,7 +24081,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1890243400
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -24012,7 +24270,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1897223719
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -24547,7 +24805,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1969496226
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -24755,7 +25013,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1981287899
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -24944,7 +25202,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &1990898388
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -25069,6 +25327,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1273120633}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2005956566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005956567}
+  - component: {fileID: 2005956569}
+  - component: {fileID: 2005956568}
+  m_Layer: 0
+  m_Name: RCAMale
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2005956567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005956566}
+  m_LocalRotation: {x: 0.18803833, y: 0.6816462, z: -0.6816462, w: 0.18803827}
+  m_LocalPosition: {x: 0.02, y: -1.407, z: 0.058}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children: []
+  m_Father: {fileID: 765167225}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 51.393, z: -97.76301}
+--- !u!23 &2005956568
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005956566}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0dab7b78a5d09b64997027e657590399, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2005956569
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005956566}
+  m_Mesh: {fileID: 8995390352983273899, guid: cd31cf25ab6b006418ec0aea0cc29a62, type: 3}
 --- !u!1 &2010292268
 GameObject:
   m_ObjectHideFlags: 0
@@ -25551,7 +25886,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &2073016563
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -25724,7 +26059,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &2098992078
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -25929,7 +26264,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &2103342483
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -26301,7 +26636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112591054}
   m_LocalRotation: {x: -0.49400282, y: 0.47456643, z: 0.5253767, w: 0.50470513}
-  m_LocalPosition: {x: 0.905, y: -0.765, z: 0.118}
+  m_LocalPosition: {x: 1.008, y: -1.005, z: 0.118}
   m_LocalScale: {x: 0.24, y: 0.045, z: 0.12}
   m_Children: []
   m_Father: {fileID: 1239310375}
@@ -26482,7 +26817,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &2125334809
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -26702,7 +27037,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!144 &2132638174
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -27062,7 +27397,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27265,7 +27600,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143193209419289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27356,7 +27691,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143193247982212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27518,7 +27853,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0020062923, y: -0.7503818, z: -0.0011012331}
+  m_ConnectedAnchor: {x: -0.0020056218, y: -0.7503818, z: -0.0011022203}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -27643,7 +27978,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143193299391124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27831,7 +28166,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!1 &705143193358684274
 GameObject:
   m_ObjectHideFlags: 0
@@ -27881,7 +28216,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00023854896, y: -0.74957514, z: 0.0007671118}
+  m_ConnectedAnchor: {x: -0.00023963861, y: -0.74957514, z: 0.00076659024}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -28008,7 +28343,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143193358684284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28197,7 +28532,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143193453070183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28386,7 +28721,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143193465206271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28575,7 +28910,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143193623250779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28639,7 +28974,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00041436404, y: -0.7480984, z: 0.00022286549}
+  m_ConnectedAnchor: {x: -0.0004151091, y: -0.7480984, z: 0.0002237875}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -28764,7 +29099,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143193775012339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28828,7 +29163,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00034896657, y: -0.7501726, z: -0.000580363}
+  m_ConnectedAnchor: {x: 0.00034998637, y: -0.7501726, z: -0.0005797483}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -28953,7 +29288,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143193846307980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29155,7 +29490,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!1 &705143194180903735
 GameObject:
   m_ObjectHideFlags: 0
@@ -29331,7 +29666,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143194180903873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29519,7 +29854,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!136 &705143194285110785
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29611,7 +29946,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143194285110790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29759,7 +30094,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0011245906, y: -0.75016785, z: 0.00068407506}
+  m_ConnectedAnchor: {x: -0.0011236779, y: -0.75016785, z: 0.0006848201}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -29884,7 +30219,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143194406774547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30073,7 +30408,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143194407400489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30262,7 +30597,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143194523434571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30361,7 +30696,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30439,7 +30774,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0018349476, y: -0.7501235, z: 0.002482459}
+  m_ConnectedAnchor: {x: 0.0018340535, y: -0.7501235, z: 0.0024832785}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -30564,7 +30899,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143194570840543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30753,7 +31088,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143194591049375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30942,7 +31277,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143194606959283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31027,7 +31362,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31200,7 +31535,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!1 &705143194843084148
 GameObject:
   m_ObjectHideFlags: 0
@@ -31226,7 +31561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705143194843084148}
   m_LocalRotation: {x: -0, y: -0.927862, z: -0, w: 0.37292382}
-  m_LocalPosition: {x: -3.0020003, y: 1.046, z: 3.119}
+  m_LocalPosition: {x: -3.0020003, y: 1.2830999, z: 3.165}
   m_LocalScale: {x: 0.50000024, y: 0.5, z: 0.50000024}
   m_Children:
   - {fileID: 705143194780560791}
@@ -31319,7 +31654,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000030142255, y: -0.7496227, z: 0.0014687143}
+  m_ConnectedAnchor: {x: -0.00002895249, y: -0.7496227, z: 0.0014686212}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -31444,7 +31779,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143194861077366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31633,7 +31968,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  m_materialColorField: 
+  m_materialColorField: _OutlineColor
 --- !u!65 &705143195079630751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31710,7 +32045,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33143,7 +33478,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33180,7 +33515,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78e73eae2952eef439087e326f47e16d, type: 2}
+  - {fileID: 2100000, guid: 1b64371a3a8109843956ecdf30dc3897, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33396,7 +33731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8419733522913674332
 Transform:
   m_ObjectHideFlags: 0
