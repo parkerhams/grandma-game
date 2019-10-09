@@ -67,6 +67,7 @@ public class PlugBehavior : MonoBehaviour
 
         //lock the plug location and try to keep cable attached
         transform.parent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        transform.parent.GetComponent<Rigidbody>().isKinematic = true;
 
         //broadcast information about what plug is plugged into which socket (so that the game knows if audio should be enabled, for example)
         Debug.Log(signal.ToString() + " plug plugged into " + socketBehaviorScript.signal.ToString() + " socket.");
@@ -86,6 +87,7 @@ public class PlugBehavior : MonoBehaviour
         //disable plug from being allowed to plug into anything for a brief moment, remove constraints, inform socket of unplugging
         StartCoroutine(UnplugWaitCoroutine());
         transform.parent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        transform.parent.GetComponent<Rigidbody>().isKinematic = false;
         isPluggedIn = false;
         currentSocketBehaviorScript.RemovePlug();
         currentSocketBehaviorScript = null;

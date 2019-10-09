@@ -47,6 +47,10 @@ public class CableBehavior : MonoBehaviour
             if (plug2Behavior.currentSocketBehaviorScript)
             {
                 socket2Behavior = plug2Behavior.currentSocketBehaviorScript;
+                if(!socket1Behavior)
+                {
+                    return;
+                }
                 if (socket1Behavior.isInputSocket)
                 {
                     inputSocket = socket1Behavior;
