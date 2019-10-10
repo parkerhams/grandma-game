@@ -19,10 +19,21 @@ public class VCRBehavior : MonoBehaviour
     float waitTime = 1.5f;//when a VHS is accepted or ejected, don't accept or remove any VHS for this duration
     bool isWaiting = false;//set to true while the VHS has recently accepted or ejected a VHS
 
+    AudioSource audioSource;
+
     private void Start()
     {
         flapUp.SetActive(false);//if this flap isn't disabled in scene view, disable it now
         debugText.text = "No VHS";
+
+        if (!GetComponent<AudioSource>())
+        {
+            Debug.Log("No audio source component on " + gameObject.name + "! It needs one!");
+        }
+        else
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     private void OnTriggerEnter(Collider other)

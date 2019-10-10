@@ -29,10 +29,19 @@ public class PlugBehavior : MonoBehaviour
     float backupDistance = 2f; //the distance the plug will eject away from the socket when unplugged
     float temporaryPlugDisableTime = 1f; //the amount of time in the seconds the plug will refuse to try to plug into anything after being unplugged, to prevent accidentally jumping right back into a socket
 
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        if (!GetComponent<AudioSource>())
+        {
+            Debug.Log("No audio source component on " + gameObject.name + "! It needs one!");
+        }
+        else
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
@@ -62,6 +71,9 @@ public class PlugBehavior : MonoBehaviour
             transform.parent.RotateAround(socketBehaviorScript.DesiredPlugLocation.transform.position, socketBehaviorScript.DesiredPlugLocation.transform.right, 180f);
         }
         currentSocketBehaviorScript = socketBehaviorScript;
+
+        //AUDIO: plug in
+
         //ungrab the plug's capsule
         if(transform.parent.GetComponent<OVRGrabbable>().isGrabbed)
         {
@@ -87,6 +99,8 @@ public class PlugBehavior : MonoBehaviour
         }
         //broadcast the plug being disabled
         Debug.Log("Unplugged.");
+
+        //AUDIO: unplug
 
         //disable plug from being allowed to plug into anything for a brief moment, remove constraints, inform socket of unplugging
         StartCoroutine(UnplugWaitCoroutine());

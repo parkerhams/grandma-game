@@ -158,6 +158,7 @@ public class CableTension : MonoBehaviour
             if (grabScript.isGrabbed)
             {
                 grabScript.grabbedBy.GetComponent<OVRGrabber>().ForceRelease(grabScript);
+                //POSSIBLE AUDIO: some sort of short "cable pulled taut" noise
             }
         }
     }

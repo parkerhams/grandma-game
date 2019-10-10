@@ -14,9 +14,23 @@ public class ButtonBehavior : MonoBehaviour
 
     bool canBePressed = true;
 
+    AudioSource audioSource;
+
     public float waitTime = .5f;//time to wait, in seconds, until button can be interacted with again
 
     //isPressed is set back to false when its corresponding function is called in the device's script to ensure that the device "hears" when it is pressed
+
+    private void Start()
+    {
+        if(!GetComponent<AudioSource>())
+        {
+            Debug.Log("No audio source component on " + gameObject.name + "! It needs one!");
+        }
+        else
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,11 +46,6 @@ public class ButtonBehavior : MonoBehaviour
         }
     }
 
-    void UnpressPowerButton()
-    {
-
-    }
-
     void PressButton()
     {
         CRTBehaviorScript.DebugButtonInfoUpdate("A");
@@ -49,6 +58,10 @@ public class ButtonBehavior : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - pressedInDistance);
                 isPressedInwards = false;
                 isPressed = false;
+
+                //AUDIO: sticky CRT button pushed in
+                audioSource.PlayOneShot(SoundManager.Instance.tv_button_on);
+
                 StartCoroutine(AfterPressWaitCoroutine());
             }
             else
@@ -58,6 +71,10 @@ public class ButtonBehavior : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
                 isPressedInwards = true;
                 isPressed = true;
+
+                //AUDIO: sticky CRT button pushed back out
+                audioSource.PlayOneShot(SoundManager.Instance.tv_button_off);
+
                 StartCoroutine(AfterPressWaitCoroutine());
             }
         }
@@ -70,6 +87,9 @@ public class ButtonBehavior : MonoBehaviour
                 StartCoroutine(AfterPressWaitCoroutine());
                 StartCoroutine(MoveButton());
                 isPressed = true;
+
+                //AUDIO: regular button pressed
+                audioSource.PlayOneShot(SoundManager.Instance.buttonPress);
             }
         }
     }

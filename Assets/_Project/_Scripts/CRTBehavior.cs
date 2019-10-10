@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.Audio;
 
 public class CRTBehavior : MonoBehaviour
 {
@@ -80,12 +81,23 @@ public class CRTBehavior : MonoBehaviour
     public Text debugTextRightAudio;
     public Text debugButtonInfo;
 
+    AudioSource audioSource;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         videoPlayer.loopPointReached += EndReached;
+
+        if (!GetComponent<AudioSource>())
+        {
+            Debug.Log("No audio source component on " + gameObject.name + "! It needs one!");
+        }
+        else
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     void EndReached(VideoPlayer vp)
@@ -125,6 +137,19 @@ public class CRTBehavior : MonoBehaviour
         {
             videoPlayer.Play();
             //videoPlayer.playbackSpeed = 1;
+        }
+    }
+
+    void AdjustAudioPerClip()
+    {
+        //The band audio clip is much louder than everything else
+        //I didn't want to manually reduce the audio of the raw file, so I'm adjusting it here
+        AudioMixer mixer = Resources.Load("Main") as AudioMixer;
+        string group = "VideoClips";
+        AudioMixerGroup videoClipAudio = mixer.FindMatchingGroups(group)[0];
+        if(videoPlayer.clip = blankScreenClip)
+        {
+            
         }
     }
     
