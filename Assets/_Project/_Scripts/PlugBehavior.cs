@@ -45,6 +45,10 @@ public class PlugBehavior : MonoBehaviour
                 return;//power cable can't be removed from its input socket on the CRT
             }
             DistanceBasedUnplugCheck();//check to see if it's tensioned hard enough to automatically unplug itself
+            if(transform.parent.GetComponent<OVRGrabbable>().isGrabbed && isPluggedIn)
+            {
+                UnplugFromSocket(keepGrabbed:true);
+            }
         }
     }
 
@@ -75,7 +79,7 @@ public class PlugBehavior : MonoBehaviour
         isPluggedIn = true;
         cableBehaviorScript.UpdatePlugStatus(gameObject);
     }
-    private void UnplugFromSocket()
+    private void UnplugFromSocket(bool keepGrabbed=false)
     {
         if(!isPluggedIn)
         {
@@ -92,6 +96,18 @@ public class PlugBehavior : MonoBehaviour
         currentSocketBehaviorScript.RemovePlug();
         currentSocketBehaviorScript = null;
         cableBehaviorScript.TerminateSignalStatus();
+        if(keepGrabbed)
+        {
+            transform.parent.GetComponent<Rigidbody>().isKinematic = true;
+        }
+        else
+        {
+            //if(transform.parent.GetComponent<OVRGrabbable>().isGrabbed)
+            //{
+            //    OVRGrabbable grabScript = transform.parent.GetComponent<OVRGrabbable>();
+            //    grabScript.grabbedBy.ForceRelease(grabScript);
+            //}
+        }
     }
 
     private void DistanceBasedUnplugCheck()

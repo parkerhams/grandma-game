@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 8250603}
   - component: {fileID: 8250602}
   - component: {fileID: 8250601}
+  - component: {fileID: 8250605}
   - component: {fileID: 8250597}
   - component: {fileID: 8250600}
   - component: {fileID: 8250599}
@@ -310,6 +311,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8250605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8250596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &11104907
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +430,7 @@ GameObject:
   - component: {fileID: 15452090}
   - component: {fileID: 15452089}
   - component: {fileID: 15452088}
+  - component: {fileID: 15452092}
   - component: {fileID: 15452084}
   - component: {fileID: 15452087}
   - component: {fileID: 15452086}
@@ -590,6 +608,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &15452092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15452083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &19104567
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +636,7 @@ GameObject:
   - component: {fileID: 19104574}
   - component: {fileID: 19104573}
   - component: {fileID: 19104572}
+  - component: {fileID: 19104576}
   - component: {fileID: 19104568}
   - component: {fileID: 19104571}
   - component: {fileID: 19104570}
@@ -780,6 +815,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19104576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19104567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &28229219
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +844,7 @@ GameObject:
   - component: {fileID: 28229225}
   - component: {fileID: 28229224}
   - component: {fileID: 28229220}
+  - component: {fileID: 28229228}
   - component: {fileID: 28229223}
   - component: {fileID: 28229222}
   - component: {fileID: 28229221}
@@ -969,6 +1021,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &28229228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28229219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &35648784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1107,6 +1175,7 @@ GameObject:
   - component: {fileID: 42175770}
   - component: {fileID: 42175769}
   - component: {fileID: 42175768}
+  - component: {fileID: 42175773}
   - component: {fileID: 42175767}
   - component: {fileID: 42175766}
   - component: {fileID: 42175765}
@@ -1283,6 +1352,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &42175773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42175764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &47232953
 GameObject:
   m_ObjectHideFlags: 1
@@ -1435,6 +1520,7 @@ GameObject:
   - component: {fileID: 57677427}
   - component: {fileID: 57677426}
   - component: {fileID: 57677425}
+  - component: {fileID: 57677429}
   - component: {fileID: 57677423}
   - component: {fileID: 57677424}
   m_Layer: 8
@@ -1553,6 +1639,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &57677429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57677422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &59370794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1668,7 @@ GameObject:
   - component: {fileID: 59370800}
   - component: {fileID: 59370799}
   - component: {fileID: 59370795}
+  - component: {fileID: 59370803}
   - component: {fileID: 59370798}
   - component: {fileID: 59370797}
   - component: {fileID: 59370796}
@@ -1742,6 +1845,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &59370803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59370794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &60399184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1874,7 @@ GameObject:
   - component: {fileID: 60399188}
   - component: {fileID: 60399187}
   - component: {fileID: 60399185}
+  - component: {fileID: 60399191}
   - component: {fileID: 60399186}
   m_Layer: 8
   m_Name: 1
@@ -1872,6 +1992,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &60399191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60399184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &63943522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,6 +2097,7 @@ GameObject:
   - component: {fileID: 67388812}
   - component: {fileID: 67388811}
   - component: {fileID: 67388810}
+  - component: {fileID: 67388814}
   - component: {fileID: 67388806}
   - component: {fileID: 67388809}
   - component: {fileID: 67388808}
@@ -2139,6 +2276,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &67388814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67388805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &80004542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2304,7 @@ GameObject:
   - component: {fileID: 80004549}
   - component: {fileID: 80004548}
   - component: {fileID: 80004547}
+  - component: {fileID: 80004551}
   - component: {fileID: 80004543}
   - component: {fileID: 80004546}
   - component: {fileID: 80004545}
@@ -2328,6 +2482,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &80004551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80004542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &84558939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,6 +2510,7 @@ GameObject:
   - component: {fileID: 84558946}
   - component: {fileID: 84558945}
   - component: {fileID: 84558944}
+  - component: {fileID: 84558948}
   - component: {fileID: 84558940}
   - component: {fileID: 84558943}
   - component: {fileID: 84558942}
@@ -2517,6 +2688,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84558948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84558939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &86871239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,6 +2844,7 @@ GameObject:
   - component: {fileID: 97582313}
   - component: {fileID: 97582316}
   - component: {fileID: 97582315}
+  - component: {fileID: 97582320}
   - component: {fileID: 97582314}
   m_Layer: 8
   m_Name: 3
@@ -2819,6 +3007,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &97582320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97582312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &101508276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2831,6 +3035,7 @@ GameObject:
   - component: {fileID: 101508283}
   - component: {fileID: 101508282}
   - component: {fileID: 101508281}
+  - component: {fileID: 101508285}
   - component: {fileID: 101508277}
   - component: {fileID: 101508280}
   - component: {fileID: 101508279}
@@ -3009,6 +3214,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &101508285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101508276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &113019711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4460770153449642512, guid: f21a07c0719b3e941ac2e1f447bceeef,
@@ -3179,6 +3400,7 @@ GameObject:
   - component: {fileID: 142550278}
   - component: {fileID: 142550277}
   - component: {fileID: 142550273}
+  - component: {fileID: 142550281}
   - component: {fileID: 142550276}
   - component: {fileID: 142550275}
   - component: {fileID: 142550274}
@@ -3355,6 +3577,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &142550281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142550272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &145664858
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,6 +3606,7 @@ GameObject:
   - component: {fileID: 145664864}
   - component: {fileID: 145664863}
   - component: {fileID: 145664859}
+  - component: {fileID: 145664867}
   - component: {fileID: 145664862}
   - component: {fileID: 145664861}
   - component: {fileID: 145664860}
@@ -3544,6 +3783,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145664867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145664858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &168256727
 GameObject:
   m_ObjectHideFlags: 0
@@ -4024,6 +4279,7 @@ GameObject:
   - component: {fileID: 211507797}
   - component: {fileID: 211507796}
   - component: {fileID: 211507795}
+  - component: {fileID: 211507799}
   - component: {fileID: 211507792}
   - component: {fileID: 211507794}
   - component: {fileID: 211507793}
@@ -4187,6 +4443,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &211507799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211507791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &217926613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4389,7 +4661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -4407,6 +4678,7 @@ GameObject:
   - component: {fileID: 219321955}
   - component: {fileID: 219321954}
   - component: {fileID: 219321950}
+  - component: {fileID: 219321958}
   - component: {fileID: 219321953}
   - component: {fileID: 219321952}
   - component: {fileID: 219321951}
@@ -4583,6 +4855,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &219321958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219321949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &222036840
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,6 +5024,7 @@ GameObject:
   - component: {fileID: 225053935}
   - component: {fileID: 225053934}
   - component: {fileID: 225053930}
+  - component: {fileID: 225053937}
   - component: {fileID: 225053933}
   - component: {fileID: 225053932}
   - component: {fileID: 225053931}
@@ -4899,6 +5188,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225053937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225053929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &227791372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,6 +5325,7 @@ GameObject:
   - component: {fileID: 256029117}
   - component: {fileID: 256029116}
   - component: {fileID: 256029115}
+  - component: {fileID: 256029119}
   - component: {fileID: 256029111}
   - component: {fileID: 256029114}
   - component: {fileID: 256029113}
@@ -5198,6 +5504,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256029119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256029110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &257466413
 GameObject:
   m_ObjectHideFlags: 0
@@ -5303,6 +5625,7 @@ GameObject:
   - component: {fileID: 262411967}
   - component: {fileID: 262411970}
   - component: {fileID: 262411969}
+  - component: {fileID: 262411974}
   - component: {fileID: 262411968}
   m_Layer: 8
   m_Name: 3
@@ -5464,6 +5787,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &262411974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262411966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &263605599
 GameObject:
   m_ObjectHideFlags: 0
@@ -5666,7 +6005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -6191,6 +6529,7 @@ GameObject:
   - component: {fileID: 312133225}
   - component: {fileID: 312133224}
   - component: {fileID: 312133223}
+  - component: {fileID: 312133227}
   - component: {fileID: 312133219}
   - component: {fileID: 312133222}
   - component: {fileID: 312133221}
@@ -6369,6 +6708,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &312133227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312133218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &322861329
 GameObject:
   m_ObjectHideFlags: 0
@@ -6381,6 +6736,7 @@ GameObject:
   - component: {fileID: 322861334}
   - component: {fileID: 322861333}
   - component: {fileID: 322861332}
+  - component: {fileID: 322861336}
   - component: {fileID: 322861330}
   - component: {fileID: 322861331}
   m_Layer: 8
@@ -6500,6 +6856,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &322861336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322861329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &338572008
 GameObject:
   m_ObjectHideFlags: 0
@@ -6607,6 +6979,7 @@ GameObject:
   - component: {fileID: 342837887}
   - component: {fileID: 342837886}
   - component: {fileID: 342837885}
+  - component: {fileID: 342837889}
   - component: {fileID: 342837881}
   - component: {fileID: 342837884}
   - component: {fileID: 342837883}
@@ -6785,6 +7158,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342837889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342837880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &351395582
 GameObject:
   m_ObjectHideFlags: 0
@@ -6987,7 +7376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -7134,6 +7522,7 @@ GameObject:
   - component: {fileID: 370351556}
   - component: {fileID: 370351555}
   - component: {fileID: 370351551}
+  - component: {fileID: 370351559}
   - component: {fileID: 370351554}
   - component: {fileID: 370351553}
   - component: {fileID: 370351552}
@@ -7310,6 +7699,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &370351559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370351550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &376910791
 GameObject:
   m_ObjectHideFlags: 0
@@ -7323,6 +7728,7 @@ GameObject:
   - component: {fileID: 376910797}
   - component: {fileID: 376910796}
   - component: {fileID: 376910792}
+  - component: {fileID: 376910800}
   - component: {fileID: 376910795}
   - component: {fileID: 376910794}
   - component: {fileID: 376910793}
@@ -7499,6 +7905,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376910800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376910791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &380822257
 GameObject:
   m_ObjectHideFlags: 0
@@ -7701,7 +8123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -8165,6 +8586,7 @@ GameObject:
   - component: {fileID: 425988734}
   - component: {fileID: 425988733}
   - component: {fileID: 425988729}
+  - component: {fileID: 425988737}
   - component: {fileID: 425988732}
   - component: {fileID: 425988731}
   - component: {fileID: 425988730}
@@ -8341,6 +8763,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425988737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425988728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &428761010
 GameObject:
   m_ObjectHideFlags: 0
@@ -8971,7 +9409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -9269,7 +9706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -9473,6 +9909,7 @@ GameObject:
   - component: {fileID: 580867869}
   - component: {fileID: 580867868}
   - component: {fileID: 580867865}
+  - component: {fileID: 580867872}
   - component: {fileID: 580867867}
   - component: {fileID: 580867866}
   m_Layer: 8
@@ -9635,6 +10072,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &580867872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580867864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &584529094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9647,6 +10100,7 @@ GameObject:
   - component: {fileID: 584529101}
   - component: {fileID: 584529100}
   - component: {fileID: 584529099}
+  - component: {fileID: 584529103}
   - component: {fileID: 584529095}
   - component: {fileID: 584529098}
   - component: {fileID: 584529097}
@@ -9825,6 +10279,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584529103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584529094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &596054670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10268,6 +10738,7 @@ GameObject:
   - component: {fileID: 631861849}
   - component: {fileID: 631861848}
   - component: {fileID: 631861847}
+  - component: {fileID: 631861851}
   - component: {fileID: 631861843}
   - component: {fileID: 631861846}
   - component: {fileID: 631861845}
@@ -10445,6 +10916,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &631861851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631861842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &638478462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 414912, guid: e6ba3498ffa1e534b91a07264266e6b8,
@@ -10655,7 +11142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -10672,6 +11158,7 @@ GameObject:
   - component: {fileID: 657831274}
   - component: {fileID: 657831273}
   - component: {fileID: 657831272}
+  - component: {fileID: 657831276}
   - component: {fileID: 657831269}
   - component: {fileID: 657831271}
   - component: {fileID: 657831270}
@@ -10836,6 +11323,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &657831276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657831268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &667170023
 GameObject:
   m_ObjectHideFlags: 0
@@ -10884,6 +11387,7 @@ GameObject:
   - component: {fileID: 677562945}
   - component: {fileID: 677562944}
   - component: {fileID: 677562940}
+  - component: {fileID: 677562948}
   - component: {fileID: 677562943}
   - component: {fileID: 677562942}
   - component: {fileID: 677562941}
@@ -11060,6 +11564,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &677562948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677562939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &679574483
 GameObject:
   m_ObjectHideFlags: 0
@@ -11359,7 +11879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -11376,6 +11895,7 @@ GameObject:
   - component: {fileID: 682687351}
   - component: {fileID: 682687350}
   - component: {fileID: 682687349}
+  - component: {fileID: 682687353}
   - component: {fileID: 682687345}
   - component: {fileID: 682687348}
   - component: {fileID: 682687347}
@@ -11553,6 +12073,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &682687353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682687344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &683800996
 GameObject:
   m_ObjectHideFlags: 0
@@ -11850,7 +12386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -11867,6 +12402,7 @@ GameObject:
   - component: {fileID: 692184329}
   - component: {fileID: 692184328}
   - component: {fileID: 692184327}
+  - component: {fileID: 692184331}
   - component: {fileID: 692184323}
   - component: {fileID: 692184326}
   - component: {fileID: 692184325}
@@ -12045,6 +12581,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692184331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692184322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &693085381
 GameObject:
   m_ObjectHideFlags: 0
@@ -12311,6 +12863,7 @@ GameObject:
   - component: {fileID: 697238637}
   - component: {fileID: 697238636}
   - component: {fileID: 697238632}
+  - component: {fileID: 697238640}
   - component: {fileID: 697238635}
   - component: {fileID: 697238634}
   - component: {fileID: 697238633}
@@ -12487,6 +13040,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697238640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697238631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &703872841
 GameObject:
   m_ObjectHideFlags: 0
@@ -12611,6 +13180,7 @@ GameObject:
   - component: {fileID: 714261794}
   - component: {fileID: 714261793}
   - component: {fileID: 714261792}
+  - component: {fileID: 714261796}
   - component: {fileID: 714261788}
   - component: {fileID: 714261791}
   - component: {fileID: 714261790}
@@ -12789,6 +13359,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &714261796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714261787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &716327283
 GameObject:
   m_ObjectHideFlags: 0
@@ -13059,7 +13645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -13076,6 +13661,7 @@ GameObject:
   - component: {fileID: 719988349}
   - component: {fileID: 719988348}
   - component: {fileID: 719988347}
+  - component: {fileID: 719988351}
   - component: {fileID: 719988343}
   - component: {fileID: 719988346}
   - component: {fileID: 719988345}
@@ -13253,6 +13839,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &719988351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719988342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &723718697
 GameObject:
   m_ObjectHideFlags: 0
@@ -13265,6 +13867,7 @@ GameObject:
   - component: {fileID: 723718705}
   - component: {fileID: 723718704}
   - component: {fileID: 723718703}
+  - component: {fileID: 723718706}
   - component: {fileID: 723718702}
   - component: {fileID: 723718701}
   - component: {fileID: 723718700}
@@ -13443,6 +14046,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723718697}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &723718706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723718697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &724318332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14014,7 +14633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -14062,6 +14680,7 @@ GameObject:
   - component: {fileID: 750563468}
   - component: {fileID: 750563467}
   - component: {fileID: 750563463}
+  - component: {fileID: 750563471}
   - component: {fileID: 750563466}
   - component: {fileID: 750563465}
   - component: {fileID: 750563464}
@@ -14238,6 +14857,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &750563471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750563462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &760151394
 GameObject:
   m_ObjectHideFlags: 0
@@ -14342,6 +14977,7 @@ GameObject:
   - component: {fileID: 765167231}
   - component: {fileID: 765167230}
   - component: {fileID: 765167229}
+  - component: {fileID: 765167233}
   - component: {fileID: 765167228}
   - component: {fileID: 765167227}
   - component: {fileID: 765167226}
@@ -14520,6 +15156,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765167224}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &765167233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765167224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &772738364 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517615109051053846, guid: 5786dbade5bff0b448c9c759e727e2de,
@@ -14808,6 +15460,7 @@ GameObject:
   - component: {fileID: 812686902}
   - component: {fileID: 812686901}
   - component: {fileID: 812686897}
+  - component: {fileID: 812686905}
   - component: {fileID: 812686900}
   - component: {fileID: 812686899}
   - component: {fileID: 812686898}
@@ -14984,6 +15637,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &812686905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812686896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &815921801
 GameObject:
   m_ObjectHideFlags: 0
@@ -14997,6 +15666,7 @@ GameObject:
   - component: {fileID: 815921807}
   - component: {fileID: 815921806}
   - component: {fileID: 815921802}
+  - component: {fileID: 815921810}
   - component: {fileID: 815921805}
   - component: {fileID: 815921804}
   - component: {fileID: 815921803}
@@ -15173,6 +15843,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &815921810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815921801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &827004974
 GameObject:
   m_ObjectHideFlags: 0
@@ -15186,6 +15872,7 @@ GameObject:
   - component: {fileID: 827004980}
   - component: {fileID: 827004979}
   - component: {fileID: 827004975}
+  - component: {fileID: 827004983}
   - component: {fileID: 827004978}
   - component: {fileID: 827004977}
   - component: {fileID: 827004976}
@@ -15362,6 +16049,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &827004983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827004974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &830595463
 GameObject:
   m_ObjectHideFlags: 0
@@ -15884,6 +16587,7 @@ GameObject:
   - component: {fileID: 873032543}
   - component: {fileID: 873032542}
   - component: {fileID: 873032538}
+  - component: {fileID: 873032546}
   - component: {fileID: 873032541}
   - component: {fileID: 873032540}
   - component: {fileID: 873032539}
@@ -16060,6 +16764,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &873032546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873032537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &874219503
 GameObject:
   m_ObjectHideFlags: 0
@@ -16191,6 +16911,7 @@ GameObject:
   - component: {fileID: 881920026}
   - component: {fileID: 881920025}
   - component: {fileID: 881920021}
+  - component: {fileID: 881920029}
   - component: {fileID: 881920024}
   - component: {fileID: 881920023}
   - component: {fileID: 881920022}
@@ -16367,6 +17088,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881920029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881920020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &888094454
 GameObject:
   m_ObjectHideFlags: 0
@@ -16380,6 +17117,7 @@ GameObject:
   - component: {fileID: 888094460}
   - component: {fileID: 888094459}
   - component: {fileID: 888094455}
+  - component: {fileID: 888094463}
   - component: {fileID: 888094458}
   - component: {fileID: 888094457}
   - component: {fileID: 888094456}
@@ -16556,6 +17294,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888094463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888094454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &906347893
 GameObject:
   m_ObjectHideFlags: 0
@@ -16758,7 +17512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -16890,6 +17643,7 @@ GameObject:
   - component: {fileID: 911638950}
   - component: {fileID: 911638949}
   - component: {fileID: 911638948}
+  - component: {fileID: 911638952}
   - component: {fileID: 911638944}
   - component: {fileID: 911638947}
   - component: {fileID: 911638946}
@@ -17068,6 +17822,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &911638952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911638943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &916609949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9064309303332522412, guid: f21a07c0719b3e941ac2e1f447bceeef,
@@ -17099,6 +17869,7 @@ GameObject:
   - component: {fileID: 928258298}
   - component: {fileID: 928258297}
   - component: {fileID: 928258296}
+  - component: {fileID: 928258300}
   - component: {fileID: 928258292}
   - component: {fileID: 928258295}
   - component: {fileID: 928258294}
@@ -17276,6 +18047,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &928258300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928258291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &930411485
 GameObject:
   m_ObjectHideFlags: 0
@@ -17289,6 +18076,7 @@ GameObject:
   - component: {fileID: 930411491}
   - component: {fileID: 930411490}
   - component: {fileID: 930411489}
+  - component: {fileID: 930411494}
   - component: {fileID: 930411488}
   - component: {fileID: 930411487}
   - component: {fileID: 930411486}
@@ -17465,6 +18253,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &930411494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930411485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &931868018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17613,6 +18417,7 @@ GameObject:
   - component: {fileID: 940379620}
   - component: {fileID: 940379619}
   - component: {fileID: 940379615}
+  - component: {fileID: 940379623}
   - component: {fileID: 940379618}
   - component: {fileID: 940379617}
   - component: {fileID: 940379616}
@@ -17789,6 +18594,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &940379623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940379614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &943756355
 GameObject:
   m_ObjectHideFlags: 0
@@ -17896,6 +18717,7 @@ GameObject:
   - component: {fileID: 952290895}
   - component: {fileID: 952290894}
   - component: {fileID: 952290893}
+  - component: {fileID: 952290897}
   - component: {fileID: 952290889}
   - component: {fileID: 952290892}
   - component: {fileID: 952290891}
@@ -18074,6 +18896,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &952290897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952290888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &955563192
 GameObject:
   m_ObjectHideFlags: 0
@@ -18284,6 +19122,7 @@ GameObject:
   - component: {fileID: 964563846}
   - component: {fileID: 964563845}
   - component: {fileID: 964563841}
+  - component: {fileID: 964563849}
   - component: {fileID: 964563844}
   - component: {fileID: 964563843}
   - component: {fileID: 964563842}
@@ -18460,6 +19299,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964563849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964563840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &980009736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18771,6 +19626,7 @@ GameObject:
   - component: {fileID: 998875839}
   - component: {fileID: 998875838}
   - component: {fileID: 998875834}
+  - component: {fileID: 998875842}
   - component: {fileID: 998875837}
   - component: {fileID: 998875836}
   - component: {fileID: 998875835}
@@ -18947,6 +19803,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &998875842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998875833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1005818445
 GameObject:
   m_ObjectHideFlags: 0
@@ -19408,7 +20280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -19615,7 +20486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -19633,6 +20503,7 @@ GameObject:
   - component: {fileID: 1056166168}
   - component: {fileID: 1056166167}
   - component: {fileID: 1056166163}
+  - component: {fileID: 1056166171}
   - component: {fileID: 1056166166}
   - component: {fileID: 1056166165}
   - component: {fileID: 1056166164}
@@ -19809,6 +20680,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1056166171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056166162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1065982840
 GameObject:
   m_ObjectHideFlags: 0
@@ -20057,7 +20944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -20675,6 +21561,7 @@ GameObject:
   - component: {fileID: 1146111088}
   - component: {fileID: 1146111087}
   - component: {fileID: 1146111083}
+  - component: {fileID: 1146111091}
   - component: {fileID: 1146111086}
   - component: {fileID: 1146111085}
   - component: {fileID: 1146111084}
@@ -20851,6 +21738,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146111091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146111082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146644375
 GameObject:
   m_ObjectHideFlags: 0
@@ -20863,6 +21766,7 @@ GameObject:
   - component: {fileID: 1146644382}
   - component: {fileID: 1146644381}
   - component: {fileID: 1146644380}
+  - component: {fileID: 1146644384}
   - component: {fileID: 1146644376}
   - component: {fileID: 1146644379}
   - component: {fileID: 1146644378}
@@ -21040,6 +21944,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146644384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146644375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1157836427
 GameObject:
   m_ObjectHideFlags: 0
@@ -21052,6 +21972,7 @@ GameObject:
   - component: {fileID: 1157836434}
   - component: {fileID: 1157836433}
   - component: {fileID: 1157836432}
+  - component: {fileID: 1157836436}
   - component: {fileID: 1157836428}
   - component: {fileID: 1157836431}
   - component: {fileID: 1157836430}
@@ -21230,6 +22151,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1157836436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157836427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1166248531
 GameObject:
   m_ObjectHideFlags: 0
@@ -21462,7 +22399,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -21669,7 +22605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -22019,6 +22954,7 @@ GameObject:
   - component: {fileID: 1265545709}
   - component: {fileID: 1265545708}
   - component: {fileID: 1265545705}
+  - component: {fileID: 1265545712}
   - component: {fileID: 1265545707}
   - component: {fileID: 1265545706}
   m_Layer: 8
@@ -22181,6 +23117,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1265545712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265545704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266371580
 GameObject:
   m_ObjectHideFlags: 0
@@ -22193,6 +23145,7 @@ GameObject:
   - component: {fileID: 1266371587}
   - component: {fileID: 1266371586}
   - component: {fileID: 1266371585}
+  - component: {fileID: 1266371589}
   - component: {fileID: 1266371581}
   - component: {fileID: 1266371584}
   - component: {fileID: 1266371583}
@@ -22370,6 +23323,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1266371589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266371580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267915242
 GameObject:
   m_ObjectHideFlags: 0
@@ -22382,6 +23351,7 @@ GameObject:
   - component: {fileID: 1267915249}
   - component: {fileID: 1267915248}
   - component: {fileID: 1267915247}
+  - component: {fileID: 1267915251}
   - component: {fileID: 1267915243}
   - component: {fileID: 1267915246}
   - component: {fileID: 1267915245}
@@ -22559,6 +23529,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1267915251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267915242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1268414957
 GameObject:
   m_ObjectHideFlags: 0
@@ -22761,7 +23747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -22779,6 +23764,7 @@ GameObject:
   - component: {fileID: 1271505269}
   - component: {fileID: 1271505268}
   - component: {fileID: 1271505264}
+  - component: {fileID: 1271505272}
   - component: {fileID: 1271505267}
   - component: {fileID: 1271505266}
   - component: {fileID: 1271505265}
@@ -22955,6 +23941,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1271505272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271505263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1273120633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23037,6 +24039,7 @@ GameObject:
   - component: {fileID: 1276268069}
   - component: {fileID: 1276268068}
   - component: {fileID: 1276268067}
+  - component: {fileID: 1276268071}
   - component: {fileID: 1276268066}
   - component: {fileID: 1276268065}
   - component: {fileID: 1276268064}
@@ -23215,6 +24218,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276268062}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1276268071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276268062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297592670
 GameObject:
   m_ObjectHideFlags: 0
@@ -23228,6 +24247,7 @@ GameObject:
   - component: {fileID: 1297592676}
   - component: {fileID: 1297592675}
   - component: {fileID: 1297592671}
+  - component: {fileID: 1297592679}
   - component: {fileID: 1297592674}
   - component: {fileID: 1297592673}
   - component: {fileID: 1297592672}
@@ -23404,6 +24424,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1297592679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297592670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300395119
 GameObject:
   m_ObjectHideFlags: 0
@@ -23518,6 +24554,7 @@ GameObject:
   - component: {fileID: 1365810916}
   - component: {fileID: 1365810915}
   - component: {fileID: 1365810914}
+  - component: {fileID: 1365810918}
   - component: {fileID: 1365810910}
   - component: {fileID: 1365810913}
   - component: {fileID: 1365810912}
@@ -23695,6 +24732,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1365810918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365810909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1389702458
 GameObject:
   m_ObjectHideFlags: 0
@@ -24545,7 +25598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -24563,6 +25615,7 @@ GameObject:
   - component: {fileID: 1522294980}
   - component: {fileID: 1522294979}
   - component: {fileID: 1522294975}
+  - component: {fileID: 1522294983}
   - component: {fileID: 1522294978}
   - component: {fileID: 1522294977}
   - component: {fileID: 1522294976}
@@ -24739,6 +25792,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1522294983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522294974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1528390553
 GameObject:
   m_ObjectHideFlags: 0
@@ -24979,7 +26048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -24996,6 +26064,7 @@ GameObject:
   - component: {fileID: 1548843649}
   - component: {fileID: 1548843648}
   - component: {fileID: 1548843647}
+  - component: {fileID: 1548843651}
   - component: {fileID: 1548843643}
   - component: {fileID: 1548843646}
   - component: {fileID: 1548843645}
@@ -25174,6 +26243,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1548843651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548843642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1583339393
 GameObject:
   m_ObjectHideFlags: 0
@@ -25186,6 +26271,7 @@ GameObject:
   - component: {fileID: 1583339400}
   - component: {fileID: 1583339399}
   - component: {fileID: 1583339398}
+  - component: {fileID: 1583339402}
   - component: {fileID: 1583339394}
   - component: {fileID: 1583339397}
   - component: {fileID: 1583339396}
@@ -25363,6 +26449,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1583339402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583339393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1601539596
 GameObject:
   m_ObjectHideFlags: 0
@@ -25375,6 +26477,7 @@ GameObject:
   - component: {fileID: 1601539603}
   - component: {fileID: 1601539602}
   - component: {fileID: 1601539601}
+  - component: {fileID: 1601539605}
   - component: {fileID: 1601539597}
   - component: {fileID: 1601539600}
   - component: {fileID: 1601539599}
@@ -25552,6 +26655,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1601539605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601539596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605291130 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4690061960754922341, guid: f21a07c0719b3e941ac2e1f447bceeef,
@@ -25570,6 +26689,7 @@ GameObject:
   - component: {fileID: 1616551021}
   - component: {fileID: 1616551020}
   - component: {fileID: 1616551019}
+  - component: {fileID: 1616551023}
   - component: {fileID: 1616551018}
   - component: {fileID: 1616551017}
   - component: {fileID: 1616551016}
@@ -25748,6 +26868,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1616551023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616551014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1631458330
 GameObject:
   m_ObjectHideFlags: 0
@@ -25950,7 +27086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -25967,6 +27102,7 @@ GameObject:
   - component: {fileID: 1652435433}
   - component: {fileID: 1652435432}
   - component: {fileID: 1652435431}
+  - component: {fileID: 1652435435}
   - component: {fileID: 1652435427}
   - component: {fileID: 1652435430}
   - component: {fileID: 1652435429}
@@ -26144,6 +27280,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1652435435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652435426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1652734404
 GameObject:
   m_ObjectHideFlags: 0
@@ -26156,6 +27308,7 @@ GameObject:
   - component: {fileID: 1652734412}
   - component: {fileID: 1652734411}
   - component: {fileID: 1652734410}
+  - component: {fileID: 1652734413}
   - component: {fileID: 1652734409}
   - component: {fileID: 1652734408}
   - component: {fileID: 1652734407}
@@ -26335,6 +27488,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652734404}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1652734413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652734404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1665042729
 GameObject:
   m_ObjectHideFlags: 0
@@ -26424,6 +27593,7 @@ GameObject:
   - component: {fileID: 1665801588}
   - component: {fileID: 1665801587}
   - component: {fileID: 1665801586}
+  - component: {fileID: 1665801590}
   - component: {fileID: 1665801582}
   - component: {fileID: 1665801585}
   - component: {fileID: 1665801584}
@@ -26601,6 +27771,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1665801590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665801581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693430092
 GameObject:
   m_ObjectHideFlags: 0
@@ -26894,7 +28080,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -27022,6 +28207,7 @@ GameObject:
   - component: {fileID: 1705227263}
   - component: {fileID: 1705227262}
   - component: {fileID: 1705227260}
+  - component: {fileID: 1705227266}
   - component: {fileID: 1705227261}
   m_Layer: 8
   m_Name: 1
@@ -27139,6 +28325,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705227266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705227259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1706726232
 GameObject:
   m_ObjectHideFlags: 0
@@ -27204,6 +28406,7 @@ GameObject:
   - component: {fileID: 1724147107}
   - component: {fileID: 1724147106}
   - component: {fileID: 1724147105}
+  - component: {fileID: 1724147109}
   - component: {fileID: 1724147101}
   - component: {fileID: 1724147104}
   - component: {fileID: 1724147103}
@@ -27381,6 +28584,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1724147109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724147100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1744529294
 GameObject:
   m_ObjectHideFlags: 0
@@ -27394,6 +28613,7 @@ GameObject:
   - component: {fileID: 1744529300}
   - component: {fileID: 1744529299}
   - component: {fileID: 1744529295}
+  - component: {fileID: 1744529303}
   - component: {fileID: 1744529298}
   - component: {fileID: 1744529297}
   - component: {fileID: 1744529296}
@@ -27570,6 +28790,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1744529303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744529294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1746647189
 GameObject:
   m_ObjectHideFlags: 0
@@ -27582,6 +28818,7 @@ GameObject:
   - component: {fileID: 1746647196}
   - component: {fileID: 1746647195}
   - component: {fileID: 1746647194}
+  - component: {fileID: 1746647198}
   - component: {fileID: 1746647190}
   - component: {fileID: 1746647193}
   - component: {fileID: 1746647192}
@@ -27759,6 +28996,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1746647198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746647189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1770439515
 GameObject:
   m_ObjectHideFlags: 0
@@ -27771,6 +29024,7 @@ GameObject:
   - component: {fileID: 1770439522}
   - component: {fileID: 1770439521}
   - component: {fileID: 1770439520}
+  - component: {fileID: 1770439524}
   - component: {fileID: 1770439516}
   - component: {fileID: 1770439519}
   - component: {fileID: 1770439518}
@@ -27949,6 +29203,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1770439524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770439515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1778514424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28096,6 +29366,7 @@ GameObject:
   - component: {fileID: 1792174247}
   - component: {fileID: 1792174246}
   - component: {fileID: 1792174245}
+  - component: {fileID: 1792174249}
   - component: {fileID: 1792174241}
   - component: {fileID: 1792174244}
   - component: {fileID: 1792174243}
@@ -28274,6 +29545,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1792174249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792174240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1819094107
 GameObject:
   m_ObjectHideFlags: 0
@@ -28396,6 +29683,7 @@ GameObject:
   - component: {fileID: 1821777731}
   - component: {fileID: 1821777730}
   - component: {fileID: 1821777729}
+  - component: {fileID: 1821777733}
   - component: {fileID: 1821777725}
   - component: {fileID: 1821777728}
   - component: {fileID: 1821777727}
@@ -28574,6 +29862,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821777733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821777724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &1830542956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -28703,6 +30007,7 @@ GameObject:
   - component: {fileID: 1860546321}
   - component: {fileID: 1860546320}
   - component: {fileID: 1860546316}
+  - component: {fileID: 1860546324}
   - component: {fileID: 1860546319}
   - component: {fileID: 1860546318}
   - component: {fileID: 1860546317}
@@ -28879,6 +30184,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1860546324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860546315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861593621
 GameObject:
   m_ObjectHideFlags: 0
@@ -29073,6 +30394,7 @@ GameObject:
   - component: {fileID: 1873849354}
   - component: {fileID: 1873849353}
   - component: {fileID: 1873849349}
+  - component: {fileID: 1873849356}
   - component: {fileID: 1873849352}
   - component: {fileID: 1873849351}
   - component: {fileID: 1873849350}
@@ -29236,6 +30558,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1873849356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873849348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1885908312
 GameObject:
   m_ObjectHideFlags: 0
@@ -29249,6 +30587,7 @@ GameObject:
   - component: {fileID: 1885908318}
   - component: {fileID: 1885908317}
   - component: {fileID: 1885908313}
+  - component: {fileID: 1885908321}
   - component: {fileID: 1885908316}
   - component: {fileID: 1885908315}
   - component: {fileID: 1885908314}
@@ -29425,6 +30764,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1885908321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885908312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1886716155
 GameObject:
   m_ObjectHideFlags: 0
@@ -29538,6 +30893,7 @@ GameObject:
   - component: {fileID: 1890243402}
   - component: {fileID: 1890243401}
   - component: {fileID: 1890243397}
+  - component: {fileID: 1890243405}
   - component: {fileID: 1890243400}
   - component: {fileID: 1890243399}
   - component: {fileID: 1890243398}
@@ -29714,6 +31070,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1890243405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890243396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1897223715
 GameObject:
   m_ObjectHideFlags: 0
@@ -29727,6 +31099,7 @@ GameObject:
   - component: {fileID: 1897223721}
   - component: {fileID: 1897223720}
   - component: {fileID: 1897223716}
+  - component: {fileID: 1897223724}
   - component: {fileID: 1897223719}
   - component: {fileID: 1897223718}
   - component: {fileID: 1897223717}
@@ -29903,6 +31276,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1897223724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897223715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1907935774
 GameObject:
   m_ObjectHideFlags: 0
@@ -30293,6 +31682,7 @@ GameObject:
   - component: {fileID: 1969496228}
   - component: {fileID: 1969496227}
   - component: {fileID: 1969496223}
+  - component: {fileID: 1969496231}
   - component: {fileID: 1969496226}
   - component: {fileID: 1969496225}
   - component: {fileID: 1969496224}
@@ -30469,6 +31859,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1969496231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969496222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1976868221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517615109051053846, guid: 5786dbade5bff0b448c9c759e727e2de,
@@ -30501,6 +31907,7 @@ GameObject:
   - component: {fileID: 1981287901}
   - component: {fileID: 1981287900}
   - component: {fileID: 1981287896}
+  - component: {fileID: 1981287904}
   - component: {fileID: 1981287899}
   - component: {fileID: 1981287898}
   - component: {fileID: 1981287897}
@@ -30677,6 +32084,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1981287904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981287895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1990898384
 GameObject:
   m_ObjectHideFlags: 0
@@ -30690,6 +32113,7 @@ GameObject:
   - component: {fileID: 1990898390}
   - component: {fileID: 1990898389}
   - component: {fileID: 1990898385}
+  - component: {fileID: 1990898393}
   - component: {fileID: 1990898388}
   - component: {fileID: 1990898387}
   - component: {fileID: 1990898386}
@@ -30866,6 +32290,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1990898393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990898384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &1991956691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 462066, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -31374,6 +32814,7 @@ GameObject:
   - component: {fileID: 2073016565}
   - component: {fileID: 2073016564}
   - component: {fileID: 2073016560}
+  - component: {fileID: 2073016568}
   - component: {fileID: 2073016563}
   - component: {fileID: 2073016562}
   - component: {fileID: 2073016561}
@@ -31550,6 +32991,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2073016568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073016559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &2098992075
 GameObject:
   m_ObjectHideFlags: 0
@@ -31562,6 +33019,7 @@ GameObject:
   - component: {fileID: 2098992082}
   - component: {fileID: 2098992081}
   - component: {fileID: 2098992080}
+  - component: {fileID: 2098992084}
   - component: {fileID: 2098992079}
   - component: {fileID: 2098992078}
   - component: {fileID: 2098992077}
@@ -31739,6 +33197,22 @@ Transform:
   m_Father: {fileID: 779020979}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2098992084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098992075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &2100298975
 GameObject:
   m_ObjectHideFlags: 0
@@ -31751,6 +33225,7 @@ GameObject:
   - component: {fileID: 2100298982}
   - component: {fileID: 2100298981}
   - component: {fileID: 2100298980}
+  - component: {fileID: 2100298984}
   - component: {fileID: 2100298976}
   - component: {fileID: 2100298979}
   - component: {fileID: 2100298978}
@@ -31929,6 +33404,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100298984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100298975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &2103342479
 GameObject:
   m_ObjectHideFlags: 0
@@ -32131,7 +33622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLengthBetweenCapsules: 0
   parentCable: {fileID: 0}
   maleEndCapsule: {fileID: 0}
   femaleEndCapsule: {fileID: 0}
@@ -32512,6 +34002,7 @@ GameObject:
   - component: {fileID: 2123948837}
   - component: {fileID: 2123948836}
   - component: {fileID: 2123948835}
+  - component: {fileID: 2123948839}
   - component: {fileID: 2123948831}
   - component: {fileID: 2123948834}
   - component: {fileID: 2123948833}
@@ -32690,6 +34181,22 @@ Transform:
   m_Father: {fileID: 881525951}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2123948839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123948830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125334805
 GameObject:
   m_ObjectHideFlags: 0
@@ -32703,6 +34210,7 @@ GameObject:
   - component: {fileID: 2125334811}
   - component: {fileID: 2125334810}
   - component: {fileID: 2125334806}
+  - component: {fileID: 2125334814}
   - component: {fileID: 2125334809}
   - component: {fileID: 2125334808}
   - component: {fileID: 2125334807}
@@ -32879,6 +34387,22 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2125334814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125334805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &2126922062
 GameObject:
   m_ObjectHideFlags: 0
@@ -32923,6 +34447,7 @@ GameObject:
   - component: {fileID: 2132638176}
   - component: {fileID: 2132638175}
   - component: {fileID: 2132638171}
+  - component: {fileID: 2132638179}
   - component: {fileID: 2132638174}
   - component: {fileID: 2132638173}
   - component: {fileID: 2132638172}
@@ -33099,6 +34624,22 @@ Transform:
   m_Father: {fileID: 1047911451}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2132638179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132638170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &33768276817954309
 GameObject:
   m_ObjectHideFlags: 0
@@ -33380,6 +34921,7 @@ GameObject:
   - component: {fileID: 705143193209419286}
   - component: {fileID: 705143193209419285}
   - component: {fileID: 705143193209419284}
+  - component: {fileID: 705143193209419281}
   - component: {fileID: 705143193209419280}
   - component: {fileID: 705143193209419282}
   - component: {fileID: 705143193209419288}
@@ -33407,6 +34949,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143193209419281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193209419279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193209419282
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -33660,6 +35218,7 @@ GameObject:
   - component: {fileID: 705143193247982209}
   - component: {fileID: 705143193247982208}
   - component: {fileID: 705143193247982335}
+  - component: {fileID: 705143193247982332}
   - component: {fileID: 705143193247982331}
   - component: {fileID: 705143193247982333}
   - component: {fileID: 705143193247982211}
@@ -33687,6 +35246,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143193247982332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193247982330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193247982333
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -33758,6 +35333,7 @@ GameObject:
   - component: {fileID: 705143193299391121}
   - component: {fileID: 705143193299391120}
   - component: {fileID: 705143193299391119}
+  - component: {fileID: 705143193299391116}
   - component: {fileID: 705143193299391115}
   - component: {fileID: 705143193299391117}
   - component: {fileID: 705143193299391123}
@@ -33785,6 +35361,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143193299391116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193299391114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193299391117
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -33947,6 +35539,7 @@ GameObject:
   - component: {fileID: 705143193300198481}
   - component: {fileID: 705143193300198480}
   - component: {fileID: 705143193300198479}
+  - component: {fileID: 705143193300198476}
   - component: {fileID: 705143193300198475}
   - component: {fileID: 705143193300198477}
   - component: {fileID: 705143193300198483}
@@ -33973,6 +35566,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143193300198476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193300198474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193300198477
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -34122,6 +35731,7 @@ GameObject:
   - component: {fileID: 705143193358684282}
   - component: {fileID: 705143193358684281}
   - component: {fileID: 705143193358684280}
+  - component: {fileID: 705143193358684276}
   - component: {fileID: 705143193358684279}
   - component: {fileID: 705143193358684277}
   - component: {fileID: 705143193358684283}
@@ -34148,6 +35758,22 @@ Transform:
   m_Father: {fileID: 705143194843084149}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &705143193358684276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193358684274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193358684277
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -34312,6 +35938,7 @@ GameObject:
   - component: {fileID: 705143193453070180}
   - component: {fileID: 705143193453070179}
   - component: {fileID: 705143193453070178}
+  - component: {fileID: 705143193453070175}
   - component: {fileID: 705143193453070174}
   - component: {fileID: 705143193453070176}
   - component: {fileID: 705143193453070182}
@@ -34339,6 +35966,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143193453070175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193453070173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193453070176
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -34501,6 +36144,7 @@ GameObject:
   - component: {fileID: 705143193465206268}
   - component: {fileID: 705143193465206267}
   - component: {fileID: 705143193465206266}
+  - component: {fileID: 705143193465206263}
   - component: {fileID: 705143193465206262}
   - component: {fileID: 705143193465206264}
   - component: {fileID: 705143193465206270}
@@ -34528,6 +36172,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143193465206263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193465206261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193465206264
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -34690,6 +36350,7 @@ GameObject:
   - component: {fileID: 705143193623250776}
   - component: {fileID: 705143193623250775}
   - component: {fileID: 705143193623250774}
+  - component: {fileID: 705143193623250771}
   - component: {fileID: 705143193623250770}
   - component: {fileID: 705143193623250772}
   - component: {fileID: 705143193623250778}
@@ -34717,6 +36378,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143193623250771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193623250769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193623250772
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -34879,6 +36556,7 @@ GameObject:
   - component: {fileID: 705143193775012336}
   - component: {fileID: 705143193775012335}
   - component: {fileID: 705143193775012334}
+  - component: {fileID: 705143193775012331}
   - component: {fileID: 705143193775012330}
   - component: {fileID: 705143193775012332}
   - component: {fileID: 705143193775012338}
@@ -34906,6 +36584,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143193775012331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193775012329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193775012332
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -35068,6 +36762,7 @@ GameObject:
   - component: {fileID: 705143193846307977}
   - component: {fileID: 705143193846307976}
   - component: {fileID: 705143193846307975}
+  - component: {fileID: 705143193846307972}
   - component: {fileID: 705143193846307971}
   - component: {fileID: 705143193846307973}
   - component: {fileID: 705143193846307979}
@@ -35095,6 +36790,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143193846307972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143193846307970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143193846307973
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -35270,6 +36981,7 @@ GameObject:
   - component: {fileID: 705143194074775549}
   - component: {fileID: 705143194074775548}
   - component: {fileID: 705143194074775547}
+  - component: {fileID: 705143194074775544}
   - component: {fileID: 705143194074775543}
   - component: {fileID: 705143194074775545}
   - component: {fileID: 705143194074775551}
@@ -35297,6 +37009,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194074775544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194074775542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194074775545
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -35446,6 +37174,7 @@ GameObject:
   - component: {fileID: 705143194180903742}
   - component: {fileID: 705143194180903741}
   - component: {fileID: 705143194180903740}
+  - component: {fileID: 705143194180903737}
   - component: {fileID: 705143194180903736}
   - component: {fileID: 705143194180903738}
   - component: {fileID: 705143194180903872}
@@ -35473,6 +37202,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194180903737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194180903735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194180903738
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -35637,6 +37382,7 @@ GameObject:
   - component: {fileID: 705143194283150173}
   - component: {fileID: 705143194283150175}
   - component: {fileID: 705143194283150177}
+  - component: {fileID: 705143194283150174}
   - component: {fileID: 705143194283150181}
   m_Layer: 8
   m_Name: 3
@@ -35661,6 +37407,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194283150174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194283150172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194283150175
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -35915,6 +37677,7 @@ GameObject:
   - component: {fileID: 705143194285110787}
   - component: {fileID: 705143194285110786}
   - component: {fileID: 705143194285110785}
+  - component: {fileID: 705143194285110910}
   - component: {fileID: 705143194285110909}
   - component: {fileID: 705143194285110911}
   - component: {fileID: 705143194285110789}
@@ -35942,6 +37705,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194285110910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194285110908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194285110911
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -35999,6 +37778,7 @@ GameObject:
   - component: {fileID: 705143194406774544}
   - component: {fileID: 705143194406774543}
   - component: {fileID: 705143194406774542}
+  - component: {fileID: 705143194406774539}
   - component: {fileID: 705143194406774538}
   - component: {fileID: 705143194406774540}
   - component: {fileID: 705143194406774546}
@@ -36026,6 +37806,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194406774539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194406774537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194406774540
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -36188,6 +37984,7 @@ GameObject:
   - component: {fileID: 705143194407400486}
   - component: {fileID: 705143194407400485}
   - component: {fileID: 705143194407400484}
+  - component: {fileID: 705143194407400481}
   - component: {fileID: 705143194407400480}
   - component: {fileID: 705143194407400482}
   - component: {fileID: 705143194407400488}
@@ -36215,6 +38012,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194407400481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194407400479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194407400482
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -36377,6 +38190,7 @@ GameObject:
   - component: {fileID: 705143194523434568}
   - component: {fileID: 705143194523434567}
   - component: {fileID: 705143194523434566}
+  - component: {fileID: 705143194523434563}
   - component: {fileID: 705143194523434562}
   - component: {fileID: 705143194523434564}
   - component: {fileID: 705143194523434570}
@@ -36404,6 +38218,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194523434563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194523434561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194523434564
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -36679,6 +38509,7 @@ GameObject:
   - component: {fileID: 705143194570840540}
   - component: {fileID: 705143194570840539}
   - component: {fileID: 705143194570840538}
+  - component: {fileID: 705143194570840535}
   - component: {fileID: 705143194570840534}
   - component: {fileID: 705143194570840536}
   - component: {fileID: 705143194570840542}
@@ -36706,6 +38537,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194570840535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194570840533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194570840536
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -36868,6 +38715,7 @@ GameObject:
   - component: {fileID: 705143194591049372}
   - component: {fileID: 705143194591049371}
   - component: {fileID: 705143194591049370}
+  - component: {fileID: 705143194591049367}
   - component: {fileID: 705143194591049366}
   - component: {fileID: 705143194591049368}
   - component: {fileID: 705143194591049374}
@@ -36895,6 +38743,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194591049367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194591049365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194591049368
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -37057,6 +38921,7 @@ GameObject:
   - component: {fileID: 705143194606959280}
   - component: {fileID: 705143194606959279}
   - component: {fileID: 705143194606959278}
+  - component: {fileID: 705143194606959275}
   - component: {fileID: 705143194606959274}
   - component: {fileID: 705143194606959276}
   - component: {fileID: 705143194606959282}
@@ -37084,6 +38949,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194606959275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194606959273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194606959276
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -37361,6 +39242,7 @@ GameObject:
   - component: {fileID: 705143194780560790}
   - component: {fileID: 705143194780560789}
   - component: {fileID: 705143194780560788}
+  - component: {fileID: 705143194780560786}
   - component: {fileID: 705143194780560785}
   - component: {fileID: 705143194780560792}
   m_Layer: 8
@@ -37386,6 +39268,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194780560786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194780560784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!136 &705143194780560788
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -37559,6 +39457,7 @@ GameObject:
   - component: {fileID: 705143194861077363}
   - component: {fileID: 705143194861077362}
   - component: {fileID: 705143194861077361}
+  - component: {fileID: 705143194861077358}
   - component: {fileID: 705143194861077357}
   - component: {fileID: 705143194861077359}
   - component: {fileID: 705143194861077365}
@@ -37586,6 +39485,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143194861077358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143194861077356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143194861077359
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -37748,6 +39663,7 @@ GameObject:
   - component: {fileID: 705143195079630748}
   - component: {fileID: 705143195079630747}
   - component: {fileID: 705143195079630746}
+  - component: {fileID: 705143195079630743}
   - component: {fileID: 705143195079630742}
   - component: {fileID: 705143195079630744}
   - component: {fileID: 705143195079630750}
@@ -37775,6 +39691,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &705143195079630743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705143195079630741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488be9859c13e6459ebd24ff1987aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCable: {fileID: 0}
+  maleEndCapsule: {fileID: 0}
+  femaleEndCapsule: {fileID: 0}
+  cableTetherPoint: {x: 0, y: 0, z: 0}
 --- !u!144 &705143195079630744
 CharacterJoint:
   m_ObjectHideFlags: 0
