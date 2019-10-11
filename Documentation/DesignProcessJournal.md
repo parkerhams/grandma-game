@@ -77,11 +77,7 @@ The dialogue system has proven to be a difficult beast to implement. Several met
 
 # **Week 6 - 10-11-19 - Playtesting, logging bugs, and making plans**
 
-## **Art:**
-
-## **Design:**
-
-## **Programming:**
+[Please see our playtesting document for our log!](https://github.com/parkerhams/grandma-game/new/master/Documentation)
 
 # **Week 7 - 10-18-19 - Going ham on the dialogue system, and world-filling models**
 
