@@ -53,6 +53,8 @@ We made the cables by anchoring a sequence of capsules to each other with config
 ## **Design:**
 
 ## **Programming:**
+### Configuring Cable Output
+The goal for this week was configuring the behavior of the TV depending on what was plugged in and what wasn't. Since this logic depends on a huge number of variables, a plan was drawn up for how the code should operate. For more details, please visit the Week 3 entry of the [Technical Journal.](https://github.com/parkerhams/grandma-game/blob/master/Documentation/TechnicalJournal.md)
 
 # **Week 4 - 9-27-19 - Modeling and coding everything, forever**
 
@@ -69,6 +71,9 @@ We made the cables by anchoring a sequence of capsules to each other with config
 ## **Design:**
 
 ## **Programming:**
+
+### Dialogue System
+The dialogue system has proven to be a difficult beast to implement. Several methods were tried over an extended prototyping session by Parker and Dan. Using Unity event systems and having certain events trigger dialogue barks (ie "The TV is on!" when you plug in the TV) proved to be much more complicated than initially thought, and it was decided late in the night to just use UI elemnts like a canvas and text as a placeholder for the alpha build and that a functional dialogue system would have to wait for a time when a group of us could work on it together.
 
 # **Week 6 - 10-11-19 - Playtesting, logging bugs, and making plans**
 
