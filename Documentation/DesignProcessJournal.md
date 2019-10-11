@@ -86,6 +86,11 @@ The dialogue system has proven to be a difficult beast to implement. Several met
 # **Week 7 - 10-18-19 - Going ham on the dialogue system, and world-filling models**
 
 ## **Art:**
+### Video Tapes and Minor Assets
+With the game almost finished, we only had a few more models to make. These included the pretty essential VHS tapes and their sleeves. Since the tapes themselves will just be clones of each other with different data attached, we only needed one model that we could implement multiple times. We also started work on other assets to just fill in the world so it feels more homey and less like an empty cell. 
+
+### Rigging Grandma
+Thorne I don't know anything about rigging, please write some stuff lol
 
 ## **Design:**
 
