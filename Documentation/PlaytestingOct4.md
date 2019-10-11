@@ -86,3 +86,8 @@
 * A lot of black cables, not very distinct from each other
 
 ## Things we Need to Explain
+
+* Communicate distance grab ability
+* Movement with stick
+* When the RCA cables are switched around (color indications should be consistent)
+* Explain that all the cables have a place
