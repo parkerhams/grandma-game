@@ -15,7 +15,7 @@ This week, we all met and established our plans for the game. We designated offi
 * Drafted mockups of State Machine for TV and VCR systems in correlation with physical mockups
 ![Cable References](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/physicalPrototype2.jpg) 
 
-# **Week 2 - 9-13-19**
+# **Week 2 - 9-13-19 - Core assets and prototyping**
 
 ## **Art:**
 ### Grandma Model
@@ -40,7 +40,7 @@ Armed with this goal and an early model for the Television, we prototyped the de
 ### Drafting Dialogue for Grandma
 The dialogue document was split into three sections: Instructional Dialogue, Prompted Dialogue, and Unprompted Dialogue. The instructional dialogue is dialogue that tells the player to do something, like "Plug in the TV." The prompted dialogue is dialogue that is prompted by something the player does, like "Oh, you turned on the TV." The unprompted dialogue is dialogue that happens regardless of what the player is doing, like "Do you wanna make cookies later?" I wrote a bunch of dialogue barks in all of these sections, to be edited, deleted, or added to as we progress.
 
-# **Week 3 - 9-20-19**
+# **Week 3 - 9-20-19 - State machine, cables, and implementing other stuff**
 
 ## **Art:**
 
@@ -48,7 +48,7 @@ The dialogue document was split into three sections: Instructional Dialogue, Pro
 
 ## **Programming:**
 
-# **Week 4 - 9-27-19**
+# **Week 4 - 9-27-19 - Modeling and coding everything, forever**
 
 ## **Art:**
 
@@ -56,7 +56,7 @@ The dialogue document was split into three sections: Instructional Dialogue, Pro
 
 ## **Programming:**
 
-# **Week 5 - 10-4-19**
+# **Week 5 - 10-4-19 - Getting ready for alpha!!** 
 
 ## **Art:**
 
@@ -64,7 +64,15 @@ The dialogue document was split into three sections: Instructional Dialogue, Pro
 
 ## **Programming:**
 
-# **Week 7 - 10-11-19**
+# **Week 6 - 10-11-19 - Playtesting, logging bugs, and making plans**
+
+## **Art:**
+
+## **Design:**
+
+## **Programming:**
+
+# **Week 7 - 10-18-19 - Going ham on the dialogue system, and world-filling models**
 
 ## **Art:**
 
