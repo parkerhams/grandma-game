@@ -50,6 +50,15 @@
 
 ### Tester 5
 
+* Make sure to disable the debug menu
+* Reduce crouching
+* Likes the physics of the wires
+* Looks really nice
+* Kind of hard to control sometimes
+* Head broke off of the yellow wire briefly
+* Having a bit of trouble getting the cables to stay plugged in
+* Some wires clipping through the table
+
 ### Tester 6
 
 ### Tester 7
