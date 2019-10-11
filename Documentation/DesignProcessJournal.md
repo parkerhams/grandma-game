@@ -47,3 +47,27 @@ The dialogue document was split into three sections: Instructional Dialogue, Pro
 ## **Design:**
 
 ## **Programming:**
+
+# **Week 4 - 9-27-19**
+
+## **Art:**
+
+## **Design:**
+
+## **Programming:**
+
+# **Week 5 - 10-4-19**
+
+## **Art:**
+
+## **Design:**
+
+## **Programming:**
+
+# **Week 7 - 10-11-19**
+
+## **Art:**
+
+## **Design:**
+
+## **Programming:**
