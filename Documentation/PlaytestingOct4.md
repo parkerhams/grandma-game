@@ -61,6 +61,28 @@
 
 ### Tester 6
 
+* First time in VR
+* The wire looks like a bunch of sausages
+* Stick to move around and look is kind of disorienting
+* Wish there was a couch and more homey furniture
+* Feels prison-ish
+* Had to explain distance grabbing again
+* Trying to figure out what goes where
+* Likes the snap into place
+* Plugged cables into wall, came out
+* Stick movement made tester dizzy
+* Wish there were more props
+
 ### Tester 7
+
+* First time in VR
+* Recommend removing stick movement
+* Hooks up RCA cables first
+* Asked about whether TV RCA sockets should be colored
+* Likes wire physics
+* Not close enough to reach back of TV and VCR from behind table
+* Movement is disorienting
+* Unplugging problems when plugged into itself
+* A lot of black cables, not very distinct from each other
 
 ## Things we Need to Explain
