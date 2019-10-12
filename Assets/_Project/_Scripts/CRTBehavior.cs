@@ -139,19 +139,6 @@ public class CRTBehavior : MonoBehaviour
             //videoPlayer.playbackSpeed = 1;
         }
     }
-
-    void AdjustAudioPerClip()
-    {
-        //The band audio clip is much louder than everything else
-        //I didn't want to manually reduce the audio of the raw file, so I'm adjusting it here
-        AudioMixer mixer = Resources.Load("Main") as AudioMixer;
-        string group = "VideoClips";
-        AudioMixerGroup videoClipAudio = mixer.FindMatchingGroups(group)[0];
-        if(videoPlayer.clip = blankScreenClip)
-        {
-            
-        }
-    }
     
     void UpdateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
     {
