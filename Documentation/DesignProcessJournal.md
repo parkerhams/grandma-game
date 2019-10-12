@@ -82,11 +82,12 @@ The dialogue system has proven to be a difficult beast to implement. Several met
 
 [Please see our playtesting document for our log!](https://github.com/parkerhams/grandma-game/new/master/Documentation)
 ## **Programming:**
-- After seeing players test the game, we came away with a lot of necessary changes to improve its usability:
-Added a highlight to grabbable objects when the player's hand is pointing at them, both so that the player knows they can grab from a distance, and so that the player knows exactly what's going to be grabbed when they push the trigger.
+After seeing players test the game, we came away with a lot of necessary changes to improve its usability:
+
+- Added a highlight to grabbable objects when the player's hand is pointing at them, both so that the player knows they can grab from a distance, and so that the player knows exactly what's going to be grabbed when they push the trigger.
 - Added an obstruction layer to the TV stand and CRT, which prevents objects from being distance grabbed through them. This prevents players from accidentally pulling out a cable from the other side of the TV stand.
 - Removed player collision with most objects and positioned the player directly behind the TV stand. This allows players to get as close as they need to in order to plug in cables, and being positioned here lets them see the unplugged sockets on both devices as well as grandma herself, making it clear what they should do without having to explicitly tell them anything.
-- Revised the cable tension behavior, causing any currently grabbed cable to instruct each capsule of the cable to constantly check the distance from its neighbors. If any capsule gets too far from its neighbors, the cable releases itself from the player's hands, preventing them from pulling the cable apart. In addition, the capsules attached to the plugs become kinematic when plugged in, preventing accidental unplugs from tugging on any other piece of the cable. Players can now instead instantly unplug a cable directly by directly grabbing that plug capsule.
+- Revised the cable tension behavior, causing any currently grabbed cable to instruct each capsule of the cable to constantly check the distance from its neighbors. If any capsule gets too far from its neighbors, the cable releases itself from the player's hands, preventing them from pulling the cable apart. In addition, the capsules attached to the plugs become kinematic when plugged in, preventing accidental unplugs from tugging on any other piece of the cable. Players can now instead instantly unplug a cable by directly grabbing that plug capsule.
 
 # **Week 7 - 10-18-19 - Going ham on the dialogue system, and world-filling models**
 
