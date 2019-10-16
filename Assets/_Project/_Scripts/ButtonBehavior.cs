@@ -16,7 +16,7 @@ public class ButtonBehavior : MonoBehaviour
 
     AudioSource audioSource;
 
-    public float waitTime = .5f;//time to wait, in seconds, until button can be interacted with again
+    private float waitTime = .2f;//time to wait, in seconds, until button can be interacted with again
 
     //isPressed is set back to false when its corresponding function is called in the device's script to ensure that the device "hears" when it is pressed
 

@@ -97,6 +97,15 @@ public class VCRBehavior : MonoBehaviour
         Rigidbody rb = VHS.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         VHS.transform.position = entryPosition.transform.position;
+        VHSBehavior VHSscript = VHS.GetComponent<VHSBehavior>();
+        //if(VHSscript.rotationToFitVCR != null)
+        //{
+        //    VHS.transform.rotation = VHSscript.rotationToFitVCR;
+        //}
+        //else
+        //{
+        //    VHS.transform.rotation = entryPosition.transform.rotation;
+        //}
         VHS.transform.rotation = entryPosition.transform.rotation;
         StartCoroutine(VHSWaitCoroutine());
         currentVHS = VHS;

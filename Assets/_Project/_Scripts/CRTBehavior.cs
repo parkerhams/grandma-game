@@ -44,6 +44,12 @@ public class CRTBehavior : MonoBehaviour
     [SerializeField]
     private SocketBehavior powerVCRSocket;
 
+    [Header("Lights")]
+    [SerializeField]
+    private GameObject lightCRTPower;
+    [SerializeField]
+    private GameObject lightVCRPower;
+
 
     [Header("Video Player")]
     //Public Reference to the CRT Screen's Video Player (could be accessed with VHS behaviors to change video being played)
@@ -83,11 +89,15 @@ public class CRTBehavior : MonoBehaviour
 
     AudioSource audioSource;
 
+    public AudioSource musicSource;
+    float musicVolume;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        musicVolume = musicSource.volume;
         videoPlayer.loopPointReached += EndReached;
 
         if (!GetComponent<AudioSource>())
@@ -122,6 +132,11 @@ public class CRTBehavior : MonoBehaviour
         debugButtonInfo.text = newText;
     }
 
+    void ResumeMusic()
+    {
+        musicSource.volume = musicVolume;
+    }
+
     private void UpdateDebugText()
     {
         debugTextPower.text = "CRT Power: " + powerSocket.signal.ToString();
@@ -136,6 +151,7 @@ public class CRTBehavior : MonoBehaviour
         if (!videoPlayer.isPlaying && !videoPlayer.isPaused)
         {
             videoPlayer.Play();
+            musicSource.volume = 0;
             //videoPlayer.playbackSpeed = 1;
         }
     }
@@ -180,6 +196,7 @@ public class CRTBehavior : MonoBehaviour
         {
             ChannelText.text = null;
             videoPlayer.Stop(); //stops the video if there is no power
+            ResumeMusic();
         }
     }
 
@@ -271,19 +288,51 @@ public class CRTBehavior : MonoBehaviour
         if (powerSocket.signal == SocketBehavior.Signal.Power) //if the power cable is plugged 
         {
             hasPower = true; //set the power state on
+            if(isOn)
+            {
+                ToggleLight(lightCRTPower, true);
+            }
         }
         else //the cable is unplugged, or has been unplugged
         {
             hasPower = false; //set it to false
+            ToggleLight(lightCRTPower, false);
         }
 
         if (powerVCRSocket.signal == SocketBehavior.Signal.Power) //if the VCR power cable is plugged
         {
             VCRHasPower = true;
+            if (VCRIsOn)
+            {
+                ToggleLight(lightVCRPower, true);
+            }
         }
         else
         {
             VCRHasPower = false;
+            ToggleLight(lightVCRPower, false);
+        }
+    }
+
+    void ToggleLight(GameObject lightSource, bool on)
+    {
+        if(!lightSource)
+        {
+            return;
+        }
+        if(on)
+        {
+            if(!lightSource.activeSelf)
+            {
+                lightSource.SetActive(true);
+            }
+        }
+        else
+        {
+            if (lightSource.activeSelf)
+            {
+                lightSource.SetActive(false);
+            }
         }
     }
 
@@ -329,6 +378,7 @@ public class CRTBehavior : MonoBehaviour
             else
             {
                 isOn = false;
+                ToggleLight(lightCRTPower, false);
             }
             if (powerButtonVCR.isPressed) //if the power button is pressed
             {
@@ -339,6 +389,7 @@ public class CRTBehavior : MonoBehaviour
             else
             {
                 VCRIsOn = false;
+                ToggleLight(lightVCRPower, false);
             }
 
             if(pauseButtonVCR.isPressed)
