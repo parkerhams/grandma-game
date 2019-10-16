@@ -20,8 +20,7 @@ public class CableTension : MonoBehaviour
      * OR try and tell if there's two capsules being grabbed, and only ungrab one of those capusles
      */
 
-    [SerializeField]
-    private float maxLengthBetweenCapsules;
+    private float maxLengthBetweenCapsules = .3f;
 
     [SerializeField]
     public GameObject parentCable;
@@ -38,9 +37,21 @@ public class CableTension : MonoBehaviour
 
     private PlugBehavior plugBehavior;
 
-    private List<GameObject> capsuleChildren;
+    private List<GameObject> capsuleChildren = new List<GameObject>();
+
+    bool cableShouldBeChecked = false;
+    OVRGrabbable myGrabScript;
+
+    int myIndex;
 
     private void Start()
+    {
+        myGrabScript = GetComponent<OVRGrabbable>();
+        EstablishCapsuleList();
+        EstablishNeighbors();
+    }
+
+    private void StartA()
     {
         maxLengthBetweenCapsules = .2f;
 
@@ -82,17 +93,61 @@ public class CableTension : MonoBehaviour
         femaleEndCapsule = capsuleChildren[capsuleChildren.Count - 1];
     }
 
+    void EstablishCapsuleList()
+    {
+        foreach(Transform child in transform.parent)
+        {
+            capsuleChildren.Add(child.gameObject);
+            if(child.gameObject == this.gameObject)
+            {
+                myIndex = capsuleChildren.IndexOf(this.gameObject);
+            }
+        }
+    }
+
+    void EstablishNeighbors()
+    {
+        if(myIndex > 0)
+        {
+            frontNeighborCapsule = capsuleChildren[myIndex - 1];
+            Debug.Log(gameObject + " front neighbor: " + frontNeighborCapsule);
+        }
+        int possibleLastIndex = myIndex + 1;
+        if(capsuleChildren.Count > possibleLastIndex)
+        {
+            backNeighborCapsule = capsuleChildren[myIndex + 1];
+            Debug.Log(gameObject + " back neighbor: " + backNeighborCapsule);
+        }
+    }
+
     private void Update()
     {
-
+        if(cableShouldBeChecked)
+        {
+            CheckDistanceBetweenCapsules();
+        }
+        else
+        {
+            if (myGrabScript.isGrabbed)
+            {
+                foreach(GameObject capsule in capsuleChildren)
+                {
+                    capsule.GetComponent<CableTension>().cableShouldBeChecked = true;
+                }
+            }
+            else if(cableShouldBeChecked == true)
+            {
+                foreach (GameObject capsule in capsuleChildren)
+                {
+                    capsule.GetComponent<CableTension>().cableShouldBeChecked = false;
+                }
+            }
+        }
     }
 
     private void FixedUpdate()//not sure if this would work better as Update or FixedUpdate. either way it might be really expensive and we might need to only do this distance check somewhere else (when moved?)
     {
-        if(backNeighborCapsule)
-        {
-            CheckDistanceBetweenCapsules(backNeighborCapsule);
-        }
+
     }
 
     private void UngrabCable()
@@ -103,23 +158,30 @@ public class CableTension : MonoBehaviour
             if (grabScript.isGrabbed)
             {
                 grabScript.grabbedBy.GetComponent<OVRGrabber>().ForceRelease(grabScript);
+                //POSSIBLE AUDIO: some sort of short "cable pulled taut" noise
             }
         }
     }
 
-    private void CheckDistanceBetweenCapsules(GameObject neighborCapsule)
+    private void CheckDistanceBetweenCapsules()
     {
         if (backNeighborCapsule)
         {
-            backDistance = Vector3.Distance(transform.position, frontNeighborCapsule.transform.position);
+            backDistance = Vector3.Distance(transform.position, backNeighborCapsule.transform.position);
             if (backDistance > maxLengthBetweenCapsules)
             {
-                //if it's plugged in: search for nearest plug side and disconnect
-                
-                //if it's not plugged in: ungrab
                 UngrabCable();
             }
         }
-        //back neighbor currently not being checked; might be redundant
+
+        if (frontNeighborCapsule)
+        {
+            frontDistance = Vector3.Distance(transform.position, frontNeighborCapsule.transform.position);
+            if (frontDistance > maxLengthBetweenCapsules)
+            {
+                UngrabCable();
+            }
+        }
+
     }
 }

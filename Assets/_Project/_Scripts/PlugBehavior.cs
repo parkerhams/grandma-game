@@ -29,10 +29,19 @@ public class PlugBehavior : MonoBehaviour
     float backupDistance = 2f; //the distance the plug will eject away from the socket when unplugged
     float temporaryPlugDisableTime = 1f; //the amount of time in the seconds the plug will refuse to try to plug into anything after being unplugged, to prevent accidentally jumping right back into a socket
 
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        if (!GetComponent<AudioSource>())
+        {
+            Debug.Log("No audio source component on " + gameObject.name + "! It needs one!");
+        }
+        else
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
@@ -45,6 +54,10 @@ public class PlugBehavior : MonoBehaviour
                 return;//power cable can't be removed from its input socket on the CRT
             }
             DistanceBasedUnplugCheck();//check to see if it's tensioned hard enough to automatically unplug itself
+            if(transform.parent.GetComponent<OVRGrabbable>().isGrabbed && isPluggedIn)
+            {
+                UnplugFromSocket(keepGrabbed:true);
+            }
         }
     }
 
@@ -58,6 +71,9 @@ public class PlugBehavior : MonoBehaviour
             transform.parent.RotateAround(socketBehaviorScript.DesiredPlugLocation.transform.position, socketBehaviorScript.DesiredPlugLocation.transform.right, 180f);
         }
         currentSocketBehaviorScript = socketBehaviorScript;
+
+        //AUDIO: plug in
+
         //ungrab the plug's capsule
         if(transform.parent.GetComponent<OVRGrabbable>().isGrabbed)
         {
@@ -67,6 +83,7 @@ public class PlugBehavior : MonoBehaviour
 
         //lock the plug location and try to keep cable attached
         transform.parent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        transform.parent.GetComponent<Rigidbody>().isKinematic = true;
 
         //broadcast information about what plug is plugged into which socket (so that the game knows if audio should be enabled, for example)
         Debug.Log(signal.ToString() + " plug plugged into " + socketBehaviorScript.signal.ToString() + " socket.");
@@ -74,7 +91,7 @@ public class PlugBehavior : MonoBehaviour
         isPluggedIn = true;
         cableBehaviorScript.UpdatePlugStatus(gameObject);
     }
-    private void UnplugFromSocket()
+    private void UnplugFromSocket(bool keepGrabbed=false)
     {
         if(!isPluggedIn)
         {
@@ -83,18 +100,32 @@ public class PlugBehavior : MonoBehaviour
         //broadcast the plug being disabled
         Debug.Log("Unplugged.");
 
+        //AUDIO: unplug
+
         //disable plug from being allowed to plug into anything for a brief moment, remove constraints, inform socket of unplugging
         StartCoroutine(UnplugWaitCoroutine());
         transform.parent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        transform.parent.GetComponent<Rigidbody>().isKinematic = false;
         isPluggedIn = false;
         currentSocketBehaviorScript.RemovePlug();
         currentSocketBehaviorScript = null;
         cableBehaviorScript.TerminateSignalStatus();
+        if(keepGrabbed)
+        {
+            transform.parent.GetComponent<Rigidbody>().isKinematic = true;
+        }
+        else
+        {
+            //if(transform.parent.GetComponent<OVRGrabbable>().isGrabbed)
+            //{
+            //    OVRGrabbable grabScript = transform.parent.GetComponent<OVRGrabbable>();
+            //    grabScript.grabbedBy.ForceRelease(grabScript);
+            //}
+        }
     }
 
     private void DistanceBasedUnplugCheck()
     {
-        Debug.Log("running");
         //if the neighbor capsule is too far away from the plug's parent capsule, unplug
         if(!neighborCapsule)
         {
@@ -102,7 +133,6 @@ public class PlugBehavior : MonoBehaviour
             return;
         }
         float currentDistance = Vector3.Distance(transform.parent.position, neighborCapsule.transform.position);
-        Debug.Log("Distance: " + currentDistance);
         if(currentDistance >= maxDistance)
         {
             UnplugFromSocket();
