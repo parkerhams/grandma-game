@@ -107,6 +107,7 @@ public class VCRBehavior : MonoBehaviour
         //    VHS.transform.rotation = entryPosition.transform.rotation;
         //}
         VHS.transform.rotation = entryPosition.transform.rotation;
+        VHSscript.FixRotation();
         StartCoroutine(VHSWaitCoroutine());
         currentVHS = VHS;
         StartCoroutine(VHSMovementCoroutine(true));
@@ -115,12 +116,24 @@ public class VCRBehavior : MonoBehaviour
 
     IEnumerator VHSMovementCoroutine(bool goingIn)
     {
+        Rigidbody rb = currentVHS.GetComponent<Rigidbody>();
         float timeWaited = 0;
         float duration = .7f;
         float step = .6f * Time.deltaTime;
         currentVHS.GetComponent<OVRGrabbable>().m_allowGrab = false;
         MoveFlap(true);
-        while(timeWaited < duration)
+        Vector3 launchDirection = new Vector3(1, 0, 0);
+        //add velocity
+        //if (!goingIn)
+        //{
+        //    currentVHS.transform.LookAt(entryPosition.transform);
+        //    currentVHS.transform.position = entryPosition.transform.position;
+        //    currentVHS.layer = 9;
+        //    rb.constraints = RigidbodyConstraints.None;
+        //    rb.AddForce(launchDirection * 20, ForceMode.Impulse);
+        //    rb.isKinematic = false;
+        //}
+        while (timeWaited < duration)
         {
             timeWaited += Time.deltaTime;
             if(goingIn)
@@ -129,7 +142,9 @@ public class VCRBehavior : MonoBehaviour
             }
             else
             {
+                //timeWaited += Time.deltaTime;
                 currentVHS.transform.position = Vector3.MoveTowards(currentVHS.transform.position, entryPosition.transform.position, step);
+                //rb.AddForce(launchDirection * 1.1f, ForceMode.Impulse);
             }
             yield return null;
         }
@@ -142,10 +157,10 @@ public class VCRBehavior : MonoBehaviour
         }
         else
         {
-            currentVHS.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            currentVHS.layer = 8;
+            rb.constraints = RigidbodyConstraints.None;
             //re-enable grabbing of VHS
             currentVHS.GetComponent<OVRGrabbable>().m_allowGrab = false;
-            Rigidbody rb = currentVHS.GetComponent<Rigidbody>();
             rb.isKinematic = false;
             currentVHS = null;
             CRTBehaviorScript.currentVHS = null;
