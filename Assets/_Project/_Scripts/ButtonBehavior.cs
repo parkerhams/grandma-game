@@ -12,6 +12,7 @@ public class ButtonBehavior : MonoBehaviour
 
     public CRTBehavior CRTBehaviorScript;
 
+    public TriggerDialogue buttonTriggerDialogue;
     bool canBePressed = true;
 
     AudioSource audioSource;
@@ -22,6 +23,7 @@ public class ButtonBehavior : MonoBehaviour
 
     private void Start()
     {
+        buttonTriggerDialogue = this.GetComponent<TriggerDialogue>();
         if(!GetComponent<AudioSource>())
         {
             Debug.Log("No audio source component on " + gameObject.name + "! It needs one!");

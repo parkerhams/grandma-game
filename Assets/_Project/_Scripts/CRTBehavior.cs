@@ -93,10 +93,14 @@ public class CRTBehavior : MonoBehaviour
     float musicVolume;
 
 
+    private TriggerDialogue crtDialogueTrigger;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        crtDialogueTrigger = this.GetComponent<TriggerDialogue>();
         musicVolume = musicSource.volume;
         videoPlayer.loopPointReached += EndReached;
 
@@ -160,6 +164,8 @@ public class CRTBehavior : MonoBehaviour
     {
         if (hasPower && isOn)
         {
+            
+
             switch (currentChannel)
             {
                 case Channel.Input:
