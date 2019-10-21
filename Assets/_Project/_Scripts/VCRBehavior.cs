@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class VCRBehavior : MonoBehaviour
 {
@@ -16,9 +15,6 @@ public class VCRBehavior : MonoBehaviour
     public GameObject insidePosition;//where the VHS will be when it's fully inside the VCR
 
     public Text debugText;
-
-    [SerializeField]
-    public TextMeshProUGUI grandmaText;
 
     float waitTime = 1.5f;//when a VHS is accepted or ejected, don't accept or remove any VHS for this duration
     bool isWaiting = false;//set to true while the VHS has recently accepted or ejected a VHS
@@ -84,8 +80,6 @@ public class VCRBehavior : MonoBehaviour
 
     void AcceptVHS(GameObject VHS)
     {
-        grandmaText.text = "Oh, I can't wait to watch your performance!";
-        
         if (currentVHS)
         {
             return;//can't take a VHS if there's already one in it
