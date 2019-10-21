@@ -6,7 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     // Audio players components.
     public AudioSource EffectsSource;
-    public AudioSource MusicSource;
+    public AudioSource EndingMusicSource;
 
     // Random pitch adjustment range.
     public float LowPitchRange = .95f;
@@ -47,10 +47,10 @@ public class SoundManager : MonoBehaviour
     }
 
     // Play a single clip through the music source.
-    public void PlayMusic(AudioClip clip)
+    public void PlayMusic()
     {
-        MusicSource.clip = clip;
-        MusicSource.Play();
+        //EndingMusicSource.clip = clip;
+        EndingMusicSource.Play();
     }
 
     // Play a random clip from an array, and randomize the pitch slightly.
