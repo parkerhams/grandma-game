@@ -88,7 +88,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineSize: 0.0477
+    - _OutlineSize: 0.002
     - _Parallax: 0.02
     - _RimColoring: 0.75
     - _RimIntensity: 1
