@@ -28,7 +28,7 @@
 
 		// Outline
 		_OutlineColor ("Outline Color", Color) = (0, 0, 0, 1)
-		_OutlineSize ("Outline Size", Range(0.001, 0.01)) = 0.01
+		_OutlineSize ("Outline Size", Range(0.001, 0.1)) = 0.1
 
 		[Toggle(ALPHA_TEST)] _AlphaTest ("Alpha Test", Float) = 0
 		_Cutout ("Alpha Threshold", Range(0, 1)) = 0.5
