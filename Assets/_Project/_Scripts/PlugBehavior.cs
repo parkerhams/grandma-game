@@ -73,6 +73,7 @@ public class PlugBehavior : MonoBehaviour
         currentSocketBehaviorScript = socketBehaviorScript;
 
         //AUDIO: plug in
+        audioSource.PlayOneShot(SoundManager.Instance.unplug);
 
         //ungrab the plug's capsule
         if(transform.parent.GetComponent<OVRGrabbable>().isGrabbed)
@@ -101,6 +102,7 @@ public class PlugBehavior : MonoBehaviour
         Debug.Log("Unplugged.");
 
         //AUDIO: unplug
+        audioSource.PlayOneShot(SoundManager.Instance.unplug);
 
         //disable plug from being allowed to plug into anything for a brief moment, remove constraints, inform socket of unplugging
         StartCoroutine(UnplugWaitCoroutine());

@@ -122,6 +122,8 @@ public class VCRBehavior : MonoBehaviour
         float step = .6f * Time.deltaTime;
         currentVHS.GetComponent<OVRGrabbable>().m_allowGrab = false;
         MoveFlap(true);
+        //AUDIO
+        audioSource.PlayOneShot(SoundManager.Instance.eject);
         Vector3 launchDirection = new Vector3(1, 0, 0);
         //add velocity
         //if (!goingIn)

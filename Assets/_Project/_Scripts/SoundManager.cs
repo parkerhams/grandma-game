@@ -17,6 +17,10 @@ public class SoundManager : MonoBehaviour
     public AudioClip TV_on;
     public AudioClip tv_button_on;
     public AudioClip tv_button_off;
+    public AudioClip pickup;
+    public AudioClip drop;
+    public AudioClip unplug;
+    public AudioClip eject;
 
     // Singleton instance.
     public static SoundManager Instance = null;
@@ -42,6 +46,11 @@ public class SoundManager : MonoBehaviour
     // Play a single clip through the sound effects source.
     public void Play(AudioClip clip)
     {
+        if(!clip)
+        {
+            Debug.Log("No audio clip added for this action in SoundManager.");
+            return;
+        }
         EffectsSource.clip = clip;
         EffectsSource.Play();
     }
