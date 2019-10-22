@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Floor
-  m_Shader: {fileID: 4800000, guid: 053c5025fd47f7d48923c9e35a727cfc, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0dd112420213c6a438c191cb0258fe65, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -112,9 +112,11 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _RimAmount: 0.638
     - _RimColoring: 0.75
     - _RimIntensity: 1
     - _RimPower: 1.25
+    - _RimThreshold: 0.962
     - _SampleGI: 0
     - _Saturation: 1
     - _Smoothness: 1
@@ -130,8 +132,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - _AmbientColor: {r: 0.8867924, g: 0.85055244, b: 0.6316305, a: 1}
     - _BaseColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
-    - _Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+    - _Color: {r: 0.9245283, g: 0.5538448, b: 0.5834282, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 0.5471698, g: 0.22970808, b: 0.22970808, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SpecularColor: {r: 0.8018868, g: 0.49550554, b: 0.49550554, a: 1}
