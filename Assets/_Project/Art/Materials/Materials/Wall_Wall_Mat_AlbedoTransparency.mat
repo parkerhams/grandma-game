@@ -107,7 +107,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineSize: 0.1
+    - _OutlineSize: 0.0443
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -120,7 +120,7 @@ Material:
     - _Saturation: 2
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
-    - _SpecIntensity: 0.24
+    - _SpecIntensity: 0.078
     - _SpecPower: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1

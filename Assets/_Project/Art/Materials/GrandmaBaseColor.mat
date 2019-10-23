@@ -99,17 +99,17 @@ Material:
     - _OutlineSize: 0.01
     - _Parallax: 0.02
     - _RimColoring: 0.316
-    - _RimIntensity: 1
+    - _RimIntensity: 0.838
     - _RimPower: 4
     - _Saturation: 1
     - _SmoothnessTextureChannel: 0
-    - _SpecIntensity: 0.126
-    - _SpecPower: 0.04
+    - _SpecIntensity: 0.114
+    - _SpecPower: 0.037
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _VCol: 1
-    - _Value: 0.77
+    - _Value: 0.63
     - _ZWrite: 1
     m_Colors:
     - Color_DEB3AA71: {r: 0.8396226, g: 0.82774115, b: 0.83830243, a: 0}
