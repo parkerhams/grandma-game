@@ -8,8 +8,8 @@ using UnityEngine.Audio;
 public class CRTBehavior : MonoBehaviour
 {
     //TODO: Refactor Signal as an inheritable interface
-    public enum Signal { Video, LeftAudio, RightAudio, Power, None}; //Denotes the type of signal a cable carries, including no signal
-    public enum CableType { Power, RCA};
+    public enum Signal { Video, LeftAudio, RightAudio, Power, None }; //Denotes the type of signal a cable carries, including no signal
+    public enum CableType { Power, RCA };
 
     //The VHS currently in the VCR. This is handled and updated by the VCR
     [HideInInspector]
@@ -50,6 +50,9 @@ public class CRTBehavior : MonoBehaviour
     [SerializeField]
     private GameObject lightVCRPower;
 
+    [SerializeField]
+    private SofaBehavior sofaScript;
+
 
     [Header("Video Player")]
     //Public Reference to the CRT Screen's Video Player (could be accessed with VHS behaviors to change video being played)
@@ -70,7 +73,7 @@ public class CRTBehavior : MonoBehaviour
     private bool hasPower = false;
     private bool VCRHasPower = false;
 
-    private enum Channel { Input, Channel1, Channel2};
+    private enum Channel { Input, Channel1, Channel2 };
 
     [Header("CRT State")]
     [SerializeField]
@@ -91,7 +94,6 @@ public class CRTBehavior : MonoBehaviour
 
     public AudioSource musicSource;
     float musicVolume;
-
 
     private TriggerDialogue crtDialogueTrigger;
 
@@ -125,7 +127,7 @@ public class CRTBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckPower(); 
+        CheckPower();
         CheckButtons();
         UpdateScreenState();
         UpdateDebugText();
@@ -156,16 +158,23 @@ public class CRTBehavior : MonoBehaviour
         {
             videoPlayer.Play();
             musicSource.volume = 0;
-            //videoPlayer.playbackSpeed = 1;
+            if(videoPlayer.clip == highschoolConcertClip)
+            {
+                //allow the player to sit on the couch and end the game if they play the right VHS
+                sofaScript.readyToEnd = true;
+            }
+            else
+            {
+                //if a different VHS plays (blank screen, credits, etc) disable the ability to end the game until they put the correct VHS in again
+                sofaScript.readyToEnd = false;
+            }
         }
     }
-    
+
     void UpdateScreenState() //Modifies the screen state (TODO: Implement video player into Channel Behavior)
     {
         if (hasPower && isOn)
         {
-            
-
             switch (currentChannel)
             {
                 case Channel.Input:
@@ -209,7 +218,7 @@ public class CRTBehavior : MonoBehaviour
     void UpdateInputChannel()
     {
         //check VCR first
-        if(!VCRIsOn || !VCRHasPower)//if the VCR doesn't have the proper conditions to play video
+        if (!VCRIsOn || !VCRHasPower)//if the VCR doesn't have the proper conditions to play video
         {
             if (videoPlayer.clip != blankScreenClip) //sees if the correct clip is already loaded, if not, changes and plays the clip
             {
@@ -294,7 +303,7 @@ public class CRTBehavior : MonoBehaviour
         if (powerSocket.signal == SocketBehavior.Signal.Power) //if the power cable is plugged 
         {
             hasPower = true; //set the power state on
-            if(isOn)
+            if (isOn)
             {
                 ToggleLight(lightCRTPower, true);
                 PixelCrushers.DialogueSystem.DialogueManager.StartConversation("GameStartDialogue");
@@ -323,13 +332,13 @@ public class CRTBehavior : MonoBehaviour
 
     void ToggleLight(GameObject lightSource, bool on)
     {
-        if(!lightSource)
+        if (!lightSource)
         {
             return;
         }
-        if(on)
+        if (on)
         {
-            if(!lightSource.activeSelf)
+            if (!lightSource.activeSelf)
             {
                 lightSource.SetActive(true);
             }
@@ -345,7 +354,7 @@ public class CRTBehavior : MonoBehaviour
 
     public void VCRPause()
     {
-        if(AllConditionsForVideo())
+        if (AllConditionsForVideo())
         {
             videoPlayer.Pause();
         }
@@ -353,9 +362,9 @@ public class CRTBehavior : MonoBehaviour
 
     public void VCRPlay()
     {
-        if(AllConditionsForVideo())
+        if (AllConditionsForVideo())
         {
-            if(!videoPlayer.isPlaying && videoPlayer.isPaused)
+            if (!videoPlayer.isPlaying && videoPlayer.isPaused)
             {
                 videoPlayer.Play();
             }
@@ -399,7 +408,7 @@ public class CRTBehavior : MonoBehaviour
                 ToggleLight(lightVCRPower, false);
             }
 
-            if(pauseButtonVCR.isPressed)
+            if (pauseButtonVCR.isPressed)
             {
                 pauseButtonVCR.isPressed = false;
                 VCRPause();

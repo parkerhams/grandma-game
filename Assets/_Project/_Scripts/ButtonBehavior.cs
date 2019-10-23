@@ -10,6 +10,9 @@ public class ButtonBehavior : MonoBehaviour
     public bool isPressedInwards = false;//power button is considered pressed inwards when locked into its closer position
     public float pressedInDistance = .02f;//how far in the button moves when pressed
 
+    public bool isEjectButton = false;
+    public VCRBehavior VCRscript;
+
     public CRTBehavior CRTBehaviorScript;
 
     public TriggerDialogue buttonTriggerDialogue;
@@ -17,7 +20,7 @@ public class ButtonBehavior : MonoBehaviour
 
     AudioSource audioSource;
 
-    private float waitTime = .2f;//time to wait, in seconds, until button can be interacted with again
+    private float waitTime = .4f;//time to wait, in seconds, until button can be interacted with again
 
     //isPressed is set back to false when its corresponding function is called in the device's script to ensure that the device "hears" when it is pressed
 
@@ -50,14 +53,19 @@ public class ButtonBehavior : MonoBehaviour
 
     void PressButton()
     {
-        CRTBehaviorScript.DebugButtonInfoUpdate("A");
         if(sticksInWhenPressed)//if it's a power button, behavior should be slightly different: lock into place when pressed in, or unlock when pressed again
         {
-            CRTBehaviorScript.DebugButtonInfoUpdate("B");
             if (isPressedInwards)
             {
                 //pull button back out to normal position
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - pressedInDistance);
+                if(!isEjectButton)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - pressedInDistance);
+                }
+                if(isEjectButton)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y - pressedInDistance, transform.position.z);
+                }
                 isPressedInwards = false;
                 isPressed = false;
 
@@ -68,9 +76,15 @@ public class ButtonBehavior : MonoBehaviour
             }
             else
             {
-                CRTBehaviorScript.DebugButtonInfoUpdate("C");
                 //push button into its closer position and lock it there
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
+                if (!isEjectButton)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
+                }
+                if (isEjectButton)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y - pressedInDistance, transform.position.z);
+                }
                 isPressedInwards = true;
                 isPressed = true;
 
@@ -82,13 +96,23 @@ public class ButtonBehavior : MonoBehaviour
         }
         else
         {
-            if(canBePressed)
+            if (canBePressed)
             {
-                CRTBehaviorScript.DebugButtonInfoUpdate("D");
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
+                if (!isEjectButton)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
+                }
+                if (isEjectButton)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y - pressedInDistance, transform.position.z);
+                }
                 StartCoroutine(AfterPressWaitCoroutine());
                 StartCoroutine(MoveButton());
                 isPressed = true;
+                if(isEjectButton)
+                {
+                    VCRscript.EjectVHS();
+                }
 
                 //AUDIO: regular button pressed
                 audioSource.PlayOneShot(SoundManager.Instance.buttonPress);
@@ -106,7 +130,15 @@ public class ButtonBehavior : MonoBehaviour
             //move the button a fraction of the distance back towards its normal position.
             var posIncrement = pressedInDistance / (waitTime / waitIncrement);//with a waitTime of .5f and waitIncrement of .01, posIncrement is .04
             var newZPos = pressedInDistance - (posIncrement * timeWaited);
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - (pressedInDistance / (waitTime / waitIncrement)));
+            if (!isEjectButton)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - (pressedInDistance / (waitTime / waitIncrement)));
+            }
+            if (isEjectButton)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + (pressedInDistance / (waitTime / waitIncrement)), transform.position.z);
+            }
+            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - (pressedInDistance / (waitTime / waitIncrement)));
             yield return new WaitForSeconds(.01f);
 
         }

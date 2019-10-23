@@ -45,9 +45,9 @@ public class VCRBehavior : MonoBehaviour
     {
         if (other.gameObject.name == "DistanceGrabHandLeft Variant" || other.gameObject.name == "DistanceGrabHandRight Variant") //if a player hand enters the button trigger
         {
-            EjectVHS();
+            //EjectVHS();
         }
-        else if(other.GetComponent<VHSBehavior>())
+        else if (other.GetComponent<VHSBehavior>())
         {
             AcceptVHS(other.gameObject);
         }
@@ -55,7 +55,7 @@ public class VCRBehavior : MonoBehaviour
 
     void MoveFlap(bool up)//the flap of the VCR that gets pushed up as you put a VHS in
     {
-        if(up)
+        if (up)
         {
             flapUp.SetActive(true);
             flapDown.SetActive(false);
@@ -67,7 +67,7 @@ public class VCRBehavior : MonoBehaviour
         }
     }
 
-    void EjectVHS()
+    public void EjectVHS()
     {
         if (isWaiting)
         {
@@ -98,6 +98,8 @@ public class VCRBehavior : MonoBehaviour
         {
             return;
         }
+        //temporarily disabled
+        //grandmaText.text = "Oh, I can't wait to watch your performance!";
         //ungrab VHS
         if (VHS.GetComponent<OVRGrabbable>().isGrabbed)
         {
@@ -117,6 +119,7 @@ public class VCRBehavior : MonoBehaviour
         //    VHS.transform.rotation = entryPosition.transform.rotation;
         //}
         VHS.transform.rotation = entryPosition.transform.rotation;
+        VHSscript.FixRotation();
         StartCoroutine(VHSWaitCoroutine());
         currentVHS = VHS;
         StartCoroutine(VHSMovementCoroutine(true));
@@ -125,26 +128,42 @@ public class VCRBehavior : MonoBehaviour
 
     IEnumerator VHSMovementCoroutine(bool goingIn)
     {
+        Rigidbody rb = currentVHS.GetComponent<Rigidbody>();
         float timeWaited = 0;
         float duration = .7f;
-        float step = .6f * Time.deltaTime;
+        float step = .9f * Time.deltaTime;
         currentVHS.GetComponent<OVRGrabbable>().m_allowGrab = false;
         MoveFlap(true);
-        while(timeWaited < duration)
+        //AUDIO
+        audioSource.PlayOneShot(SoundManager.Instance.eject);
+        Vector3 launchDirection = new Vector3(1, 0, 0);
+        //add velocity
+        //if (!goingIn)
+        //{
+        //    currentVHS.transform.LookAt(entryPosition.transform);
+        //    currentVHS.transform.position = entryPosition.transform.position;
+        //    currentVHS.layer = 9;
+        //    rb.constraints = RigidbodyConstraints.None;
+        //    rb.AddForce(launchDirection * 20, ForceMode.Impulse);
+        //    rb.isKinematic = false;
+        //}
+        while (timeWaited < duration)
         {
             timeWaited += Time.deltaTime;
-            if(goingIn)
+            if (goingIn)
             {
                 currentVHS.transform.position = Vector3.MoveTowards(currentVHS.transform.position, insidePosition.transform.position, step);
             }
             else
             {
+                //timeWaited += Time.deltaTime;
                 currentVHS.transform.position = Vector3.MoveTowards(currentVHS.transform.position, entryPosition.transform.position, step);
+                //rb.AddForce(launchDirection * 1.1f, ForceMode.Impulse);
             }
             yield return null;
         }
         MoveFlap(false);
-        if(goingIn)
+        if (goingIn)
         {
             currentVHS.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             CRTBehaviorScript.currentVHS = currentVHS;
@@ -152,10 +171,10 @@ public class VCRBehavior : MonoBehaviour
         }
         else
         {
-            currentVHS.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            currentVHS.layer = 8;
+            rb.constraints = RigidbodyConstraints.None;
             //re-enable grabbing of VHS
             currentVHS.GetComponent<OVRGrabbable>().m_allowGrab = false;
-            Rigidbody rb = currentVHS.GetComponent<Rigidbody>();
             rb.isKinematic = false;
             currentVHS = null;
             CRTBehaviorScript.currentVHS = null;
