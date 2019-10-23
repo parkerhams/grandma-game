@@ -50,6 +50,9 @@ public class CRTBehavior : MonoBehaviour
     [SerializeField]
     private GameObject lightVCRPower;
 
+    [SerializeField]
+    private SofaBehavior sofaScript;
+
 
     [Header("Video Player")]
     //Public Reference to the CRT Screen's Video Player (could be accessed with VHS behaviors to change video being played)
@@ -155,7 +158,16 @@ public class CRTBehavior : MonoBehaviour
         {
             videoPlayer.Play();
             musicSource.volume = 0;
-            //videoPlayer.playbackSpeed = 1;
+            if(videoPlayer.clip == highschoolConcertClip)
+            {
+                //allow the player to sit on the couch and end the game if they play the right VHS
+                sofaScript.readyToEnd = true;
+            }
+            else
+            {
+                //if a different VHS plays (blank screen, credits, etc) disable the ability to end the game until they put the correct VHS in again
+                sofaScript.readyToEnd = false;
+            }
         }
     }
 

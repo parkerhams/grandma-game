@@ -31,7 +31,7 @@ public class SofaBehavior : MonoBehaviour
         //play ending music
         SoundManager.Instance.PlayMusic();
         //fade out video audio
-        //show credits
+        //show credits?
         //show "restart" button
     }
 
