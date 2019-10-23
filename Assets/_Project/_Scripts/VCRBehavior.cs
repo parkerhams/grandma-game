@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using PixelCrushers.DialogueSystem;
 
 public class VCRBehavior : MonoBehaviour
 {
@@ -17,16 +18,16 @@ public class VCRBehavior : MonoBehaviour
 
     public Text debugText;
 
-    [SerializeField]
-    public TextMeshProUGUI grandmaText;
-
     float waitTime = 1.5f;//when a VHS is accepted or ejected, don't accept or remove any VHS for this duration
     bool isWaiting = false;//set to true while the VHS has recently accepted or ejected a VHS
 
     AudioSource audioSource;
+    DialogueSystemTrigger dialogueSystemTrigger;
 
     private void Start()
     {
+        dialogueSystemTrigger = this.GetComponent<DialogueSystemTrigger>();
+
         flapUp.SetActive(false);//if this flap isn't disabled in scene view, disable it now
         debugText.text = "No VHS";
 
@@ -38,6 +39,8 @@ public class VCRBehavior : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
+
+        dialogueSystemTrigger.enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -68,6 +71,7 @@ public class VCRBehavior : MonoBehaviour
 
     void EjectVHS()
     {
+        dialogueSystemTrigger.enabled = true;
         if (isWaiting)
         {
             return;
@@ -83,9 +87,7 @@ public class VCRBehavior : MonoBehaviour
     }
 
     void AcceptVHS(GameObject VHS)
-    {
-        grandmaText.text = "Oh, I can't wait to watch your performance!";
-        
+    {        
         if (currentVHS)
         {
             return;//can't take a VHS if there's already one in it

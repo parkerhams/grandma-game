@@ -110,13 +110,13 @@ public class CableTension : MonoBehaviour
         if(myIndex > 0)
         {
             frontNeighborCapsule = capsuleChildren[myIndex - 1];
-            Debug.Log(gameObject + " front neighbor: " + frontNeighborCapsule);
+            //Debug.Log(gameObject + " front neighbor: " + frontNeighborCapsule);
         }
         int possibleLastIndex = myIndex + 1;
         if(capsuleChildren.Count > possibleLastIndex)
         {
             backNeighborCapsule = capsuleChildren[myIndex + 1];
-            Debug.Log(gameObject + " back neighbor: " + backNeighborCapsule);
+            //Debug.Log(gameObject + " back neighbor: " + backNeighborCapsule);
         }
     }
 
