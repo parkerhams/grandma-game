@@ -44,7 +44,7 @@ public class VCRBehavior : MonoBehaviour
     {
         if (other.gameObject.name == "DistanceGrabHandLeft Variant" || other.gameObject.name == "DistanceGrabHandRight Variant") //if a player hand enters the button trigger
         {
-            EjectVHS();
+            //EjectVHS();
         }
         else if (other.GetComponent<VHSBehavior>())
         {
@@ -66,7 +66,7 @@ public class VCRBehavior : MonoBehaviour
         }
     }
 
-    void EjectVHS()
+    public void EjectVHS()
     {
         if (isWaiting)
         {
@@ -125,7 +125,7 @@ public class VCRBehavior : MonoBehaviour
         Rigidbody rb = currentVHS.GetComponent<Rigidbody>();
         float timeWaited = 0;
         float duration = .7f;
-        float step = .6f * Time.deltaTime;
+        float step = .9f * Time.deltaTime;
         currentVHS.GetComponent<OVRGrabbable>().m_allowGrab = false;
         MoveFlap(true);
         //AUDIO
