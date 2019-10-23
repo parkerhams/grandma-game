@@ -22883,12 +22883,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991102077}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 1024
+  trigger: 16
   condition:
     luaConditions: []
     questConditions: []
@@ -22903,7 +22903,7 @@ MonoBehaviour:
   questEntryNumber: 1
   questEntryState: 0
   luaCode: 
-  sequence: AnimatorBool(Continuous Fire)
+  sequence: 
   sequenceSpeaker: {fileID: 991102080}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 0
@@ -22911,8 +22911,8 @@ MonoBehaviour:
   textTable: {fileID: 0}
   alertDuration: 0
   sendMessages: []
-  barkSource: 0
-  barkConversation: 
+  barkSource: 1
+  barkConversation: GameStartDialogue
   barkText: 
   barkTextSequence: 
   barker: {fileID: 0}
@@ -22944,7 +22944,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 8f89748dc0b2ee444bc0e519c77940b0, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 6a3531004c73273408abde2f574ebc2e, type: 2}
 --- !u!114 &991102082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22952,7 +22952,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991102077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0dc55c6579779804a9babaf0a7b03207, type: 3}
   m_Name: 

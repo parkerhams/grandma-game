@@ -39,8 +39,6 @@ public class VCRBehavior : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
-
-        dialogueSystemTrigger.enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)
