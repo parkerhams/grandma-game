@@ -297,6 +297,7 @@ public class CRTBehavior : MonoBehaviour
             if(isOn)
             {
                 ToggleLight(lightCRTPower, true);
+                PixelCrushers.DialogueSystem.DialogueManager.StartConversation("GameStartDialogue");
             }
         }
         else //the cable is unplugged, or has been unplugged

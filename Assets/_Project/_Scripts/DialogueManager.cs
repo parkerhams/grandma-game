@@ -90,8 +90,8 @@ public class DialogueManager : MonoBehaviour
         alreadySpokenSentences.Add(sentence);
         Debug.Log(sentence);
 
-        StopAllCoroutines();
-		StartCoroutine(TypeSentence(sentence));
+        //StopAllCoroutines();
+		//StartCoroutine(TypeSentence(sentence));
     }
 
     public void EndDialogue()
@@ -99,14 +99,14 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End of conversation");
     }
 
-    public IEnumerator TypeSentence (string sentence)
-	{
-		grandmaSpeechBubble.text = "";
-		foreach (char letter in sentence.ToCharArray())
-		{
-			grandmaSpeechBubble.text += letter;
-			yield return null;
-		}
-	}
+ //   public IEnumerator TypeSentence (string sentence)
+	//{
+	//	grandmaSpeechBubble.text = "";
+	//	foreach (char letter in sentence.ToCharArray())
+	//	{
+	//		grandmaSpeechBubble.text += letter;
+	//		yield return null;
+	//	}
+	//}
 
 }
