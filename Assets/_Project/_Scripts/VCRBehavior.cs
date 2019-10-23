@@ -69,7 +69,6 @@ public class VCRBehavior : MonoBehaviour
 
     void EjectVHS()
     {
-        dialogueSystemTrigger.enabled = true;
         if (isWaiting)
         {
             return;
@@ -85,7 +84,12 @@ public class VCRBehavior : MonoBehaviour
     }
 
     void AcceptVHS(GameObject VHS)
-    {        
+    {
+        if (dialogueSystemTrigger.enabled != true) //trigger dialogue bark for first object insertion
+        {
+            dialogueSystemTrigger.enabled = true;
+        }
+
         if (currentVHS)
         {
             return;//can't take a VHS if there's already one in it
