@@ -11,6 +11,11 @@ public class SofaBehavior : MonoBehaviour
     public GameObject canvas;
 
     public GameObject[] lights;
+    public GameObject restartButton;
+
+    float canvasEndingYPosition = .5f;//how high up the canvas scrolls until it stops
+    float lightIntensityWhenDimmed = .08f;//how dark the lights get when the game ends
+    float scrollSpeed = .09f;//how quickly the canvas scrolls up
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +46,7 @@ public class SofaBehavior : MonoBehaviour
         CRTscript.SetVideoVolume();
         //show credits? titlecard? show restart button
         StartCoroutine(ScrollPanelUpCoroutine());
+        restartButton.SetActive(true);
     }
 
     void DimScreen()
@@ -49,7 +55,7 @@ public class SofaBehavior : MonoBehaviour
         foreach(GameObject lightGO in lights)
         {
             Light theLight = lightGO.GetComponent<Light>();
-            StartCoroutine(DimLightCoroutine(theLight, .1f));
+            StartCoroutine(DimLightCoroutine(theLight, lightIntensityWhenDimmed));
         }
     }
 
@@ -70,16 +76,12 @@ public class SofaBehavior : MonoBehaviour
     }
 
 
-    IEnumerator FadeCoroutine(bool toBlack, float desiredDarkness)
-    {
-        yield return new WaitForSeconds(.1f);
-    }
 
     IEnumerator ScrollPanelUpCoroutine()
     {
-        while(canvas.transform.position.y < 0)
+        while(canvas.transform.position.y < canvasEndingYPosition)
         {
-            canvas.transform.Translate(Vector3.up * .07f * Time.deltaTime);
+            canvas.transform.Translate(Vector3.up * scrollSpeed * Time.deltaTime);
             yield return new WaitForSeconds(.01f);
         }
     }

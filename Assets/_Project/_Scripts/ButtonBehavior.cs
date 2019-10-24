@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonBehavior : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ButtonBehavior : MonoBehaviour
     public float pressedInDistance = .02f;//how far in the button moves when pressed
 
     public bool isEjectButton = false;
+    public bool isRestartButton = false;
     public VCRBehavior VCRscript;
 
     public CRTBehavior CRTBehaviorScript;
@@ -35,6 +37,11 @@ public class ButtonBehavior : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -98,6 +105,12 @@ public class ButtonBehavior : MonoBehaviour
         {
             if (canBePressed)
             {
+                if (isRestartButton)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y - pressedInDistance, transform.position.z);
+                    ReloadScene();
+
+                }
                 if (!isEjectButton)
                 {
                     transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + pressedInDistance);
