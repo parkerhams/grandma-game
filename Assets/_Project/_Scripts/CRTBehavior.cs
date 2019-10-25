@@ -91,6 +91,7 @@ public class CRTBehavior : MonoBehaviour
     public Text debugButtonInfo;
 
     AudioSource audioSource;
+    public AudioSource videoAudioSource;
 
     public AudioSource musicSource;
     float musicVolume;
@@ -141,6 +142,13 @@ public class CRTBehavior : MonoBehaviour
     void ResumeMusic()
     {
         musicSource.volume = musicVolume;
+    }
+
+    public void SetVideoVolume()//when the ending plays, quiet the video audio and mute the normal gameplay music
+    {
+        videoAudioSource.volume = .1f;
+        musicVolume = 0f;
+        musicSource.volume = 0f;
     }
 
     private void UpdateDebugText()
