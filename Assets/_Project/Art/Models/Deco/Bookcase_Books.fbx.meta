@@ -3,7 +3,62 @@ guid: 12e172d9eb3cc6f42b84e8f6f2b1ebdc
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cover1
+    second: {fileID: 2100000, guid: 743208aa1e43df747be0c56edc3cbee2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cover2
+    second: {fileID: 2100000, guid: ef5288abba752a74c96ca83765a28f3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cover3
+    second: {fileID: 2100000, guid: f955d3cd3025d6945b2230338b98fd2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cover4
+    second: {fileID: 2100000, guid: d525767b5ee183042a0b440719fc5242, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cover5
+    second: {fileID: 2100000, guid: 1a33bee41bb0dac49842a46387382b38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cover6
+    second: {fileID: 2100000, guid: f083ecae6dbcd624f9cbd7a2dddaca29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkWood
+    second: {fileID: 2100000, guid: d93c8acd116bf294a8a51b216dfa49f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 2da8a0b2d63d2604f9d0e9f43d056520, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pages
+    second: {fileID: 2100000, guid: 0c8c799f5a6f97141b2c083f8c6fbe05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood1
+    second: {fileID: 2100000, guid: 5e5e586df3ef9fa40a3fa23ed4e2b411, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood2
+    second: {fileID: 2100000, guid: 5bfc67d9f623ec24091c285963cd8352, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
