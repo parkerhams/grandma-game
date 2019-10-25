@@ -19,7 +19,7 @@ public class SocketBehavior : MonoBehaviour
     {
         if (collision.gameObject.tag == "Plug") //the socket collides with a plug
         {
-            Debug.Log("A");
+            //Debug.Log("A");
             //check if socket has its script
             if (!collision.gameObject.GetComponent<PlugBehavior>())
             {
@@ -34,7 +34,7 @@ public class SocketBehavior : MonoBehaviour
             {
                 return;
             }
-            Debug.Log("B");
+            //Debug.Log("B");
 
             //check if the plug and socket are the same type
             switch (cableType)
