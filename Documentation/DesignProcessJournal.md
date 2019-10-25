@@ -101,3 +101,18 @@ Thorne I don't know anything about rigging, please write some stuff lol
 ## **Design:**
 
 ## **Programming:**
+
+We made the choice to implement the PixelCrushers dialogue system in order to properly support dialogue. 
+
+# **Week 8 - 10-25-19 - Finally getting the dialogue system to work!!**
+
+## **Art:**
+
+Our artists have been working on world-filling and quality-of-life art this week. The floor lamp is almost done and the radio is being worked on, and we added two kid-style drawings to be framed and put on the wall. 
+
+## **Design:**
+
+## **Programming:**
+
+
+
