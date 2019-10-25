@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ce6625bb7d0e1fa4485fefe88b164892, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -69,7 +69,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaTest: 0
-    - _AmbientBoost: 1
+    - _AmbientBoost: 1.05
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
@@ -89,7 +89,7 @@ Material:
     - _RimColoring: 0.75
     - _RimIntensity: 1
     - _RimPower: 1.25
-    - _Saturation: 1
+    - _Saturation: 2
     - _SmoothnessTextureChannel: 0
     - _SpecIntensity: 0.5
     - _SpecPower: 0.1
@@ -100,6 +100,6 @@ Material:
     - _Value: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.9150943, g: 0.13381095, b: 0.13381095, a: 1}
+    - _Color: {r: 1, g: 0.4009434, b: 0.4009434, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
