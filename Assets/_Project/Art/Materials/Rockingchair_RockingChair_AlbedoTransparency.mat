@@ -93,7 +93,7 @@ Material:
     - _RimColoring: 0.75
     - _RimIntensity: 1
     - _RimPower: 1.13
-    - _Saturation: 1
+    - _Saturation: 1.31
     - _SmoothnessTextureChannel: 0
     - _SpecIntensity: 0.5
     - _SpecPower: 0.1
@@ -101,7 +101,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _VCol: 1
-    - _Value: 1
+    - _Value: 1.28
     - _ZWrite: 1
     m_Colors:
     - Color_DEB3AA71: {r: 0.16981131, g: 0.12979114, b: 0.11294054, a: 0}

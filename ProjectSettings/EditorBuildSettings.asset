@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Oculus/SampleFramework/Usage/DistanceGrab.unity
     guid: 24f58b3f0ca02d44eaec7f50bca538f2
   - enabled: 0
-    path: Assets/_Project/_Scenes/VideoPrototyping.unity
+    path: Assets/_Project/_Scenes/_Main.unity
     guid: f887cb0fee7d41e458fb64b340793e45
   - enabled: 0
     path: Assets/_Project/_Scenes/CableTest.unity
