@@ -8,6 +8,11 @@ This week, we all met and established our plans for the game. We designated offi
 * Full character sketch and turnaround
 * Fully colored character art
 ![Grandma Concept Art](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/physicalPrototype0.jpg)
+
+### Room Layout
+  Both environment artists worked on different ideas of what the layout of the room should be before merging their ideas into one cohesive room.
+ ![Room Layout](https://github.com/parkerhams/grandma-game/blob/3ce0a283bb38b5345974e38ba9895a664a5d0853/Documentation/images/InteriorConcept.png)
+
 ## **Design:**
 * Physical prototype
 ![Cardboard Prototype](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/physicalPrototype1.jpg)
@@ -23,6 +28,10 @@ This week, we all met and established our plans for the game. We designated offi
 ![Grandma Base Mesh](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/GrandmaBaseMesh.JPG)
 ![Grandma Base Mesh Frontal View](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/GrandmaBaseMeshFront.JPG)
 ![Grandma UV Map](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/GrandmaUV.png)
+
+### Environment
+  Cable heads we worked on, as well as the base tv model.
+![Cable Heads](https://github.com/parkerhams/grandma-game/blob/db8ef396abc433d19d24eb62ec3d3c25cabbfe30/cables01.png)
 
 ## **Design:**
 ### CRT & VCR Prototyping
