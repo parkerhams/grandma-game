@@ -40,9 +40,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 938da6ceb14224140825754262910ccd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5330a56816b00594ab7d52208a17bc07, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0.53, y: 0}
     - _MaskTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -69,7 +69,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaTest: 0
-    - _AmbientBoost: 0.5
+    - _AmbientBoost: 0.25
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
@@ -84,15 +84,15 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineSize: 0.1
+    - _OutlineSize: 0.0443
     - _Parallax: 0.02
     - _RimColoring: 0.75
-    - _RimIntensity: 1
+    - _RimIntensity: 0.92
     - _RimPower: 1.25
-    - _Saturation: 1
+    - _Saturation: 2
     - _SmoothnessTextureChannel: 0
-    - _SpecIntensity: 0.5
-    - _SpecPower: 0.1
+    - _SpecIntensity: 0.078
+    - _SpecPower: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
@@ -100,6 +100,6 @@ Material:
     - _Value: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}

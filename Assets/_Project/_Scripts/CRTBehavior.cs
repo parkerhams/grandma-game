@@ -71,7 +71,7 @@ public class CRTBehavior : MonoBehaviour
     private bool isOn = false;
     private bool VCRIsOn = false;
     private bool hasPower = false;
-    private bool VCRHasPower = false;
+    public bool VCRHasPower = false;
 
     private enum Channel { Input, Channel1, Channel2 };
 

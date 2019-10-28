@@ -29,7 +29,7 @@ public class ButtonBehavior : MonoBehaviour
     private void Start()
     {
         buttonTriggerDialogue = this.GetComponent<TriggerDialogue>();
-        if(!GetComponent<AudioSource>())
+        if (!GetComponent<AudioSource>())
         {
             Debug.Log("No audio source component on " + gameObject.name + "! It needs one!");
         }
@@ -37,6 +37,13 @@ public class ButtonBehavior : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
+
+        if (isRestartButton)
+        {
+            //don't show the restart button when the game starts; only when the player reaches the end
+            gameObject.SetActive(false);
+        }
+
     }
 
     public void ReloadScene()

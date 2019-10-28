@@ -47,7 +47,7 @@ public class VCRBehavior : MonoBehaviour
         {
             //EjectVHS();
         }
-        else if (other.GetComponent<VHSBehavior>())
+        else if (other.GetComponent<VHSBehavior>() && CRTBehaviorScript.VCRHasPower)
         {
             AcceptVHS(other.gameObject);
         }
@@ -78,6 +78,10 @@ public class VCRBehavior : MonoBehaviour
             //debugText.text = "no current VHS";
             return;//can't eject a VHS if there isn't one in it
         }
+        if(!CRTBehaviorScript.VCRHasPower)
+        {
+            return;
+        }
         StartCoroutine(VHSWaitCoroutine());
         StartCoroutine(VHSMovementCoroutine(false));
 
@@ -85,10 +89,6 @@ public class VCRBehavior : MonoBehaviour
 
     void AcceptVHS(GameObject VHS)
     {
-        if (dialogueSystemTrigger.enabled != true) //trigger dialogue bark for first object insertion
-        {
-            dialogueSystemTrigger.enabled = true;
-        }
 
         if (currentVHS)
         {
@@ -98,6 +98,15 @@ public class VCRBehavior : MonoBehaviour
         {
             return;
         }
+
+        if(dialogueSystemTrigger)
+        {
+            if (dialogueSystemTrigger.enabled != true) //trigger dialogue bark for first object insertion
+            {
+                dialogueSystemTrigger.enabled = true;
+            }
+        }
+
         //temporarily disabled
         //grandmaText.text = "Oh, I can't wait to watch your performance!";
         //ungrab VHS
