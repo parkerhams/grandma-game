@@ -2552,9 +2552,11 @@ MonoBehaviour:
   sticksInWhenPressed: 0
   isPressedInwards: 0
   pressedInDistance: 0.02
+  isEjectButton: 0
+  isRestartButton: 0
+  VCRscript: {fileID: 0}
   CRTBehaviorScript: {fileID: 0}
   buttonTriggerDialogue: {fileID: 0}
-  waitTime: 0.5
 --- !u!65 &113019716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3180,9 +3182,11 @@ MonoBehaviour:
   sticksInWhenPressed: 0
   isPressedInwards: 0
   pressedInDistance: 0.02
+  isEjectButton: 0
+  isRestartButton: 0
+  VCRscript: {fileID: 0}
   CRTBehaviorScript: {fileID: 0}
   buttonTriggerDialogue: {fileID: 0}
-  waitTime: 0.5
 --- !u!65 &175385238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4086,6 +4090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0feaf13be33b1b4681a7d6e1dd8b690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fixedRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &225053929
 GameObject:
   m_ObjectHideFlags: 0
@@ -9565,7 +9570,8 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.26
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7730549658908933139, guid: 4331a49d93b37a64c85f16588047d51b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4331a49d93b37a64c85f16588047d51b, type: 3}
 --- !u!4 &696676182 stripped
 Transform:
@@ -10765,11 +10771,15 @@ MonoBehaviour:
   leftAudioSocket: {fileID: 984155588}
   rightAudioSocket: {fileID: 268595519}
   powerVCRSocket: {fileID: 303806928}
+  lightCRTPower: {fileID: 0}
+  lightVCRPower: {fileID: 0}
+  sofaScript: {fileID: 0}
   videoPlayer: {fileID: 2105313544}
   blankScreenClip: {fileID: 32900000, guid: 4eb42bd22b9818145bdb6451232e696b, type: 3}
   highschoolConcertClip: {fileID: 32900000, guid: 57aca441cbc77fe4489f87c2a10c0819,
     type: 3}
   BandVHSTape: {fileID: 222036840}
+  VCRHasPower: 0
   currentChannel: 1
   ChannelText: {fileID: 366654351}
   debugTextPower: {fileID: 679574485}
@@ -10778,6 +10788,8 @@ MonoBehaviour:
   debugTextVideo: {fileID: 830595466}
   debugTextRightAudio: {fileID: 791412841}
   debugButtonInfo: {fileID: 1255042271}
+  videoAudioSource: {fileID: 0}
+  musicSource: {fileID: 0}
 --- !u!1 &724318336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8933801212004612612, guid: ed5df38e21a2bcb47ac32b20548784b3,
@@ -10818,9 +10830,11 @@ MonoBehaviour:
   sticksInWhenPressed: 0
   isPressedInwards: 0
   pressedInDistance: 0.02
+  isEjectButton: 0
+  isRestartButton: 0
+  VCRscript: {fileID: 0}
   CRTBehaviorScript: {fileID: 724318335}
   buttonTriggerDialogue: {fileID: 0}
-  waitTime: 0.5
 --- !u!114 &724318341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10837,9 +10851,11 @@ MonoBehaviour:
   sticksInWhenPressed: 0
   isPressedInwards: 0
   pressedInDistance: 0.02
+  isEjectButton: 0
+  isRestartButton: 0
+  VCRscript: {fileID: 0}
   CRTBehaviorScript: {fileID: 724318335}
   buttonTriggerDialogue: {fileID: 0}
-  waitTime: 0.5
 --- !u!114 &724318342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10856,9 +10872,11 @@ MonoBehaviour:
   sticksInWhenPressed: 0
   isPressedInwards: 0
   pressedInDistance: 0.02
+  isEjectButton: 0
+  isRestartButton: 0
+  VCRscript: {fileID: 0}
   CRTBehaviorScript: {fileID: 724318335}
   buttonTriggerDialogue: {fileID: 0}
-  waitTime: 0.5
 --- !u!114 &724318343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10875,9 +10893,11 @@ MonoBehaviour:
   sticksInWhenPressed: 0
   isPressedInwards: 0
   pressedInDistance: 0.02
+  isEjectButton: 0
+  isRestartButton: 0
+  VCRscript: {fileID: 0}
   CRTBehaviorScript: {fileID: 724318335}
   buttonTriggerDialogue: {fileID: 0}
-  waitTime: 0.5
 --- !u!328 &724318344
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -11009,7 +11029,6 @@ MonoBehaviour:
   entryPosition: {fileID: 1485505355}
   insidePosition: {fileID: 874219503}
   debugText: {fileID: 943756358}
-  grandmaText: {fileID: 1088804366}
 --- !u!65 &724979208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12783,6 +12802,48 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854468652}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &859382179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7730549658907484703, guid: 4331a49d93b37a64c85f16588047d51b,
+    type: 3}
+  m_PrefabInstance: {fileID: 696676181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &859382180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859382179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d7a78717472c2499db2ef8db0693b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &859382181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859382179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4b6b4fe76286a4fbc9a8c3ef16666d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &873032537
 GameObject:
   m_ObjectHideFlags: 0
@@ -16014,6 +16075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OutlineColorInRange: {r: 0, g: 0, b: 0, a: 0}
   OutlineColorHighlighted: {r: 0, g: 0, b: 0, a: 0}
+  OutlineNoHighlight: {r: 0, g: 0, b: 0, a: 0}
 --- !u!135 &1065982843
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20064,9 +20126,11 @@ MonoBehaviour:
   sticksInWhenPressed: 0
   isPressedInwards: 0
   pressedInDistance: 0.02
+  isEjectButton: 0
+  isRestartButton: 0
+  VCRscript: {fileID: 0}
   CRTBehaviorScript: {fileID: 0}
   buttonTriggerDialogue: {fileID: 0}
-  waitTime: 0.5
 --- !u!65 &1418863664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25069,6 +25133,64 @@ Transform:
   m_Father: {fileID: 1360000387}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1898587991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1898587993}
+  - component: {fileID: 1898587992}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1898587992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898587991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e98dfcfdda64a4cb3da5c68c3b9eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: 0c5c1535b2a3b6040b675408aab593a4,
+    type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  diffractionFlags: 11
+  engineLogging: 0
+--- !u!4 &1898587993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898587991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1899485584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27585,6 +27707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0feaf13be33b1b4681a7d6e1dd8b690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fixedRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &2112591058
 MonoBehaviour:
   m_ObjectHideFlags: 0
