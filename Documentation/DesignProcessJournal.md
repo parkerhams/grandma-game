@@ -30,8 +30,10 @@ This week, we all met and established our plans for the game. We designated offi
 ![Grandma UV Map](https://github.com/parkerhams/grandma-game/blob/master/Documentation/images/GrandmaUV.png)
 
 ### Environment
-  Cable heads we worked on, as well as the base tv model.
+  Cable heads, and the first pass of the cross stitch hoop, as well as the base tv model.
 ![Cable Heads](https://github.com/parkerhams/grandma-game/blob/db8ef396abc433d19d24eb62ec3d3c25cabbfe30/cables01.png)
+![Cross Stitch Hoop WIP01](https://github.com/parkerhams/grandma-game/blob/issac-imageuploads/CrossStitchHoop.PNG)
+![Cross Stitch Hoop WIP](https://github.com/parkerhams/grandma-game/blob/issac-imageuploads/CrossStitchClothWIP.PNG)
 
 ## **Design:**
 ### CRT & VCR Prototyping
@@ -58,6 +60,8 @@ We made the cables by anchoring a sequence of capsules to each other with config
 # **Week 3 - 9-20-19 - State machine, cables, and implementing other stuff**
 
 ## **Art:**
+### Environment Props
+![Finished Cross Stitch Hoop](https://github.com/parkerhams/grandma-game/blob/356f932ea3be4adb1db2990afd1397ab7cdef43d/Documentation/images/finishedCrossStitch.png)
 
 ## **Design:**
 
@@ -68,6 +72,8 @@ The goal for this week was configuring the behavior of the TV depending on what 
 # **Week 4 - 9-27-19 - Modeling and coding everything, forever**
 
 ## **Art:**
+### Environment Props
+
 
 ## **Design:**
 
