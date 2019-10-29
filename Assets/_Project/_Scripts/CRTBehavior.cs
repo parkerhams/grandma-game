@@ -73,6 +73,10 @@ public class CRTBehavior : MonoBehaviour
     private bool hasPower = false;
     public bool VCRHasPower = false;
 
+    bool leftAudioWorking = false;
+    bool rightAudioWorking = false;
+    public bool videoVolumeOverwritten = false;//this is set to true when the game is ending and we want the video's volume to stay very low
+
     private enum Channel { Input, Channel1, Channel2 };
 
     [Header("CRT State")]
@@ -122,6 +126,27 @@ public class CRTBehavior : MonoBehaviour
         //vp.playbackSpeed = 1;
         vp.Stop();
         vp.Play();
+    }
+
+    void AdjustVideoAudio()//changes the volume level of the video based on the RCA audio cables being plugged in or not
+    {
+        if(videoVolumeOverwritten)
+        {
+            return;//don't adjust the volume it's being overridden by the ending
+        }
+        if(leftAudioWorking && rightAudioWorking)
+        {
+            videoAudioSource.volume = 1f;
+        }
+        else if((leftAudioWorking && !rightAudioWorking) || (!leftAudioWorking && rightAudioWorking))
+        {
+            videoAudioSource.volume = .5f;
+        }
+        else if(!leftAudioWorking && !rightAudioWorking)
+        {
+            videoAudioSource.volume = 0f;
+        }
+
     }
 
 
@@ -282,28 +307,25 @@ public class CRTBehavior : MonoBehaviour
         }
 
         //Audio Socket Logic
-        //If the audio is connected correctly
-        if (leftAudioSocket.signal == SocketBehavior.Signal.LeftAudio && rightAudioSocket.signal == SocketBehavior.Signal.RightAudio)
+        //If left audio is plugged in to either audio socket
+        if (leftAudioSocket.signal == SocketBehavior.Signal.LeftAudio || leftAudioSocket.signal == SocketBehavior.Signal.RightAudio)
         {
-            //Play the video audio
-            Debug.Log("The Audio is playing correctly");
+            leftAudioWorking = true;
         }
-        //If the audio signal is switched
-        else if (leftAudioSocket.signal == SocketBehavior.Signal.RightAudio && rightAudioSocket.signal == SocketBehavior.Signal.LeftAudio)
-        {
-            //Play the audio backwards
-            Debug.Log("The Audio plays backwards");
-        }
-        //If only one audio socket is plugged in
-        else if (leftAudioSocket.signal == SocketBehavior.Signal.LeftAudio || rightAudioSocket.signal == SocketBehavior.Signal.RightAudio)
-        {
-            //Play audio at half volume / with weird artifacting / not quite right
-        }
-        //if the audio socket has a video signal, or no signal
         else
         {
-            //No Audio Plays
+            leftAudioWorking = false;
         }
+        //If right audio is plugged in to either audio socket
+        if (rightAudioSocket.signal == SocketBehavior.Signal.RightAudio || rightAudioSocket.signal == SocketBehavior.Signal.LeftAudio)
+        {
+            rightAudioWorking = true;
+        }
+        else
+        {
+            rightAudioWorking = false;
+        }
+        AdjustVideoAudio();
     }
 
     void CheckPower()

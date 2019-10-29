@@ -23,7 +23,7 @@ public class CableGrabMonitor : MonoBehaviour
         for (int index = 0; index < children; ++index)
         {
             capsuleChildren.Add(transform.GetChild(index).gameObject);
-            Debug.Log(name + " children: " + transform.GetChild(index).gameObject.name);
+            //Debug.Log(name + " children: " + transform.GetChild(index).gameObject.name);
         }
     }
 

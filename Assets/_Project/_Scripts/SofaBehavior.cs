@@ -13,8 +13,10 @@ public class SofaBehavior : MonoBehaviour
     public GameObject[] lights;
     public GameObject restartButton;
 
+    bool hasEnded = false;//once the ending is started, it can not be triggered any more
+
     float canvasEndingYPosition = .5f;//how high up the canvas scrolls until it stops
-    float lightIntensityWhenDimmed = .08f;//how dark the lights get when the game ends
+    float lightIntensityWhenDimmed = .06f;//how dark the lights get when the game ends
     float scrollSpeed = .09f;//how quickly the canvas scrolls up
     // Start is called before the first frame update
     void Start()
@@ -24,10 +26,9 @@ public class SofaBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name + " entered");
         if (other.tag == "Player")
         {
-            if(readyToEnd)
+            if(readyToEnd && !hasEnded)
             {
                 EndGame();
             }
@@ -36,6 +37,10 @@ public class SofaBehavior : MonoBehaviour
 
     void EndGame()
     {
+        hasEnded = true;
+
+        //prevent the end button from being pressable for a short moment after the ending begins
+        StartCoroutine(restartButton.GetComponent<ButtonBehavior>().AfterPressWaitCoroutine(3));
         //if we want to move the player and lock them in place, fade to black first and then RepositionPlayer()
 
         //darken the lights in the scene
@@ -43,6 +48,7 @@ public class SofaBehavior : MonoBehaviour
         //play ending music
         SoundManager.Instance.PlayMusic();
         //fade out video audio
+        CRTscript.videoVolumeOverwritten = true;
         CRTscript.SetVideoVolume();
         //show credits? titlecard? show restart button
         StartCoroutine(ScrollPanelUpCoroutine());

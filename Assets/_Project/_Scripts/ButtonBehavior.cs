@@ -86,7 +86,7 @@ public class ButtonBehavior : MonoBehaviour
                 //AUDIO: sticky CRT button pushed in
                 audioSource.PlayOneShot(SoundManager.Instance.tv_button_on);
 
-                StartCoroutine(AfterPressWaitCoroutine());
+                StartCoroutine(AfterPressWaitCoroutine(0));
             }
             else
             {
@@ -105,7 +105,7 @@ public class ButtonBehavior : MonoBehaviour
                 //AUDIO: sticky CRT button pushed back out
                 audioSource.PlayOneShot(SoundManager.Instance.tv_button_off);
 
-                StartCoroutine(AfterPressWaitCoroutine());
+                StartCoroutine(AfterPressWaitCoroutine(0));
             }
         }
         else
@@ -126,7 +126,7 @@ public class ButtonBehavior : MonoBehaviour
                 {
                     transform.position = new Vector3(transform.position.x, transform.position.y - pressedInDistance, transform.position.z);
                 }
-                StartCoroutine(AfterPressWaitCoroutine());
+                StartCoroutine(AfterPressWaitCoroutine(0));
                 StartCoroutine(MoveButton());
                 isPressed = true;
                 if(isEjectButton)
@@ -165,10 +165,10 @@ public class ButtonBehavior : MonoBehaviour
         
     }
 
-    IEnumerator AfterPressWaitCoroutine()
+    public IEnumerator AfterPressWaitCoroutine(float additionalDelay)
     {
         canBePressed = false;
-        yield return new WaitForSeconds(waitTime);
+        yield return new WaitForSeconds(waitTime + additionalDelay);
         canBePressed = true;
     }
 }
