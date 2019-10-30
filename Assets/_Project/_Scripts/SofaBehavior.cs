@@ -53,6 +53,16 @@ public class SofaBehavior : MonoBehaviour
         //show credits? titlecard? show restart button
         StartCoroutine(ScrollPanelUpCoroutine());
         restartButton.SetActive(true);
+
+        //dialogue
+        if(CRTscript.santaVideoPlaying)
+        {
+            //dialogue call: reminisce about santa video during end of game
+        }
+        else if(CRTscript.concertVideoPlaying)
+        {
+            //dialogue call: reminisce about concert video during end of game
+        }
     }
 
     void DimScreen()

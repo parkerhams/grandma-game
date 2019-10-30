@@ -17475,13 +17475,13 @@ MonoBehaviour:
   sofaScript: {fileID: 2067974362}
   videoPlayer: {fileID: 2105313544}
   blankScreenClip: {fileID: 32900000, guid: 4eb42bd22b9818145bdb6451232e696b, type: 3}
-  highschoolConcertClip: {fileID: 32900000, guid: f159a380750dd7d47b45210a561c7a61,
+  highschoolConcertClip: {fileID: 32900000, guid: 963fafbf3aa6b8849bbd50d98d81917d,
     type: 3}
-  pizzaClip: {fileID: 0}
-  plateClip: {fileID: 0}
-  bananaClip: {fileID: 0}
-  pancakeClip: {fileID: 0}
-  santaClip: {fileID: 0}
+  pizzaClip: {fileID: 32900000, guid: 797e34917ea786349aae2aeb81bb31ff, type: 3}
+  plateClip: {fileID: 32900000, guid: 6abe47f106ec0374b8258e0d5e4b1cef, type: 3}
+  bananaClip: {fileID: 32900000, guid: 777a18472dec60049908a4fb7f7ee1cb, type: 3}
+  pancakeClip: {fileID: 32900000, guid: a80a1cde37fc72246a434b2059b6f84b, type: 3}
+  santaClip: {fileID: 32900000, guid: 9b045e6681df7cc4c94280f62f5f3019, type: 3}
   BandVHSTape: {fileID: 2130080470}
   pizza: {fileID: 710570616}
   plate: {fileID: 370610308}
@@ -17489,6 +17489,8 @@ MonoBehaviour:
   pancake: {fileID: 820708094}
   santaVHSTape: {fileID: 0}
   VCRHasPower: 0
+  santaVideoPlaying: 0
+  concertVideoPlaying: 0
   videoVolumeOverwritten: 0
   currentChannel: 1
   ChannelText: {fileID: 366654351}
@@ -42056,7 +42058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388f8e7ebeeaafd4ca205ef1ac5b2b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  readyToEnd: 1
+  readyToEnd: 0
   endingPosition: {fileID: 2067974360}
   CRTscript: {fileID: 724318335}
   canvas: {fileID: 1165718057}

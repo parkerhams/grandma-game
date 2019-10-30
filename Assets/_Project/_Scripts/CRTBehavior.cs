@@ -91,7 +91,12 @@ public class CRTBehavior : MonoBehaviour
     private bool isOn = false;
     private bool VCRIsOn = false;
     private bool hasPower = false;
+    [HideInInspector]
     public bool VCRHasPower = false;
+    [HideInInspector]
+    public bool santaVideoPlaying = false;
+    [HideInInspector]
+    public bool concertVideoPlaying = false;
 
     bool leftAudioWorking = false;
     bool rightAudioWorking = false;
@@ -169,6 +174,22 @@ public class CRTBehavior : MonoBehaviour
 
     }
 
+    void EndingVideoPlayed()//establish which ending video is being played
+    {
+        if(videoPlayer.clip == highschoolConcertClip)
+        {
+            concertVideoPlaying = true;
+            santaVideoPlaying = false;
+            //dialogue call: grandma's excited video is playing, beckons you to sit on couch and watch it with her
+        }
+        else if(videoPlayer.clip == santaClip)
+        {
+            concertVideoPlaying = false;
+            santaVideoPlaying = true;
+            //dialogue call: grandma's excited video is playing, beckons you to sit on couch and watch it with her
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -211,7 +232,7 @@ public class CRTBehavior : MonoBehaviour
         {
             videoPlayer.Play();
             musicSource.volume = 0;
-            if(videoPlayer.clip == highschoolConcertClip)
+            if(videoPlayer.clip == highschoolConcertClip || videoPlayer.clip == santaClip)
             {
                 //allow the player to sit on the couch and end the game if they play the right VHS
                 sofaScript.readyToEnd = true;
@@ -282,6 +303,11 @@ public class CRTBehavior : MonoBehaviour
             PlayIfNotPlaying();
         }
         //Video Socket Logic
+        //if the video cable is plugged into an audio socket
+        if((videoSocket.signal == SocketBehavior.Signal.LeftAudio) || (videoSocket.signal == SocketBehavior.Signal.RightAudio))
+        {
+            //dialogue call: grandma lets player know the video cable looks like it isn't connected to the right thing
+        }
         else if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
             ChannelText.text = "PLAY";
@@ -294,6 +320,7 @@ public class CRTBehavior : MonoBehaviour
                     videoPlayer.Stop();
                     videoPlayer.clip = highschoolConcertClip;
                     PlayIfNotPlaying();
+                    EndingVideoPlayed();
                 }
                 PlayIfNotPlaying();
             }
@@ -335,6 +362,7 @@ public class CRTBehavior : MonoBehaviour
                     videoPlayer.Stop();
                     videoPlayer.clip = santaClip;
                     PlayIfNotPlaying();
+                    EndingVideoPlayed();
                 }
                 PlayIfNotPlaying();
             }
