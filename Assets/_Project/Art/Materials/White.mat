@@ -74,7 +74,7 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaTest: 0
-    - _AmbientBoost: 0.5
+    - _AmbientBoost: 0
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
@@ -93,14 +93,14 @@ Material:
     - _OutlineSize: 0.1
     - _Parallax: 0.02
     - _QueueOffset: 0
-    - _RimColoring: 0.75
-    - _RimIntensity: 1
-    - _RimPower: 1.25
+    - _RimColoring: 0
+    - _RimIntensity: 0
+    - _RimPower: 0.5
     - _SampleGI: 0
     - _Saturation: 1
     - _SmoothnessTextureChannel: 0
-    - _SpecIntensity: 0.5
-    - _SpecPower: 0.1
+    - _SpecIntensity: 0
+    - _SpecPower: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0

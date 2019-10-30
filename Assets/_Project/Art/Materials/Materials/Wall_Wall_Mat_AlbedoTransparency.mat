@@ -8,14 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wall_Wall_Mat_AlbedoTransparency
-  m_Shader: {fileID: 4800000, guid: 053c5025fd47f7d48923c9e35a727cfc, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0dd112420213c6a438c191cb0258fe65, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -100,16 +99,16 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimAmount: 0.716
+    - _RimAmount: 1
     - _RimColoring: 0.75
     - _RimIntensity: 0.92
     - _RimPower: 1.25
-    - _RimThreshold: 0.507
+    - _RimThreshold: 0.272
     - _SampleGI: 0
     - _Saturation: 2
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
-    - _SpecIntensity: 0.078
+    - _SpecIntensity: 0
     - _SpecPower: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -121,14 +120,14 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_DEB3AA71: {r: 0.122641504, g: 0.12100448, b: 0.11165005, a: 0}
-    - _AmbientColor: {r: 1, g: 1, b: 1, a: 1}
+    - _AmbientColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _SpecularColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &3759356082120521801
 MonoBehaviour:
   m_ObjectHideFlags: 11
