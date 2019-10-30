@@ -146,7 +146,7 @@ public class OVRGrabbable : MonoBehaviour
             Collider collider = this.GetComponent<Collider>();
             if (collider == null)
             {
-				throw new ArgumentException("Grabbables cannot have zero grab points and no collider -- please add a grab point or collider.");
+				throw new ArgumentException(collider.gameObject + ": Grabbables cannot have zero grab points and no collider -- please add a grab point or collider.");
             }
 
             // Create a default grab point

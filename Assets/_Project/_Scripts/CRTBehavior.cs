@@ -62,10 +62,30 @@ public class CRTBehavior : MonoBehaviour
     private VideoClip blankScreenClip;
     [SerializeField]
     private VideoClip highschoolConcertClip;
+    [SerializeField]
+    private VideoClip pizzaClip;
+    [SerializeField]
+    private VideoClip plateClip;
+    [SerializeField]
+    private VideoClip bananaClip;
+    [SerializeField]
+    private VideoClip pancakeClip;
+    [SerializeField]
+    private VideoClip santaClip;
 
     [Header("VHS Tape Objects")]
     [SerializeField]
     private GameObject BandVHSTape;
+    [SerializeField]
+    private GameObject pizza;
+    [SerializeField]
+    private GameObject plate;
+    [SerializeField]
+    private GameObject banana;
+    [SerializeField]
+    private GameObject pancake;
+    [SerializeField]
+    private GameObject santaVHSTape;
 
     //Variables for keeping track of the CRT's current state
     private bool isOn = false;
@@ -273,6 +293,47 @@ public class CRTBehavior : MonoBehaviour
                 {
                     videoPlayer.Stop();
                     videoPlayer.clip = highschoolConcertClip;
+                    PlayIfNotPlaying();
+                }
+                PlayIfNotPlaying();
+            }
+
+            if (currentVHS == pizza)
+            {
+                if (videoPlayer.clip != pizzaClip)
+                {
+                    videoPlayer.Stop();
+                    videoPlayer.clip = pizzaClip;
+                    PlayIfNotPlaying();
+                }
+                PlayIfNotPlaying();
+            }
+            if (currentVHS == plate)
+            {
+                if (videoPlayer.clip != plateClip)
+                {
+                    videoPlayer.Stop();
+                    videoPlayer.clip = plateClip;
+                    PlayIfNotPlaying();
+                }
+                PlayIfNotPlaying();
+            }
+            if (currentVHS == banana)
+            {
+                if (videoPlayer.clip != bananaClip)
+                {
+                    videoPlayer.Stop();
+                    videoPlayer.clip = bananaClip;
+                    PlayIfNotPlaying();
+                }
+                PlayIfNotPlaying();
+            }
+            if (currentVHS == santaVHSTape)
+            {
+                if (videoPlayer.clip != santaClip)
+                {
+                    videoPlayer.Stop();
+                    videoPlayer.clip = santaClip;
                     PlayIfNotPlaying();
                 }
                 PlayIfNotPlaying();
