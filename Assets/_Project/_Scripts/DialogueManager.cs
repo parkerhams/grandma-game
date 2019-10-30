@@ -36,77 +36,65 @@ public class DialogueManager : MonoBehaviour
         set{}
     }
 
-    public static Dialogue _dialogue;
+    [SerializeField]
+    public Canvas grandmaCanvas;
 
     [SerializeField]
     public TextMeshProUGUI grandmaSpeechBubble;
 
     [SerializeField]
-    private Queue<string> grandmaSentences; //first in first out system, then loads new sentence from end of queue
+    private List<string> alreadySpokenSentences = new List<string>();
 
     [SerializeField]
-    private List<string> alreadySpokenSentences;
-
-    public delegate void OnTVPowerHasPower();
-	public event OnTVPowerHasPower OnTVPowerOn;
+    [Header("Dialogue Strings for Grandma")]
+    public string gameStartDialogue = "Could you plug the TV in for me, sweetie?";
+    public string tvHasBeenPluggedIn = "Oh, thank you! Now can you handle the rest of this stuff, too?";
+    public string bananaInVCRDialogue = "Yo fool that's a banana";
+    public string vcrHasBeenPluggedIn = "You got it working! Come and put one of these tapes in, and we can watch it.";
+    public string tvHasBeenTurnedOff = "Oh, why'd you turn it off?";
+    public string tvIsOnChannel1 = "Ooh, this reminds me of that movie you watched as a kid. You know, the one with the penguins!";
+    public string tvIsOnChannel2 = "I love this show! Isn't it just the cutest thing?";
+    public string tvIsOnStaticChannel = "Oh, no! What made the picture go away?";
+    public string bandClipIsPlaying = "Oh my, such a lovely sound! I was so proud of you that night, and I still am!";
+    public string santaClipIsPlaying = "Fuck that Santa is terrifying";
+    public string santaClipIsPlayingAtEnd = "You know, your grandfather was so excited to play Santa that day. He wanted to see how you'd react!";
+    public string bandClipIsPlayingAtEnd = "We always loved hearing you play so passionately. You stole the stage at all your performances!";
+    public string vcrVideoCablePluggedIntoAudioSlot = "Oh, my! This sounds like those radio broadcasts they played during the war.";
+    public string vcrAudioCablePluggedIntoVideoSlot = "I've never understood why the snow happens. And with that sound!";
+    public string vcrAndTVHaveVideoButNotAudio = "Where's the noise? Or is everyone just not talking?";
+    public string vcrAndTVHaveAudioButNotVideo = "I can hear it! But where's the picture?";
+    public string bananaIsInTV = "My, how exciting! It's like those scary movies your dad liked to watch.";
+    public string playerPutsPhoto1IntoVCR = "Look, it's that picture you drew when you were little!";
+    public string playerPutsPhoto2IntoVCR = "Aw, I love that drawing of us.";
+    public string playerPutsPhoto3IntoVCR = "I love this photo! It was so nice of that man to take it for us.";
+    public string grandmaPromptsPlayersToPutStuffIntoVCR = "I wonder what would happen if you put something else in the slot...";
 
     private void Start()
     {
-        grandmaSentences = new Queue<string>();
-        alreadySpokenSentences = new List<string>();
         _dialogueManager = this;
-
-        _dialogue.grandmaSentences = new string[3]{"Hi there! This should be typing","*kiss*","Fuck this took so long"};
-        StartDialogue(_dialogue);
+        Bark(gameStartDialogue);
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void Bark(string dialogue)
     {
-        _dialogue = dialogue;
-        grandmaSentences.Clear();
-
-        foreach(string sentence in dialogue.grandmaSentences)
-        {
-            //compare string sentence to anything that's already been spoken
-            //if it's been spoken, don't display it 
-            //if(sentence == alreadySpokenSentences[alreadySpokenSentences.Count-1])
-            //{
-            grandmaSentences.Enqueue(sentence);
-            //}
-        }
-
-        DisplayNextSentence();
+         grandmaCanvas.GetComponent<CanvasGroup>().alpha = 1f;
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(dialogue));
     }
 
-    public void DisplayNextSentence()
-    {
-        if(grandmaSentences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
 
-        string sentence = grandmaSentences.Dequeue();
-        alreadySpokenSentences.Add(sentence);
-        Debug.Log(sentence);
+    IEnumerator TypeSentence (string sentence)
+	{
+		grandmaSpeechBubble.text = "";
+		foreach (char letter in sentence.ToCharArray())
+		{
+			grandmaSpeechBubble.text += letter;
+			yield return new WaitForSeconds(.1f);
+		}
 
-        //StopAllCoroutines();
-		//StartCoroutine(TypeSentence(sentence));
-    }
+        yield return new WaitForSeconds(5);
 
-    public void EndDialogue()
-    {
-        Debug.Log("End of conversation");
-    }
-
- //   public IEnumerator TypeSentence (string sentence)
-	//{
-	//	grandmaSpeechBubble.text = "";
-	//	foreach (char letter in sentence.ToCharArray())
-	//	{
-	//		grandmaSpeechBubble.text += letter;
-	//		yield return null;
-	//	}
-	//}
+        grandmaCanvas.GetComponent<CanvasGroup>().alpha = 0f;
+	} 
 
 }

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fireplace_low_lambert2_AlbedoTransparency
+  m_Name: Logholder_Logs_AlbedoTransparency 1
   m_Shader: {fileID: 4800000, guid: 053c5025fd47f7d48923c9e35a727cfc, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 39b54425d8265414b86e70db7fb631cd, type: 3}
+        m_Texture: {fileID: 2800000, guid: a09a885951c4c96418c37144dc09d45b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -91,8 +91,8 @@ Material:
     - _RimPower: 1.25
     - _Saturation: 1
     - _SmoothnessTextureChannel: 0
-    - _SpecIntensity: 0.078
-    - _SpecPower: 0.938
+    - _SpecIntensity: 0.5
+    - _SpecPower: 0.1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0

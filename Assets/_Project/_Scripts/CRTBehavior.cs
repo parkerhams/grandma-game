@@ -125,14 +125,11 @@ public class CRTBehavior : MonoBehaviour
     public AudioSource musicSource;
     float musicVolume;
 
-    private TriggerDialogue crtDialogueTrigger;
-
 
 
     // Start is called before the first frame update
     void Start()
     {
-        crtDialogueTrigger = this.GetComponent<TriggerDialogue>();
         musicVolume = musicSource.volume;
         videoPlayer.loopPointReached += EndReached;
 
@@ -181,12 +178,14 @@ public class CRTBehavior : MonoBehaviour
             concertVideoPlaying = true;
             santaVideoPlaying = false;
             //dialogue call: grandma's excited video is playing, beckons you to sit on couch and watch it with her
+            DialogueManager.Instance.Bark(DialogueManager.Instance.bandClipIsPlaying);
         }
         else if(videoPlayer.clip == santaClip)
         {
             concertVideoPlaying = false;
             santaVideoPlaying = true;
             //dialogue call: grandma's excited video is playing, beckons you to sit on couch and watch it with her
+            DialogueManager.Instance.Bark(DialogueManager.Instance.santaClipIsPlaying);
         }
     }
 
@@ -307,6 +306,7 @@ public class CRTBehavior : MonoBehaviour
         if((videoSocket.signal == SocketBehavior.Signal.LeftAudio) || (videoSocket.signal == SocketBehavior.Signal.RightAudio))
         {
             //dialogue call: grandma lets player know the video cable looks like it isn't connected to the right thing
+            DialogueManager.Instance.Bark(DialogueManager.Instance.vcrVideoCablePluggedIntoAudioSlot);
         }
         else if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
@@ -315,6 +315,7 @@ public class CRTBehavior : MonoBehaviour
             if (currentVHS == BandVHSTape)//we can add info inside VHSBehavior and reference that instead of using the name if we want
             {
                 //play video 1
+                DialogueManager.Instance.Bark(DialogueManager.Instance.bandClipIsPlaying);
                 if (videoPlayer.clip != highschoolConcertClip) //sees if the correct clip is already loaded, if not, plays the clip
                 {
                     videoPlayer.Stop();
