@@ -58,10 +58,12 @@ public class SofaBehavior : MonoBehaviour
         if(CRTscript.santaVideoPlaying)
         {
             //dialogue call: reminisce about santa video during end of game
+            DialogueManager.Instance.Bark(DialogueManager.Instance.santaClipIsPlayingAtEnd);
         }
         else if(CRTscript.concertVideoPlaying)
         {
             //dialogue call: reminisce about concert video during end of game
+            DialogueManager.Instance.Bark(DialogueManager.Instance.bandClipIsPlayingAtEnd);
         }
     }
 
