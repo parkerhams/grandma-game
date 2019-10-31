@@ -230,16 +230,18 @@ public class CRTBehavior : MonoBehaviour
         if (!videoPlayer.isPlaying && !videoPlayer.isPaused)
         {
             videoPlayer.Play();
-            musicSource.volume = 0;
+            //musicSource.volume = 0;
             if(videoPlayer.clip == highschoolConcertClip || videoPlayer.clip == santaClip)
             {
                 //allow the player to sit on the couch and end the game if they play the right VHS
                 sofaScript.readyToEnd = true;
+                musicSource.volume = 0;
             }
             else
             {
                 //if a different VHS plays (blank screen, credits, etc) disable the ability to end the game until they put the correct VHS in again
                 sofaScript.readyToEnd = false;
+                musicSource.volume = musicVolume;
             }
         }
     }
@@ -253,6 +255,10 @@ public class CRTBehavior : MonoBehaviour
                 case Channel.Input:
                     ChannelText.text = "INPUT";
                     UpdateInputChannel();
+                    if(videoSocket.signal == SocketBehavior.Signal.Video && (leftAudioWorking || rightAudioWorking) && !currentVHS)
+                    {
+                        DialogueManager.Instance.Bark(DialogueManager.Instance.readyForVHS);
+                    }
                     break;
                 case Channel.Channel1:
                     ChannelText.text = "CHANNEL-1";
@@ -268,6 +274,7 @@ public class CRTBehavior : MonoBehaviour
                 case Channel.Channel2:
                     ChannelText.text = "CHANNEL-2";
                     //show blank screen
+                    DialogueManager.Instance.Bark(DialogueManager.Instance.tvIsOnChannel2);
                     if (videoPlayer.clip != blankScreenClip) //sees if the correct clip is already loaded, if not, changes and plays the clip
                     {
                         videoPlayer.Stop();
