@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8427041202304725605
+--- !u!1 &5221749590403637051
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8427041202304725604}
-  - component: {fileID: 8427041202304725659}
+  - component: {fileID: 5221749590403637044}
+  - component: {fileID: 5221749590403637045}
   m_Layer: 0
-  m_Name: Managers
-  m_TagString: Manager
+  m_Name: Reload
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8427041202304725604
+--- !u!4 &5221749590403637044
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427041202304725605}
+  m_GameObject: {fileID: 5221749590403637051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8427041202468234844}
-  - {fileID: 8427041202799952531}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 5221749590914510787}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8427041202304725659
+--- !u!114 &5221749590403637045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427041202304725605}
+  m_GameObject: {fileID: 5221749590403637051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77479d7933bbe704ebef87e907300d3f, type: 3}
+  m_Script: {fileID: 11500000, guid: d0dbe18795cc4604487d20ec035fecad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grandmaSpeechBubble: {fileID: 0}
-  alreadySpokenSentences: []
---- !u!1 &8427041202468234845
+--- !u!1 &5221749590885612538
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,10 +51,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8427041202468234844}
-  - component: {fileID: 8427041202468234833}
-  - component: {fileID: 8427041202468234834}
-  - component: {fileID: 8427041202468234835}
+  - component: {fileID: 5221749590885612539}
+  - component: {fileID: 5221749590885612534}
+  - component: {fileID: 5221749590885612533}
+  - component: {fileID: 5221749590885612532}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -66,34 +62,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8427041202468234844
+--- !u!4 &5221749590885612539
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427041202468234845}
+  m_GameObject: {fileID: 5221749590885612538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8427041202304725604}
+  m_Father: {fileID: 5221749590914510787}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8427041202468234833
+--- !u!114 &5221749590885612534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427041202468234845}
+  m_GameObject: {fileID: 5221749590885612538}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05e0ac1e49e23a341abe6fc662f14bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EffectsSource: {fileID: 8427041202468234834}
-  EndingMusicSource: {fileID: 8427041202468234835}
+  EffectsSource: {fileID: 5221749590885612533}
+  EndingMusicSource: {fileID: 5221749590885612532}
   LowPitchRange: 0.95
   HighPitchRange: 1.05
   buttonPress: {fileID: 8300000, guid: a6703f80b0eb60d41a8f4d5721bd2645, type: 3}
@@ -105,13 +101,13 @@ MonoBehaviour:
   drop: {fileID: 8300000, guid: 0c0376517f245f64ab2b110314aa1c6f, type: 3}
   unplug: {fileID: 8300000, guid: 7168acab2b2fe744aa9170fe168e4692, type: 3}
   eject: {fileID: 8300000, guid: b435c3e8e46d3c748b1ae87244802ac2, type: 3}
---- !u!82 &8427041202468234834
+--- !u!82 &5221749590885612533
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427041202468234845}
+  m_GameObject: {fileID: 5221749590885612538}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -201,13 +197,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &8427041202468234835
+--- !u!82 &5221749590885612532
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427041202468234845}
+  m_GameObject: {fileID: 5221749590885612538}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6400379206721833754, guid: 291f24e48d3f2c6409e824bef81d0746,
@@ -298,7 +294,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &8427041202799952540
+--- !u!1 &5221749590914510786
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,38 +302,73 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8427041202799952531}
-  - component: {fileID: 8427041202799952530}
+  - component: {fileID: 5221749590914510787}
+  - component: {fileID: 5221749590914510652}
   m_Layer: 0
-  m_Name: Reload
-  m_TagString: Untagged
+  m_Name: Managers
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8427041202799952531
+--- !u!4 &5221749590914510787
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427041202799952540}
+  m_GameObject: {fileID: 5221749590914510786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8427041202304725604}
-  m_RootOrder: 1
+  m_Children:
+  - {fileID: 5221749590885612539}
+  - {fileID: 5221749590403637044}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8427041202799952530
+--- !u!114 &5221749590914510652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427041202799952540}
+  m_GameObject: {fileID: 5221749590914510786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0dbe18795cc4604487d20ec035fecad, type: 3}
+  m_Script: {fileID: 11500000, guid: 77479d7933bbe704ebef87e907300d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grandmaCanvas: {fileID: 0}
+  grandmaSpeechBubble: {fileID: 0}
+  alreadySpokenSentences: []
+  gameStartDialogue: Could you plug the TV in for me, sweetie?
+  tvHasBeenPluggedIn: Oh, thank you! Now can you handle the rest of this stuff, too?
+  bananaInVCRDialogue: Yo fool that's a banana
+  vcrHasBeenPluggedIn: You got it working! Come and put one of these tapes in, and
+    we can watch it.
+  tvHasBeenTurnedOff: Oh, why'd you turn it off?
+  tvIsOnChannel1: Ooh, this reminds me of that movie you watched as a kid. You know,
+    the one with the penguins!
+  tvIsOnChannel2: I love this show! Isn't it just the cutest thing?
+  tvIsOnStaticChannel: Oh, no! What made the picture go away?
+  bandClipIsPlaying: Oh my, such a lovely sound! I was so proud of you that night,
+    and I still am!
+  santaClipIsPlaying: Fuck that Santa is terrifying
+  santaClipIsPlayingAtEnd: You know, your grandfather was so excited to play Santa
+    that day. He wanted to see how you'd react!
+  bandClipIsPlayingAtEnd: We always loved hearing you play so passionately. You stole
+    the stage at all your performances!
+  vcrVideoCablePluggedIntoAudioSlot: Oh, my! This sounds like those radio broadcasts
+    they played during the war.
+  vcrAudioCablePluggedIntoVideoSlot: I've never understood why the snow happens. And
+    with that sound!
+  vcrAndTVHaveVideoButNotAudio: Where's the noise? Or is everyone just not talking?
+  vcrAndTVHaveAudioButNotVideo: I can hear it! But where's the picture?
+  bananaIsInTV: My, how exciting! It's like those scary movies your dad liked to watch.
+  playerPutsPhoto1IntoVCR: Look, it's that picture you drew when you were little!
+  playerPutsPhoto2IntoVCR: Aw, I love that drawing of us.
+  playerPutsPhoto3IntoVCR: I love this photo! It was so nice of that man to take it
+    for us.
+  grandmaPromptsPlayersToPutStuffIntoVCR: I wonder what would happen if you put something
+    else in the slot...
