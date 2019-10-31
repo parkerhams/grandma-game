@@ -22,6 +22,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip unplug;
     public AudioClip eject;
 
+    public AudioClip[] grandmaNoises;
+
     // Singleton instance.
     public static SoundManager Instance = null;
 

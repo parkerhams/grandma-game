@@ -330,8 +330,20 @@ public class CRTBehavior : MonoBehaviour
             {
                 if (videoPlayer.clip != pizzaClip)
                 {
+                    DialogueManager.Instance.Bark(DialogueManager.Instance.pizzaInVCR);
                     videoPlayer.Stop();
                     videoPlayer.clip = pizzaClip;
+                    PlayIfNotPlaying();
+                }
+                PlayIfNotPlaying();
+            }
+            if (currentVHS == pancake)
+            {
+                if (videoPlayer.clip != pancakeClip)
+                {
+                    DialogueManager.Instance.Bark(DialogueManager.Instance.pancakeInVCR);
+                    videoPlayer.Stop();
+                    videoPlayer.clip = pancakeClip;
                     PlayIfNotPlaying();
                 }
                 PlayIfNotPlaying();
@@ -340,6 +352,7 @@ public class CRTBehavior : MonoBehaviour
             {
                 if (videoPlayer.clip != plateClip)
                 {
+                    DialogueManager.Instance.Bark(DialogueManager.Instance.platesInVCR);
                     videoPlayer.Stop();
                     videoPlayer.clip = plateClip;
                     PlayIfNotPlaying();
@@ -350,6 +363,7 @@ public class CRTBehavior : MonoBehaviour
             {
                 if (videoPlayer.clip != bananaClip)
                 {
+                    DialogueManager.Instance.Bark(DialogueManager.Instance.bananaInVCRDialogue);
                     videoPlayer.Stop();
                     videoPlayer.clip = bananaClip;
                     PlayIfNotPlaying();
@@ -422,11 +436,16 @@ public class CRTBehavior : MonoBehaviour
     {
         if (powerSocket.signal == SocketBehavior.Signal.Power) //if the power cable is plugged 
         {
+            DialogueManager.Instance.Bark(DialogueManager.Instance.tvHasBeenPluggedIn);
             hasPower = true; //set the power state on
             if (isOn)
             {
                 ToggleLight(lightCRTPower, true);
-                PixelCrushers.DialogueSystem.DialogueManager.StartConversation("GameStartDialogue");
+                //PixelCrushers.DialogueSystem.DialogueManager.StartConversation("GameStartDialogue");
+                if(!VCRHasPower)
+                {
+                    DialogueManager.Instance.Bark(DialogueManager.Instance.VCRNeedsPower);
+                }
             }
         }
         else //the cable is unplugged, or has been unplugged

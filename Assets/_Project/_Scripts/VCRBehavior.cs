@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using PixelCrushers.DialogueSystem;
 
 public class VCRBehavior : MonoBehaviour
 {
@@ -22,11 +21,9 @@ public class VCRBehavior : MonoBehaviour
     bool isWaiting = false;//set to true while the VHS has recently accepted or ejected a VHS
 
     AudioSource audioSource;
-    DialogueSystemTrigger dialogueSystemTrigger;
 
     private void Start()
     {
-        dialogueSystemTrigger = this.GetComponent<DialogueSystemTrigger>();
 
         flapUp.SetActive(false);//if this flap isn't disabled in scene view, disable it now
         debugText.text = "No VHS";
@@ -99,13 +96,6 @@ public class VCRBehavior : MonoBehaviour
             return;
         }
 
-        if(dialogueSystemTrigger)
-        {
-            if (dialogueSystemTrigger.enabled != true) //trigger dialogue bark for first object insertion
-            {
-                dialogueSystemTrigger.enabled = true;
-            }
-        }
 
         //temporarily disabled
         //grandmaText.text = "Oh, I can't wait to watch your performance!";
