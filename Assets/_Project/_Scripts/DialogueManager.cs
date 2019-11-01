@@ -86,7 +86,6 @@ public class DialogueManager : MonoBehaviour
             return;//don't say something she's already said
         }
         alreadySpokenSentences.Add(dialogue);
-        grandmaCanvas.GetComponent<CanvasGroup>().alpha = 1f;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(dialogue));
     }
@@ -94,10 +93,18 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
 	{
-		grandmaSpeechBubble.text = "";
+        yield return new WaitForSeconds(1);
+        grandmaCanvas.GetComponent<CanvasGroup>().alpha = 1f;
+        grandmaSpeechBubble.text = "";
+        int letterCount = 0;
 		foreach (char letter in sentence.ToCharArray())
 		{
-            SoundManager.Instance.RandomSoundEffect(SoundManager.Instance.grandmaNoises);
+            letterCount++;
+            if(letterCount >= 3)
+            {
+                SoundManager.Instance.RandomSoundEffect(SoundManager.Instance.grandmaNoises);
+                letterCount = 0;
+            }
 			grandmaSpeechBubble.text += letter;
 			yield return new WaitForSeconds(.06f);
 		}
