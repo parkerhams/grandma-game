@@ -130,6 +130,7 @@ public class CRTBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        videoPlayer.Prepare();
         musicVolume = musicSource.volume;
         videoPlayer.loopPointReached += EndReached;
 
@@ -197,6 +198,13 @@ public class CRTBehavior : MonoBehaviour
         CheckButtons();
         UpdateScreenState();
         UpdateDebugText();
+
+        //if the video cable is plugged into an audio socket
+        if ((videoSocket.signal == SocketBehavior.Signal.LeftAudio) || (videoSocket.signal == SocketBehavior.Signal.RightAudio))
+        {
+            //dialogue call: grandma lets player know the video cable looks like it isn't connected to the right thing
+            DialogueManager.Instance.Bark(DialogueManager.Instance.vcrVideoCablePluggedIntoAudioSlot);
+        }
     }
 
     public void DebugButtonInfoUpdate(string newText)
@@ -309,12 +317,6 @@ public class CRTBehavior : MonoBehaviour
             PlayIfNotPlaying();
         }
         //Video Socket Logic
-        //if the video cable is plugged into an audio socket
-        if((videoSocket.signal == SocketBehavior.Signal.LeftAudio) || (videoSocket.signal == SocketBehavior.Signal.RightAudio))
-        {
-            //dialogue call: grandma lets player know the video cable looks like it isn't connected to the right thing
-            DialogueManager.Instance.Bark(DialogueManager.Instance.vcrVideoCablePluggedIntoAudioSlot);
-        }
         else if (videoSocket.signal == SocketBehavior.Signal.Video && currentVHS)
         {
             ChannelText.text = "PLAY";
