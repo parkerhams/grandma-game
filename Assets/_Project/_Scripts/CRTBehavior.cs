@@ -573,12 +573,16 @@ public class CRTBehavior : MonoBehaviour
                 channelUpButton.isPressed = false; //Reset the button's state
                 if (isOn) //check to see if that TV is on
                 {
-                    currentChannel++; //Turn the channel up
-                    videoPlayer.Stop();
-                    if (currentChannel >= Channel.Channel2)
+                    if (currentChannel == Channel.Channel2)
                     {
-                        currentChannel = Channel.Channel2;
+                        currentChannel = Channel.Input;
                     }
+                    else
+                    {
+                        currentChannel++; //Turn the channel up
+
+                    }
+                    videoPlayer.Stop();
                 }
             }
             if (channelDownButton.isPressed) //if the Channel Up Button is Pressed
