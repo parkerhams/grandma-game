@@ -10078,7 +10078,6 @@ Transform:
   m_Children:
   - {fileID: 1657942097}
   - {fileID: 981624996}
-  - {fileID: 5006512735196733005}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13615,7 +13614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610105635}
   - component: {fileID: 610105636}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: VCRBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13630,7 +13629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610105634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1936, y: 0.1602, z: -0.0591}
+  m_LocalPosition: {x: 0.284, y: 0.1448, z: -0.0405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1742646369}
@@ -13647,7 +13646,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.08, z: 0.01}
+  m_Size: {x: 0.6, y: 0.12, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &619211350
 GameObject:
@@ -37075,6 +37074,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.213, y: 0.226, z: 0.37}
   m_Center: {x: -0.0014051831, y: 0.0000000037252903, z: 0}
+--- !u!4 &1692289880 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6f34d26b96387b94a81e637339b7905a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1692289873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1693430092
 GameObject:
   m_ObjectHideFlags: 0
@@ -52157,13 +52162,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669339446366}
-  m_LocalRotation: {x: -0, y: -0.9999978, z: -0, w: 0.0021262956}
-  m_LocalPosition: {x: -0.5081, y: -1.285, z: -1.0565522}
-  m_LocalScale: {x: 0.010000007, y: 0.01, z: 0.010000007}
+  m_LocalRotation: {x: -0, y: -0.69957906, z: -0, w: -0.7145553}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.020000027, y: 0.02, z: 0.020000027}
   m_Children:
   - {fileID: 7818803837887110811}
-  m_Father: {fileID: 381689745}
-  m_RootOrder: 2
+  m_Father: {fileID: 1692289880}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -179.75601, z: 0}
 --- !u!4 &5006512735811272432
 Transform:
@@ -53035,7 +53040,7 @@ GameObject:
   - component: {fileID: 5006512735196733005}
   - component: {fileID: 424113497}
   m_Layer: 0
-  m_Name: Radio
+  m_Name: RadioMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
