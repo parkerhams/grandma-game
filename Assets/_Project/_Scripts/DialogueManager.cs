@@ -76,6 +76,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         _dialogueManager = this;
+        grandmaSpeechBubble.text = "";
         Bark(gameStartDialogue);
     }
 
@@ -108,10 +109,10 @@ public class DialogueManager : MonoBehaviour
 			grandmaSpeechBubble.text += letter;
 			yield return new WaitForSeconds(.06f);
 		}
+        //we're not disabling the text when it ends
+        //yield return new WaitForSeconds(5);
 
-        yield return new WaitForSeconds(5);
-
-        grandmaCanvas.GetComponent<CanvasGroup>().alpha = 0f;
+        //grandmaCanvas.GetComponent<CanvasGroup>().alpha = 0f;
 	} 
 
 }

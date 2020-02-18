@@ -17,7 +17,7 @@ public class SofaBehavior : MonoBehaviour
 
     float canvasEndingYPosition = .5f;//how high up the canvas scrolls until it stops
     float lightIntensityWhenDimmed = .06f;//how dark the lights get when the game ends
-    float scrollSpeed = .09f;//how quickly the canvas scrolls up
+    float scrollSpeed = .15f;//how quickly the canvas scrolls up
     // Start is called before the first frame update
     void Start()
     {
